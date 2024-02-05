@@ -37,8 +37,6 @@
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="index.html">SIPUBARAT | 013</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -69,7 +67,7 @@
           <li class="dropdown"><a class="getstarted scrollto">Login<i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="login.php">Siswa</a></li>
-              <li><a href="login_admin.php">Admin</a></li>
+              <li><a href="admin_menu/login.php">Admin</a></li>
             </ul>
           </li>
         </ul>
@@ -93,7 +91,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/gabungan.jpg" class="img-fluid animated" alt="">
+          <img src="assets/img/clients/Logo-3.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
