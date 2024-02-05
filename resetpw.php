@@ -54,7 +54,7 @@
             $mail->Body="<b>Hai Pengguna PPDB SD Negeri 013 Tanjungpinang Barat</b>
             <h3>Kami menerima permintaan untuk mengatur ulang kata sandi Anda.</h3>
             <p>Silakan klik tautan di bawah ini untuk mengatur ulang kata sandi Anda:</p>
-            http://localhost/Login/changepass.php
+            http://localhost/included_all/changepass.php
             <br><br>";
 
             if(!$mail->send()){
