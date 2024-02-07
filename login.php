@@ -29,7 +29,7 @@ if (isset($_POST["login"])) {
           ?>
           <script>
               alert("Login Berhasil! Anda akan dialihkan ke halaman utama.");
-              window.location.href = "changepass.php";
+              window.location.href = "/included_all/siswa_menu/data.php";
           </script>
           <?php
       } else {

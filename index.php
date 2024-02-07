@@ -1,3 +1,39 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+if(isset($_POST['send'])){
+    $name = htmlentities($_POST['name']);
+    $email = htmlentities($_POST['email']);
+    $subject = htmlentities($_POST['subject']);
+    $message = htmlentities($_POST['message']);
+
+    $mail = new PHPMailer(true);
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'ptravyy@gmail.com'; // Your G-Mail Address
+        $mail->Password = 'cctrenzylubjwpwq'; // Your Gmail Password or App Password
+        $mail->Port = 587; // Use 587 for TLS or 465 for SSL
+        $mail->SMTPSecure = 'tls'; // Use 'tls' or 'ssl'
+        $mail->isHTML(true);
+        $mail->setFrom($email, $name);
+        $mail->addAddress('ptravyy@gmail.com');
+        $mail->Subject = "$email ($subject)";
+        $mail->Body = $message;
+        $mail->send();
+        header("Location: contact.php?email_sent=1"); // Change 'contact.php' to 'index.php'
+        exit(); // Make sure to exit after header redirection
+    } catch (Exception $e) {
+        echo "Pesan tidak dapat dikirim!. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +93,7 @@
           <li class="dropdown"><a href="#"><span>PPDB</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Petunjuk Teknis</a></li>
-              <li><a href="#">Pendaftaran Ulang</a></li>
+              <li><a href="login.php">Pendaftaran Ulang</a></li>
               <li><a href="#">Pengumuman Hasil Seleksi</a></li>
             </ul>
           </li>
@@ -615,20 +651,20 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
+                  <label for="name">Nama</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="name">Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="name">Subjek</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
+                <label for="name">Pesan</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
               <div class="my-3">
@@ -636,7 +672,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Kirim</button></div>
             </form>
           </div>
 
