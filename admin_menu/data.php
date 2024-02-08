@@ -141,6 +141,31 @@ while ($data = $sql->fetch_assoc()) {
 								</a>
 							</li>
 
+							<!-- Guru -->
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
+									<i class="nav-icon far fa fa-user-graduate"></i>
+									<p>
+										PPDB
+										<i class="right fas fa-angle-left"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview" style="font-size: 12px;">
+									<li class="nav-item">
+										<a href="?page=data-akun-ppdb" class="nav-link">
+											<i class="nav-icon fas fa-unlock-alt" style="font-size: 12px;"></i>
+											<p>Akun Terdaftar</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-setting-ppdb" class="nav-link">
+											<i class="nav-icon fas fa-wrench" style="font-size: 12px;"></i>
+											<p>Setting</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+
 							<li class="nav-item">
 								<a href="?page=proses-verifikasi" class="nav-link">
 									<i class="nav-icon far fa fa-user-clock"></i>
@@ -170,31 +195,7 @@ while ($data = $sql->fetch_assoc()) {
 							</li>
 
 						<?php
-						} elseif ($data_level == "Sekretaris") {
-						?>
-
-							<li class="nav-item">
-								<a href="data.php" class="nav-link">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>
-										Dashboard
-									</p>
-								</a>
-							</li>
-
-							<li class="nav-item">
-								<a href="?page=data-pegawai" class="nav-link">
-									<i class="nav-icon far fa fa-users"></i>
-									<p>
-										Data Pegawai
-									</p>
-								</a>
-							</li>
-
-							<li class="nav-header">Setting</li>
-
-						<?php
-						} elseif ($data_level == "Pegawai") {
+						} elseif ($data_level == "Guru") {
 						?>
 
 							<li class="nav-item">
@@ -319,6 +320,23 @@ while ($data = $sql->fetch_assoc()) {
 								break;
 							case 'view-guru':
 								include "admin/guru/view_guru.php";
+								break;
+
+								//PPDB
+							case 'data-akun-ppdb':
+								include "admin/ppdb/data_akun_ppdb.php";
+								break;
+							case 'edit-akun-ppdb':
+								include "admin/ppdb/edit_akun_ppdb.php";
+								break;
+							case 'del-akun-ppdb':
+								include "admin/ppdb/del_akun_ppdb.php";
+								break;
+							case 'view-akun-ppdb':
+								include "admin/ppdb/view_akun_ppdb.php";
+								break;
+							case 'data-setting-ppdb':
+								include "admin/ppdb/edit_setting_ppdb.php";
 								break;
 
 								//biodata

@@ -77,6 +77,7 @@ if(isset($_POST['send'])){
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="e-learning/index.php">E-Learning</a></li>
           <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a class="nav-link scrollto active" href="#visi">Visi & Misi</a></li>
@@ -93,7 +94,7 @@ if(isset($_POST['send'])){
           <li class="dropdown"><a href="#"><span>PPDB</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="alurpendaftaran.html">Petunjuk Teknis</a></li>
-              <li><a href="login.php">Pendaftaran Ulang</a></li>
+              <li><a href="registrasi.php">Pendaftaran Ulang</a></li>
               <li><a href="#">Pengumuman Hasil Seleksi</a></li>
             </ul>
           </li>
