@@ -61,7 +61,7 @@ if (isset($_POST["login"])) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/login.css?= time();?>" />
-    <title>Login | PPDB</title>
+    <title>Login Siswa | PPDB</title>
   </head>
   <body>
     <!----------------------- Main Container -------------------------->
@@ -85,8 +85,8 @@ if (isset($_POST["login"])) {
         <div class="col-md-6 right-box">
           <div class="row align-items-center">
             <div class="header-text mb-4">
-              <h2 align="center"><strong>Dashboard Login|</strong>PPDB 2024</h2>
-              <p align="center">Segera daftarkan putra dan putri anda di SD Negeri 013 Tanjungpinang Barat!</p>
+              <h2 align="center"><strong>Dashboard Login Siswa</strong></h2>
+              <p align="center">Silahkan Gunakan NIK dan Password Anda Untuk Dapat Masuk Kedalam Sistem.</p>
             </div>
             <div class="card-body">
               <form action="#" method="POST" name="login">
@@ -107,9 +107,6 @@ if (isset($_POST["login"])) {
               </div>
               <div class="input-group mb-3">
                 <button class="btn btn-lg btn-primary w-100 fs-6" name="login">Login</button>
-              </div>
-              <div class="row">
-                <small>Belum punya akun? <a href="registrasi.php">Daftar akun</a></small>
               </div>
               </form>
             </div> 

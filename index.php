@@ -17,17 +17,17 @@ if(isset($_POST['send'])){
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'ptravyy@gmail.com'; // Your G-Mail Address
-        $mail->Password = 'cctrenzylubjwpwq'; // Your Gmail Password or App Password
+        $mail->Username = '013sdntanjungpinangbarat@gmail.com'; // Your G-Mail Address
+        $mail->Password = 'abzrczsogizfdwtc'; // Your Gmail Password or App Password
         $mail->Port = 587; // Use 587 for TLS or 465 for SSL
         $mail->SMTPSecure = 'tls'; // Use 'tls' or 'ssl'
         $mail->isHTML(true);
         $mail->setFrom($email, $name);
-        $mail->addAddress('ptravyy@gmail.com');
+        $mail->addAddress('013sdntanjungpinangbarat@gmail.com');
         $mail->Subject = "$email ($subject)";
         $mail->Body = $message;
         $mail->send();
-        header("Location: contact.php?email_sent=1"); // Change 'contact.php' to 'index.php'
+        header("Location: index.php?email_sent=1"); // Change 'contact.php' to 'index.php'
         exit(); // Make sure to exit after header redirection
     } catch (Exception $e) {
         echo "Pesan tidak dapat dikirim!. Mailer Error: {$mail->ErrorInfo}";
@@ -102,7 +102,7 @@ if(isset($_POST['send'])){
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li class="dropdown"><a class="getstarted scrollto">Login<i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="login.php">Siswa</a></li>
+              <li><a href="loginsiswa.php">Siswa</a></li>
               <li><a href="admin_menu/login.php">Admin</a></li>
             </ul>
           </li>
@@ -648,31 +648,32 @@ if(isset($_POST['send'])){
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Nama</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+            <form action="#" method="post" role="form" class="php-email-form">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Nama</label>
+                        <input type="text" name="name" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                <div class="form-group">
+                    <label for="subject">Subjek</label>
+                    <input type="text" class="form-control" name="subject" id="subject" required>
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subjek</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Pesan</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Kirim</button></div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+                </div>
+                <div class="my-3">
+                    <div class="loading">Mengirim Pesan</div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" name="send">Kirim</button>
+                </div>
             </form>
           </div>
 
@@ -692,9 +693,10 @@ if(isset($_POST['send'])){
           <div class="col-lg-6">
             <h4>PENGUMUMAN PPDB 2024</h4>
             <p>Belum Berlangsung, Pantau dan Lihat Informasi Terbaru Kami.</p>
+            <!--
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            </form>/-->
           </div>
         </div>
       </div>
