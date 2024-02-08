@@ -71,7 +71,7 @@ if(isset($_POST['send'])){
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-
+    <img src="assets/img/clients/LOGO SINDIKAT.png" alt="Logo" width="100" height="100">
       <h1 class="logo me-auto"><a href="index.html">SIPUBARAT | 013</a></h1>
 
       <nav id="navbar" class="navbar">
@@ -92,7 +92,7 @@ if(isset($_POST['send'])){
           </li>
           <li class="dropdown"><a href="#"><span>PPDB</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Petunjuk Teknis</a></li>
+              <li><a href="alurpendaftaran.html">Petunjuk Teknis</a></li>
               <li><a href="login.php">Pendaftaran Ulang</a></li>
               <li><a href="#">Pengumuman Hasil Seleksi</a></li>
             </ul>
@@ -564,7 +564,7 @@ if(isset($_POST['send'])){
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="assets/img/clients/ppdb.png" class="testimonial-img flex-shrink-0" alt="">
+                    <img src="assets/img/clients/ppdbnew.png" class="testimonial-img flex-shrink-0" alt="">
                     <div>
                       <h3>PPDB 2024</h3>
                       <h4>Dinas Pendidikan</h4>
