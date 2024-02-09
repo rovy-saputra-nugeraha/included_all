@@ -1,13 +1,13 @@
 <div class="card card-info">
 	<div class="card-header">
 		<h3 class="card-title">
-			<i class="fa fa-table"></i> Data Guru</h3>
+			<i class="fa fa-table"></i> Berita SDN 013 Tanjungpinang Barat</h3>
 	</div>
 	<!-- /.card-header -->
 	<div class="card-body">
 		<div class="table-responsive">
 			<div align="center">
-				<a href="?page=add-guru" class="btn btn-primary">
+				<a href="?page=add-berita" class="btn btn-primary">
 					<i class="fa fa-edit"></i> Tambah Data</a>
 			</div>
 			<br>
@@ -16,11 +16,9 @@
 					<tr class="text-center">
 						<th>No</th>
 						<th>Foto</th>
-						<th>NIP</th>
-						<th>Nama</th>
-						<th>Alamat</th>
-						<th>Status</th>
-						<th>Jenis PTK</th>
+						<th>Judul</th>
+						<th>Mitra</th>
+						<th>Berita</th>
 						<th>Aksi</th>
 					</tr>
 				</thead>
@@ -28,7 +26,7 @@
 
 					<?php
               $no = 1;
-						  $sql = $koneksi->query("SELECT * from data_guru");
+						  $sql = $koneksi->query("SELECT * from berita");
               while ($data= $sql->fetch_assoc()) {
             ?>
 
@@ -37,34 +35,28 @@
 							<?php echo $no++; ?>
 						</td>
 						<td align="center">
-							<img src="foto/guru/<?php echo $data['foto_guru']; ?>" width="70px" />
+							<img src="foto/berita/<?php echo $data['foto_berita']; ?>" width="70px" />
 						</td>
 						<td>
-							<?php echo $data['nip_guru']; ?>
+							<?php echo $data['judul_berita']; ?>
 						</td>
 						<td>
-							<?php echo $data['nama_guru']; ?>
+							<?php echo $data['mitra']; ?>
 						</td>
 						<td>
-							<?php echo $data['alamat_guru']; ?>
-						</td>
-						<td>
-							<?php echo $data['status_kepegawaian']; ?>
-						</td>
-						<td>
-							<?php echo $data['jenis_ptk']; ?>
+							<?php echo $data['penjelasan_berita']; ?>
 						</td>
 
 						<td>
-							<a href="?page=view-guru&kode=<?php echo $data['id_guru']; ?>" title="Detail"
+							<a href="?page=view-berita&kode=<?php echo $data['id_berita']; ?>" title="Detail"
 							 class="btn btn-info btn-sm">
 								<i class="fa fa-eye"></i>
 							</a>
 							</a>
-							<a href="?page=edit-guru&kode=<?php echo $data['id_guru']; ?>" title="Ubah" class="btn btn-success btn-sm">
+							<a href="?page=edit-berita&kode=<?php echo $data['id_berita']; ?>" title="Ubah" class="btn btn-success btn-sm">
 								<i class="fa fa-edit"></i>
 							</a>
-							<a href="?page=del-guru&kode=<?php echo $data['id_guru']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')"
+							<a href="?page=del-berita&kode=<?php echo $data['id_berita']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')"
 							 title="Hapus" class="btn btn-danger btn-sm">
 								<i class="fa fa-trash"></i>
 						</td>

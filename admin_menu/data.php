@@ -132,16 +132,32 @@ while ($data = $sql->fetch_assoc()) {
 								</a>
 							</li>
 
-							<li class="nav-item">
-								<a href="?page=data-guru" class="nav-link">
-									<i class="nav-icon far fa fa-users"></i>
+							<!-- PPDB -->
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
+									<i class="nav-icon far fa fa-info-circle"></i>
 									<p>
-										Data Guru
+										Informasi
+										<i class="right fas fa-angle-left"></i>
 									</p>
 								</a>
+								<ul class="nav nav-treeview" style="font-size: 12px;">
+									<li class="nav-item">
+										<a href="?page=data-guru" class="nav-link">
+											<i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+											<p>Data Guru</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-berita" class="nav-link">
+											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+											<p>Berita</p>
+										</a>
+									</li>
+								</ul>
 							</li>
 
-							<!-- Guru -->
+							<!-- PPDB -->
 							<li class="nav-item has-treeview">
 								<a href="#" class="nav-link">
 									<i class="nav-icon far fa fa-user-graduate"></i>
@@ -320,6 +336,23 @@ while ($data = $sql->fetch_assoc()) {
 								break;
 							case 'view-guru':
 								include "admin/guru/view_guru.php";
+								break;
+
+								//Berita
+							case 'data-berita':
+								include "admin/berita/data_berita.php";
+								break;
+							case 'add-berita':
+								include "admin/berita/add_berita.php";
+								break;
+							case 'edit-berita':
+								include "admin/berita/edit_berita.php";
+								break;
+							case 'del-berita':
+								include "admin/berita/del_berita.php";
+								break;
+							case 'view-berita':
+								include "admin/berita/view_berita.php";
 								break;
 
 								//PPDB

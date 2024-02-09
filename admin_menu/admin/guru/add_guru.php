@@ -81,6 +81,13 @@
 				</div>
 
 				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Jenis PTK</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" id="jenis_ptk" name="jenis_ptk" placeholder="Masukkan Jenis PTK" required>
+					</div>
+				</div>
+
+				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Jurusan/Prodi</label>
 					<div class="col-sm-5">
 						<input type="text" class="form-control" id="jurusan_guru" name="jurusan_guru" placeholder="Masukkan Jurusan Asal" required>
@@ -91,6 +98,13 @@
 					<label class="col-sm-2 col-form-label">Kompetensi</label>
 					<div class="col-sm-5">
 						<input type="text" class="form-control" id="kompetensi_guru" placeholder="Input - jika tidak ada data kompetensi" name="kompetensi_guru" required>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Kata Pengantar</label>
+					<div class="col-sm-10">
+					<textarea class="form-control" name="kata_pengantar" rows="8" autocomplete="off" placeholder="Input - jika tidak ada kata pengantar" required></textarea>
 					</div>
 				</div>
 
@@ -116,11 +130,11 @@
 
 	if (isset($_POST['Simpan'])) {
 		$sumber = @$_FILES['foto_guru']['tmp_name'];
-		$target = 'foto/';
+		$target = 'foto/guru/';
 		$nama_file = @$_FILES['foto_guru']['name'];
 		$pindah = move_uploaded_file($sumber, $target . $nama_file);
 		if (!empty($sumber)) {
-			$sql_simpan = "INSERT INTO data_guru (nip_guru, nama_guru, tempat_lahir_guru, tgl_lahir_guru, alamat_guru, jk_guru, no_hp_guru, status_kepegawaian, jurusan_guru, kompetensi_guru, foto_guru) VALUES (
+			$sql_simpan = "INSERT INTO data_guru (nip_guru, nama_guru, tempat_lahir_guru, tgl_lahir_guru, alamat_guru, jk_guru, no_hp_guru, status_kepegawaian, jenis_ptk, jurusan_guru, kompetensi_guru, kata_pengantar, foto_guru) VALUES (
             '" . $_POST['nip_guru'] . "',
 						'" . $_POST['nama_guru'] . "',
 						'" . $_POST['tempat_lahir_guru'] . "',
@@ -129,8 +143,10 @@
 						'" . $_POST['jk_guru'] . "',
 						'" . $_POST['no_hp_guru'] . "',
 						'" . $_POST['status_kepegawaian'] . "',
+						'" . $_POST['jenis_ptk'] . "',
 						'" . $_POST['jurusan_guru'] . "',
 						'" . $_POST['kompetensi_guru'] . "',
+						'" . $_POST['kata_pengantar'] . "',
             '" . $nama_file . "')";
 			$query_simpan = mysqli_query($koneksi, $sql_simpan);
 			mysqli_close($koneksi);

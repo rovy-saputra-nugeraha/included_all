@@ -85,6 +85,14 @@
 						</tr>
 						<tr>
 							<td style="width: 200px">
+								<b>Jenis PTK</b>
+							</td>
+							<td>:
+								<?php echo $data_cek['jenis_ptk']; ?>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 200px">
 								<b>Jurusan/Prodi</b>
 							</td>
 							<td>:
@@ -97,6 +105,14 @@
 							</td>
 							<td>:
 								<?php echo $data_cek['kompetensi_guru']; ?>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 200px">
+								<b>Kata Pengantar</b>
+							</td>
+							<td>:
+								<?php echo $data_cek['kata_pengantar']; ?>
 							</td>
 						</tr>
 					</tbody>
@@ -125,7 +141,7 @@
 			</div>
 			<div class="card-body">
 				<div class="text-center">
-					<img src="foto/<?php echo $data_cek['foto_guru']; ?>" width="280px" />
+					<img src="foto/guru/<?php echo $data_cek['foto_guru']; ?>" width="280px" />
 				</div>
 
 				<h3 class="profile-username text-center">
