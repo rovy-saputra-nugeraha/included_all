@@ -74,10 +74,10 @@ if (isset($_POST["login"])) {
 
         <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe">
           <div class="featured-image mb-3">
-            <img src="assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
+            <img src="assets/img/clients/logoputih.png" class="img-fluid" style="width: 250px" />
           </div>
-          <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Segera Daftar</p>
-          <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan input berkas yang di perlukan.</small>
+          <h1 class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Selamat Datang</h1>
+          <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan lakukan aktifitas kamu pada sistem ini!</small>
         </div>
 
         <!-------------------- ------ Right Box ---------------------------->

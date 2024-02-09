@@ -711,7 +711,7 @@ if (isset($_POST['send'])) {
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>SIPUBARAT | 013</h3>
+            <h3>SIDIKAT</h3>
             <p>
               Jl. Yos Sudarso No.24, Kp. Baru, Kec. Tanjungpinang Barat, Kota Tanjung Pinang, Kepulauan Riau<br>
               <strong>Telpon:</strong> +62 8214562<br>
