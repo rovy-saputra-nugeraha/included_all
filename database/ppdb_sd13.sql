@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Feb 2024 pada 17.19
+-- Waktu pembuatan: 09 Feb 2024 pada 05.31
 -- Versi server: 10.4.32-MariaDB-log
 -- Versi PHP: 8.1.25
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `ppdb_sd13`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `berita`
+--
+
+CREATE TABLE `berita` (
+  `id_berita` int(11) NOT NULL,
+  `judul_berita` varchar(50) NOT NULL,
+  `mitra` varchar(50) NOT NULL,
+  `penjelasan_berita` varchar(255) NOT NULL,
+  `foto_berita` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `berita`
+--
+
+INSERT INTO `berita` (`id_berita`, `judul_berita`, `mitra`, `penjelasan_berita`, `foto_berita`) VALUES
+(1, 'Kurikulum Merdeka', 'Kementrian Pendidikan', 'Kurikulum Merdeka meberikan keleluasaan kepada pendidik untuk menciptakan pembelajaran berkualitas yang sesuai dengan kebutuhan dan lingkungan belajar peserta didik.', 'Kurikulum.png'),
+(2, 'PPDB 2024', 'Dinas Pendidikan', 'PPDB 2024 belum berlangsung silahkan menunggu dan pantau terus wesite ini, karena update berita akan diberikan melalui berita pada laman ini terimakasih.', 'ppdbnew.png'),
+(3, 'Merdeka Mengajar', 'Kementrian Pendidikan', 'Merdeka Belajar adalah sebuah program yang digagas oleh Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi, Nadiem Anwar Makarim sebagai upaya untuk bebas berpikir dan berekspresi.', 'mengajar.png'),
+(4, 'Pelajar Pancasila', 'Kementrian Pendidikan', 'Pelajar Pancasila merupakan ciri karakter dan kompetensi yang diharapkan untuk diraih oleh peserta didik, yang didasarkan pada nilai-nilai luhur Pancasila.', 'pelajar.png');
 
 -- --------------------------------------------------------
 
@@ -157,11 +181,13 @@ CREATE TABLE `data_guru` (
   `alamat_guru` varchar(50) NOT NULL,
   `no_hp_guru` varchar(15) NOT NULL,
   `status_kepegawaian` enum('Pegawai','PPPK','Honorer') NOT NULL,
+  `jenis_ptk` varchar(100) NOT NULL,
   `tgl_lahir_guru` date NOT NULL,
   `tempat_lahir_guru` varchar(30) NOT NULL,
   `jk_guru` enum('Laki-Laki','Perempuan') NOT NULL,
   `kompetensi_guru` varchar(50) NOT NULL,
   `jurusan_guru` varchar(30) NOT NULL,
+  `kata_pengantar` varchar(255) NOT NULL,
   `foto_guru` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -169,8 +195,9 @@ CREATE TABLE `data_guru` (
 -- Dumping data untuk tabel `data_guru`
 --
 
-INSERT INTO `data_guru` (`id_guru`, `nip_guru`, `nama_guru`, `alamat_guru`, `no_hp_guru`, `status_kepegawaian`, `tgl_lahir_guru`, `tempat_lahir_guru`, `jk_guru`, `kompetensi_guru`, `jurusan_guru`, `foto_guru`) VALUES
-(5, '876548342', 'Hardi Saputri', 'Jalan Dompak', '09857578541', 'Pegawai', '1919-04-30', 'Moco', 'Laki-Laki', 'Guru Casting', 'Teknik Mancing', 'pancing.jpg');
+INSERT INTO `data_guru` (`id_guru`, `nip_guru`, `nama_guru`, `alamat_guru`, `no_hp_guru`, `status_kepegawaian`, `jenis_ptk`, `tgl_lahir_guru`, `tempat_lahir_guru`, `jk_guru`, `kompetensi_guru`, `jurusan_guru`, `kata_pengantar`, `foto_guru`) VALUES
+(6, '123456789', 'Irma Nurcahyani', 'Tanjungpinang', '08767654321', 'Honorer', 'Tenaga Administrasi Sekolah', '1980-07-26', 'Sragen', 'Perempuan', '-', 'Teknik Informatika', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam cum quam quia, magni officiis corporis id eveniet et, hic culpa nemo repudiandae a assumenda nostrum nulla recusandae beatae mollitia quae!', 'guru-perempuan.png'),
+(7, '198908012023211007', 'Alimun Akbar Siregar', 'Tanjungpinang', '09896565413', 'PPPK', 'Guru Mapel', '1989-08-01', 'MORANG', 'Laki-Laki', 'Guru Kelas SD/MI', 'Bahasa Indonesia', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam cum quam quia, magni officiis corporis id eveniet et, hic culpa nemo repudiandae a assumenda nostrum nulla recusandae beatae mollitia quae!', 'guru-laki.png');
 
 -- --------------------------------------------------------
 
@@ -286,6 +313,12 @@ INSERT INTO `tb_profil` (`id_profil`, `nama_profil`, `alamat`, `bidang`) VALUES
 --
 
 --
+-- Indeks untuk tabel `berita`
+--
+ALTER TABLE `berita`
+  ADD PRIMARY KEY (`id_berita`);
+
+--
 -- Indeks untuk tabel `berkas`
 --
 ALTER TABLE `berkas`
@@ -361,6 +394,12 @@ ALTER TABLE `tb_profil`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `berita`
+--
+ALTER TABLE `berita`
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT untuk tabel `berkas`
 --
 ALTER TABLE `berkas`
@@ -394,7 +433,7 @@ ALTER TABLE `countdown_login`
 -- AUTO_INCREMENT untuk tabel `data_guru`
 --
 ALTER TABLE `data_guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `e_learning_login`
