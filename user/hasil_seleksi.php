@@ -5,12 +5,13 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Website Resmi SDN 013 Tanjungpinang Barat</title>
+  <title>Pengumuman Pendaftaran Ulang | PPDB</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
 
   <!-- Favicons -->
-  <link href="../style/img/logo.png" rel="icon" />
+  <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
+  <link href="../assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
   <!--=============== REMIXICONS ===============-->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -28,9 +29,8 @@
   <link href="../style/vendor/aos/aos.css" rel="stylesheet" />
   <link href="../style/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
   <link href="../style/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-  <!-- Template Main CSS File -->
-  <link href="../style/style.css" rel="stylesheet" />
+<!-- Template Main CSS File -->
+<link href="../style/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="../style/assets/css/styles.css">
   <style>
     .pengumuman {
@@ -97,7 +97,7 @@
 <body>
 
   <?php
-  include('../inc/koneksi.php');
+  include('../connect/connection.php');
   ?>
   <!--=============== HEADER ===============-->
   <header class="header">
@@ -111,94 +111,6 @@
           <i class="ri-menu-line nav__burger"></i>
           <i class="ri-close-line nav__close"></i>
         </div>
-      </div>
-
-      <!--=============== NAV MENU ===============-->
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li><a href="/ppdb-sd/index.php" class="nav__link ri-home-5-line">Home</a></li>
-
-          <!--=============== DROPDOWN 1 ===============-->
-          <li class="dropdown__item">
-            <div class="nav__link ri-profile-line">
-              Profil <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-            </div>
-
-            <ul class="dropdown__menu">
-              <li>
-                <a href="/ppdb-sd/index.php" class="dropdown__link">
-                  <i class="ri-pie-chart-line"></i> Visi Misi
-                </a>
-              </li>
-
-              <li>
-                <a href="/ppdb-sd/index.php" class="dropdown__link">
-                  <i class="ri-pushpin-2-line"></i> Tata Tertib
-                </a>
-              </li>
-
-              <!--=============== DROPDOWN SUBMENU ===============-->
-              <li class="dropdown__subitem">
-                <div class="dropdown__link">
-                  <i class="ri-bar-chart-line"></i> Sumberdaya <i class="ri-add-line dropdown__add"></i>
-                </div>
-
-                <ul class="dropdown__submenu">
-                  <li>
-                    <a href="/ppdb-sd/index.php" class="dropdown__sublink">
-                      <i class="ri-user-line"></i> Data Kepala Sekolah
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="/ppdb-sd/index.php" class="dropdown__sublink">
-                      <i class="ri-team-line"></i> Data Guru
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="/ppdb-sd/index.php" class="dropdown__sublink">
-                      <i class="ri-building-2-line"></i> Fasilitas Sekolah
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
-          <!--=============== DROPDOWN 2 ===============-->
-          <li class="dropdown__item">
-            <div class="nav__link ri-school-line">
-              PPDB 2023 <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-            </div>
-
-            <ul class="dropdown__menu">
-              <li>
-                <a href="petunjuk_teknis.php" class="dropdown__link">
-                  <i class="ri-search-eye-line"></i> Petunjuk Teknis
-                </a>
-              </li>
-
-              <li>
-                <a href="/ppdb-sd/src/login_siswa/index.php" class="dropdown__link">
-                  <i class="ri-lock-line"></i> Pendaftaran Ulang
-                </a>
-              </li>
-
-              <li>
-                <a href="hasil_seleksi.php" class="dropdown__link">
-                  <i class="ri-file-search-line"></i> Pengumuman Hasil Seleksi
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li><a href="/ppdb-sd/index.php" class="nav__link ri-article-line">Berita</a></li>
-
-          <li><a href="#footer" class="nav__link ri-information-line">Informasi Resmi</a></li>
-
-          <li><a href="/ppdb-sd/src/admin_menu/login.php" class="nav__link ri-admin-line">Admin Menu</a></li>
-        </ul>
       </div>
     </nav>
   </header>
@@ -245,7 +157,7 @@
       </thead>
       <tbody id="showdata" class="text-center">
         <?php
-        include('../inc/koneksi.php');
+        include('../connect/connection.php');
 
         $sql = "SELECT biodata_siswa.id_siswa, login_siswa.nik, biodata_siswa.nama_siswa, biodata_siswa.jk_siswa, hasil_seleksi.tgl_penerimaan, hasil_seleksi.jalur_penerimaan, hasil_seleksi.status_penerimaan
         FROM biodata_siswa
@@ -253,7 +165,7 @@
         LEFT JOIN hasil_seleksi ON biodata_siswa.id_siswa = hasil_seleksi.id_siswa
         ORDER BY login_siswa.nik ASC";
 
-        $query = mysqli_query($koneksi, $sql);
+        $query = mysqli_query($connect, $sql);
 
         if (mysqli_num_rows($query) > 0) {
           while ($row = mysqli_fetch_assoc($query)) {
@@ -296,80 +208,6 @@
   </div>
   <!-- Pengumuman Hasil Seleksi -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer mt-5">
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div>
-            <h4>ALAMAT</h4>
-            <p>
-              Jl. Yos Sudarso, Tanjungpinang Barat, Kota Tanjungpinang<br />
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Kontak</h4>
-            <p>
-              <strong>Phone:</strong> (0771) 315306<br />
-              <strong>Email:</strong> sdn013_tpibarat@yahoo.co.id<br />
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Kunjungi Sosial Media untuk Informasi Lainnya</h4>
-          <div class="social-links d-flex">
-            <a title="facebook" href="https://www.facebook.com/profile.php?id=100068154853700" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a title="youtube" href="https://youtube.com/@sdn013tanjungpinangbarat2?si=ZXFFSBWgbQRcyJC2" class="youtube"><i class="bi bi-youtube"></i></a>
-            <a title="whats-app" href="#" class="whats-app"><i class="bi bi-whatsapp"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Jam Sekolah</h4>
-            <div>
-              <h6 class="text-white text-uppercase">SISWA</h6>
-              <p>
-                - Senin-Kamis : <br />
-                07.00 AM-14.30 PM
-              </p>
-              <p>
-                - Jumat : <br />
-                07.00 AM-11.00 PM
-              </p>
-              <h6 class="text-white text-uppercase">STAFF</h6>
-              <p>
-                - Senin-Kamis : <br />
-                07.00 AM-15.30 PM
-              </p>
-              <p>
-                - Jumat : <br />
-                07.00 AM-11.00 PM
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by MAMANG UI PROJECT
-      </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
-  <!-- End Footer -->
 
   <!-- Template Javascript -->
   <script src="../style/js/main.js"></script>

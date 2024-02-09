@@ -1,5 +1,5 @@
 <?php
-include('../inc/koneksi.php'); // Sertakan file koneksi database Anda
+include('../connect/connection.php'); // Sertakan file koneksi database Anda
 
 if (isset($_POST['nik'])) {
     $searchTerm = $_POST['nik'];
@@ -12,7 +12,7 @@ if (isset($_POST['nik'])) {
                 WHERE login_siswa.nik LIKE '%$searchTerm%'";
 
 
-    $result = mysqli_query($koneksi, $sql);
+    $result = mysqli_query($connect, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {

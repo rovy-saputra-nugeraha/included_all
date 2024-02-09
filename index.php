@@ -79,7 +79,6 @@ if (isset($_POST['send'])) {
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
-          <li><a class="nav-link scrollto" href="e-learning/index.php">E-Learning</a></li>
           <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a class="nav-link scrollto active" href="#visi">Visi & Misi</a></li>
@@ -98,9 +97,10 @@ if (isset($_POST['send'])) {
             <ul>
               <li><a href="alurpendaftaran.html">Petunjuk Teknis</a></li>
               <li><a href="registrasi.php">Pendaftaran Ulang</a></li>
-              <li><a href="#">Pengumuman Hasil Seleksi</a></li>
+              <li><a href="user/hasil_seleksi.php">Pengumuman Hasil Seleksi</a></li>
             </ul>
           </li>
+          <li><a class="nav-link scrollto" href="e-learning/index.php">E-Learning</a></li>
           <li><a class="nav-link scrollto" href="#mitra">Informasi</a></li>
           <li><a class="nav-link scrollto" href="#berita">Berita</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -759,7 +759,7 @@ if (isset($_POST['send'])) {
         &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
       </div>
       <div class="credits">
-        Designed by <a href="#">PKM-PI24</a>
+        Designed by <a href="#">PKM-PM24</a>
       </div>
     </div>
   </footer><!-- End Footer -->

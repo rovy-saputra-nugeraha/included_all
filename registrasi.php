@@ -193,7 +193,7 @@ if ($status == 'NonAktif') {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Registrasi | PPDB</title>
+            <title>Registrasi | SIDIKAT</title>
             <!-- Favicons -->
             <link href="assets/img/clients/Tutwurihandayani.png" rel="icon">
             <link href="assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
