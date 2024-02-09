@@ -72,8 +72,9 @@ if (isset($_POST['send'])) {
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-      <img src="assets/img/clients/LOGO SINDIKAT.png" alt="Logo" width="100" height="100">
-      <h1 class="logo me-auto"><a href="index.html">SIPUBARAT | 013</a></h1>
+      <div class="logo me-auto">
+        <img src="assets/img/clients/LOGO SINDIKAT.png" alt="Logo" width="200" height="100">
+      </div>
 
       <nav id="navbar" class="navbar">
         <ul>
