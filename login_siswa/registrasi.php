@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php
-include('connect/connection.php');
+include('../connect/connection.php');
 
 if (isset($_POST["register"])) {
   $nama_pendek = $_POST["nama_pendek"];
@@ -36,7 +36,7 @@ if (isset($_POST["register"])) {
         $otp = rand(100000, 999999);
         $_SESSION['otp'] = $otp;
         $_SESSION['mail'] = $email;
-        require "Mail/phpmailer/PHPMailerAutoload.php";
+        require "../Mail/phpmailer/PHPMailerAutoload.php";
         $mail = new PHPMailer;
 
         $mail->isSMTP();
@@ -77,7 +77,7 @@ if (isset($_POST["register"])) {
 
 <?php
 date_default_timezone_set('Asia/Jakarta');
-include('connect/connection.php');
+include('../connect/connection.php');
 
 if (isset($_POST["register"])) {
     $nama_pendek = $_POST["nama_pendek"];
@@ -153,7 +153,7 @@ if (isset($_POST["register"])) {
 ?>
 
 <?php
-include('connect/connection.php');
+include('../connect/connection.php');
 
 // Mengecek status countdown dari database
 $query_countdown = mysqli_query($connect, "SELECT * FROM countdown_login");
@@ -195,11 +195,11 @@ if ($status == 'NonAktif') {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Registrasi | SIDIKAT</title>
             <!-- Favicons -->
-            <link href="assets/img/clients/Tutwurihandayani.png" rel="icon">
-            <link href="assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
+            <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
+            <link href="../assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
 
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-            <link rel="stylesheet" href="assets/css/login.css?= time();?>" />
+            <link rel="stylesheet" href="../assets/css/login.css?= time();?>" />
         </head>
 
         <body>
@@ -212,7 +212,7 @@ if ($status == 'NonAktif') {
 
                     <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe">
                         <div class="featured-image mb-3">
-                            <img src="assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
+                            <img src="../assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
                         </div>
                         <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Segera Daftar</p>
                         <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan input berkas yang di perlukan.</small>

@@ -33,15 +33,11 @@ include "inc/koneksi.php";
 		<div class="card">
 			<div class="card-body login-card-body">
 				<center>
-					<img src="dist/img/logo.png" width=180px />
-					<br>
-					<br>
+					<img src="dist/img/LOGO SINDIKAT.png" width="270px" height="170px"/>
 				</center>
 				<div class="login-logo">
 					<a href="login.php">
-						<font color="black">
-							<h1> SDN 013 Tanjungpinang Barat </h1>
-						</font>
+						<h1><b>Selamat Datang Admin</b></h1>
 					</a>
 				</div>
 				<form action="" method="post">

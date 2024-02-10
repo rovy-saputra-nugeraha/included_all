@@ -1,5 +1,5 @@
 <?php
-include('connect/connection.php');
+include('../connect/connection.php');
 
 if (isset($_POST["login"])) {
     $nik = mysqli_real_escape_string($connect, trim($_POST['nik']));
@@ -56,12 +56,12 @@ if (isset($_POST["login"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicons -->
-    <link href="assets/img/clients/Tutwurihandayani.png" rel="icon">
-    <link href="assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
+    <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
+    <link href="../assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/login.css?= time();?>" />
-    <title>Login Siswa | SIDIKAT</title>
+    <link rel="stylesheet" href="../assets/css/login.css?= time();?>" />
+    <title>Login | SIDIKAT</title>
   </head>
   <body>
     <!----------------------- Main Container -------------------------->
@@ -74,10 +74,10 @@ if (isset($_POST["login"])) {
 
         <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe">
           <div class="featured-image mb-3">
-            <img src="assets/img/clients/logoputih.png" class="img-fluid" style="width: 250px" />
+            <img src="../assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
           </div>
-          <h1 class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Selamat Datang</h1>
-          <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan lakukan aktifitas kamu pada sistem ini!</small>
+          <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Segera Daftar</p>
+          <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan input berkas yang di perlukan.</small>
         </div>
 
         <!-------------------- ------ Right Box ---------------------------->
@@ -85,8 +85,8 @@ if (isset($_POST["login"])) {
         <div class="col-md-6 right-box">
           <div class="row align-items-center">
             <div class="header-text mb-4">
-              <h2 align="center"><strong>Dashboard Login Siswa</strong></h2>
-              <p align="center">Silahkan Gunakan NIK dan Password Anda Untuk Dapat Masuk Kedalam Sistem.</p>
+              <h2 align="center"><strong>Dashboard Login|</strong>PPDB 2024</h2>
+              <p align="center">Segera daftarkan putra dan putri anda di SD Negeri 013 Tanjungpinang Barat!</p>
             </div>
             <div class="card-body">
               <form action="#" method="POST" name="login">
@@ -107,6 +107,9 @@ if (isset($_POST["login"])) {
               </div>
               <div class="input-group mb-3">
                 <button class="btn btn-lg btn-primary w-100 fs-6" name="login">Login</button>
+              </div>
+              <div class="row">
+                <small>Belum punya akun? <a href="registrasi.php">Daftar akun</a></small>
               </div>
               </form>
             </div> 

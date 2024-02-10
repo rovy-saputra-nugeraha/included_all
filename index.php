@@ -96,7 +96,7 @@ if (isset($_POST['send'])) {
           <li class="dropdown"><a href="#"><span>PPDB</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="alurpendaftaran.html">Petunjuk Teknis</a></li>
-              <li><a href="registrasi.php">Pendaftaran Ulang</a></li>
+              <li><a href="login_siswa/registrasi.php">Pendaftaran Ulang</a></li>
               <li><a href="user/hasil_seleksi.php">Pengumuman Hasil Seleksi</a></li>
             </ul>
           </li>
@@ -126,7 +126,7 @@ if (isset($_POST['send'])) {
           <h1>Selamat Datang</h1>
           <h2>Sistem Informasi SD Negeri 013 Tanjungpinang Barat Sekolah Pusat Keunggulan Bidang Seni dan Ekonomi Kreatif</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Informasi</a>
+            <a href="#berita" class="btn-get-started scrollto">Informasi</a>
             <a href="https://www.youtube.com/watch?v=d0809-x7R6g" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Lihat Video</span></a>
           </div>
         </div>
@@ -279,7 +279,7 @@ if (isset($_POST['send'])) {
             </div>
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/clients/tatatertib.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/hero-img.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -434,7 +434,7 @@ if (isset($_POST['send'])) {
           <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
             <div class="portfolio-img"><img src="assets/img/portfolio/perpustakaan.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Perpustakaan/h4>
+              <h4>Perpustakaan</h4>
                 <p>SDN 013 TPIBARAT</p>
                 <a href="assets/img/portfolio/perpustakaan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Perpustakaan"><i class="bx bx-plus"></i></a>
                 <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
@@ -632,7 +632,7 @@ if (isset($_POST['send'])) {
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Lokasi:</h4>
-                <p>Jl. Yos Sudarso No.24, Kp. Baru, Kec. Tanjungpinang Bar., Kota Tanjung Pinang, Kepulauan Riau</p>
+                <p>Jl. Yos Sudarso No.24, Kp. Baru, Kec. Tanjungpinang Barat., Kota Tanjung Pinang, Kepulauan Riau</p>
               </div>
 
               <div class="email">

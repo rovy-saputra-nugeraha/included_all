@@ -1,27 +1,35 @@
-<?php session_start() ?>
-<?php 
-    include('connect/connection.php');
-    if(isset($_POST["verify"])){
-        $otp = $_SESSION['otp'];
-        $email = $_SESSION['mail'];
-        $otp_code = $_POST['otp_code'];
+<?php session_start() ;
+?>
+<?php
+    if(isset($_POST["reset"])){
+        include('../connect/connection.php');
+        $psw = $_POST["password"];
 
-        if($otp != $otp_code){
+        $token = $_SESSION['token'];
+        $Email = $_SESSION['email'];
+
+        $hash = password_hash( $psw , PASSWORD_DEFAULT );
+
+        $sql = mysqli_query($connect, "SELECT * FROM login_siswa WHERE email='$Email'");
+        $query = mysqli_num_rows($sql);
+  	    $fetch = mysqli_fetch_assoc($sql);
+
+        if($Email){
+            $new_pass = $hash;
+            mysqli_query($connect, "UPDATE login_siswa SET password='$new_pass' WHERE email='$Email'");
             ?>
-           <script>
-               alert("Kode OTP Tidak Valid");
-           </script>
-           <?php
+            <script>
+                window.location.replace("login.php");
+                alert("<?php echo "Kata Sandi Anda Telah Berhasil di Ubah"?>");
+            </script>
+            <?php
         }else{
-            mysqli_query($connect, "UPDATE login_siswa SET status = 1 WHERE email = '$email'");
             ?>
-             <script>
-                 alert("Verifikasi Akun Selesai, Anda Dapat Masuk Sekarang");
-                   window.location.replace("login.php");
-             </script>
-             <?php
+            <script>
+                alert("<?php echo "Silakan Coba Lagi"?>");
+            </script>
+            <?php
         }
-
     }
 
 ?>
@@ -32,12 +40,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicons -->
-    <link href="assets/img/clients/Tutwurihandayani.png" rel="icon">
-    <link href="assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
+    <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
+    <link href="../assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/login.css?= time();?>" />
-    <title>OTP | SIDIKAT</title>
+    <link rel="stylesheet" href="../assets/css/login.css?= time();?>" />
+    <title>Password Baru | SIDIKAT</title>
   </head>
   <body>
     <!----------------------- Main Container -------------------------->
@@ -50,7 +58,7 @@
 
         <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe">
           <div class="featured-image mb-3">
-            <img src="assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
+            <img src="../assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
           </div>
           <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Segera Daftar</p>
           <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan input berkas yang di perlukan.</small>
@@ -61,24 +69,23 @@
         <div class="col-md-6 right-box">
           <div class="row align-items-center">
             <div class="header-text mb-4">
-              <h2 align="center"><strong>Dashboard Kode OTP|</strong>PPDB 2024</h2>
+              <h2 align="center"><strong>Dashboard Password Baru|</strong>PPDB 2024</h2>
               <p align="center">Segera daftarkan putra dan putri anda di SD Negeri 013 Tanjungpinang Barat!</p>
             </div>
             <div class="card-body">
-              <form action="#" method="POST">
+              <form action="#" method="POST" name="login">
                 <div class="input-group mb-3">
-                <input type="text" class="form-control form-control-lg bg-light fs-6" name="otp_code" required autofocus  placeholder="Masukkan Kode OTP" />
+                <input type="text" class="form-control form-control-lg bg-light fs-6" name="password" autofocus placeholder="Password Baru" />
                 </div>
                 <div class="input-group mb-5 d-flex justify-content-between"></div>
                 <div class="input-group mb-3">
-                  <button class="btn btn-lg btn-primary w-100 fs-6" name="verify">Kirim</button>
+                  <button class="btn btn-lg btn-primary w-100 fs-6" name="reset">Kirim</button>
                 </div>
-                </div> <div class="row">
-                  <small>Belum punya akun? <a href="registrasi.php">Login</a></small>
+                <div class="row">
+                  <small>Belum punya akun? <a href="registrasi.php">Daftar akun</a></small>
                 </div>
-              </form>
+              </form> 
             </div>
-            
 
           </div>
         </div>

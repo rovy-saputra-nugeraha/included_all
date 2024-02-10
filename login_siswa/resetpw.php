@@ -1,7 +1,7 @@
 <?php session_start() ?>
 <?php 
     if(isset($_POST["recover"])){
-        include('connect/connection.php');
+        include('../connect/connection.php');
         $email = $_POST["email"];
 
         $sql = mysqli_query($connect, "SELECT * FROM login_siswa WHERE email='$email'");
@@ -29,7 +29,7 @@
             $_SESSION['token'] = $token;
             $_SESSION['email'] = $email;
 
-            require "Mail/phpmailer/PHPMailerAutoload.php";
+            require "../Mail/phpmailer/PHPMailerAutoload.php";
             $mail = new PHPMailer;
 
             $mail->isSMTP();
@@ -54,7 +54,7 @@
             $mail->Body="<b>Hai Pengguna PPDB SD Negeri 013 Tanjungpinang Barat</b>
             <h3>Kami menerima permintaan untuk mengatur ulang kata sandi Anda.</h3>
             <p>Silakan klik tautan di bawah ini untuk mengatur ulang kata sandi Anda:</p>
-            http://localhost/included_all/changepass.php
+            http://localhost/included_all/login_siswa/changepass.php
             <br><br>";
 
             if(!$mail->send()){
@@ -80,11 +80,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicons -->
-    <link href="assets/img/clients/Tutwurihandayani.png" rel="icon">
-    <link href="assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
+    <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
+    <link href="../assets/img/clients/Tutwurihandayani.png" rel="apple-touch-icon">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/login.css?= time();?>" />
+    <link rel="stylesheet" href="../assets/css/login.css?= time();?>" />
     <title>Password | SIDIKAT</title>
   </head>
   <body>
@@ -98,7 +98,7 @@
 
         <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe">
           <div class="featured-image mb-3">
-            <img src="assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
+            <img src="../assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
           </div>
           <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Segera Daftar</p>
           <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan input berkas yang di perlukan.</small>

@@ -83,9 +83,8 @@ while ($data = $sql->fetch_assoc()) {
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<!-- Brand Logo -->
 			<a href="data.php" class="brand-link text-center">
-				<div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-					<img src="dist/img/logo.png" alt="AdminLTE Logo" class="brand-image" style="width: 45px;">
-					<span class="brand-text">SDN 013<br>Tanjungpinang Barat</span>
+				<div style="display: flex; flex-direction: column; align-items: center;">
+					<img src="dist/img/LOGO SINDIKAT.png" alt="AdminLTE Logo" class="brand-image" style="height: 50px;">
 				</div>
 			</a>
 
