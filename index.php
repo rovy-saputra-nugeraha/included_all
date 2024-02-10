@@ -103,7 +103,7 @@ if (isset($_POST['send'])) {
           <li><a class="nav-link scrollto" href="e-learning/index.php">E-Learning</a></li>
           <li><a class="nav-link scrollto" href="#mitra">Informasi</a></li>
           <li><a class="nav-link scrollto" href="#berita">Berita</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li class="dropdown"><a class="getstarted scrollto">Login<i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="loginsiswa.php">Siswa</a></li>
@@ -186,16 +186,16 @@ if (isset($_POST['send'])) {
 
         <div class="row content">
           <div class="col-lg-6">
+              <img src="assets/img/clients/Kurikulum.png" class="img-fluid animated" alt="">
+              <img src="assets/img/clients/MB.png" class="img-fluid animated" alt="">
+              <img src="assets/img/clients/mengajar.png" class="img-fluid animated" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
             <div class="section-title">
               <h2>Visi</h2><br>
               Terwujudnya peserta didik yang berakhlak mulia, kreatif, sehat, cerdas, berwawasan dan berprofil pelajar pancasila.
             </div>
-            </p>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
             <div class="section-title">
               <h2>Misi</h2>
             </div>
@@ -210,7 +210,7 @@ if (isset($_POST['send'])) {
               <li><i class="ri-check-double-line"></i> Mengintegrasikan materi lingkungan hidup (LH) dalam mata pelajaran.</li>
               <li><i class="ri-check-double-line"></i> Membiasakan diri ikut kegiatan aksi lingkungan bersih.</li>
               <li><i class="ri-check-double-line"></i> Menjaga kelestarian lingkungan dengan mencegah pencemaran dan kerusakan lingkungan dengan program 7-K (Keamanan, Kebersihan, Keimanan, Keindahan, Ketertiban dan Kekeluargaan).</li>
-              <li><i class="ri-check-double-line"></i> Mebangun lingkungan sekolah yang bertoleransi dalam kebhinekaan golbal, mencintai budaya local dan menjungung nilai gotong royonh.</li>
+              <li><i class="ri-check-double-line"></i> Mebangun lingkungan sekolah yang bertoleransi dalam kebhinekaan golbal, mencintai budaya local dan menjungung nilai gotong royonh.</li>    
             </ul>
           </div>
         </div>
@@ -279,7 +279,7 @@ if (isset($_POST['send'])) {
             </div>
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/clients/tatatertib.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -292,7 +292,7 @@ if (isset($_POST['send'])) {
 
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/clients/sklh.jpg" class="img-fluid" alt="">
+            <img src="assets/img/guru/guru-perempuan.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
             <h3>Kepala Sekolah SD Negeri 013 Tanjungpinang Barat</h3>
@@ -481,8 +481,8 @@ if (isset($_POST['send'])) {
               <div align="center">
                 <img src="assets/img/clients/Tutwurihandayani.png" alt="" style="width: 50%; height: auto;">
               </div><br>
-              <h4>Kementrian pendidikan</h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4 align="center">Kementrian pendidikan</h4>
+            
             </div>
           </div>
 
@@ -491,8 +491,8 @@ if (isset($_POST['send'])) {
               <div align="center"><br>
                 <img src="assets/img/clients/MB.png" alt="" style="width: 50%; height: auto;">
               </div><br>
-              <h4>Merdeka Belajar</h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4 align="center">Merdeka Belajar</h4>
+             
             </div>
           </div>
 
@@ -501,8 +501,8 @@ if (isset($_POST['send'])) {
               <div align="center"><br>
                 <img src="assets/img/clients/mengajar.png" alt="" style="width: 50%; height: auto;">
               </div><br>
-              <h4>Merdeka Mengajar</h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4 align="center">Merdeka Mengajar</h4>
+            
             </div>
           </div>
 
@@ -511,8 +511,8 @@ if (isset($_POST['send'])) {
               <div align="center"><br>
                 <img src="assets/img/clients/Kurikulum.png" alt="" style="width: 50%; height: auto;">
               </div><br>
-              <h4>Kurikulum Merdeka</h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4 align="center">Kurikulum Merdeka</h4>
+             
             </div>
           </div>
 
@@ -621,8 +621,8 @@ if (isset($_POST['send'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Pelayanan Sistem</h2>
+          <p>Jika anda butuh informasi lebih lanjut mengenai Sistem Informasi Digital Akademik SD Negeri 013 Tanjungpinang Barat, Dapat mengirimkan pesan email dengan menggunakan formulir dibawah ini. Atas perhatiannya kami ucapkan Terimaksih.</p>
         </div>
 
         <div class="row">
@@ -652,33 +652,29 @@ if (isset($_POST['send'])) {
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="#" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Nama</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+            <form action="#" method="post" role="form" class="emaill">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">Nama</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                <div class="form-group">
+                  <label for="subject">Subjek</label>
+                  <input type="text" class="form-control" name="subject" id="subject" required>
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subjek</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Pesan</label>
-                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Mengirim Pesan</div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center">
-                <button type="submit" name="send">Kirim</button>
-              </div>
-            </form>
+                <div class="form-group">
+                  <label for="message">Pesan</label>
+                  <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" name="send">Kirim</button>
+                </div>
+              </form>
           </div>
 
         </div>
@@ -695,12 +691,7 @@ if (isset($_POST['send'])) {
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <h4>PENGUMUMAN PPDB 2024</h4>
-            <p>Belum Berlangsung, Pantau dan Lihat Informasi Terbaru Kami.</p>
-            <!--
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>/-->
+            <img src="assets/img/clients/LOGO SINDIKAT.png" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
@@ -733,8 +724,8 @@ if (isset($_POST['send'])) {
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Pengaduan layanan</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Costumer Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Pelayanan Sistem</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Kontak</a></li>
             </ul>
           </div>
 

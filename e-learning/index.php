@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>LOGIN E-LEARNING</title>
+    <title>Login | E-Learnig</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Favicons -->
     <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
@@ -29,7 +29,7 @@
 <body>
     <form action="login.php" method="post">
 
-        <h2>LOGIN</h2>
+        <h2><strong>Masuk E-Learning <br> SD Negeri 013 Tanjungpinang Barat</strong></h2>
 
         <?php if (isset($_GET['error'])) { ?>
             <p class="error"><?php echo $_GET['error']; ?></p>
