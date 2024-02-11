@@ -691,7 +691,7 @@ if (isset($_POST['send'])) {
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <img src="assets/img/clients/LOGO SINDIKAT.png" class="img-fluid animated" alt="">
+            <img src="assets/img/clients/sidikathitam.png" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
