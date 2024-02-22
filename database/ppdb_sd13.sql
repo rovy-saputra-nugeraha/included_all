@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Feb 2024 pada 05.31
+-- Waktu pembuatan: 22 Feb 2024 pada 17.00
 -- Versi server: 10.4.32-MariaDB-log
 -- Versi PHP: 8.1.25
 
@@ -65,7 +65,6 @@ CREATE TABLE `berkas` (
 --
 
 INSERT INTO `berkas` (`id_berkas`, `id_siswa`, `kartu_keluarga`, `akta_lahir`, `pas_foto`, `ktp`) VALUES
-(14, 1, 'kk2.png', 'akta2.jpg', 'foto2.png', 'ktp2.png'),
 (18, 7, 'kk.jpg', 'akta.jpg', 'Rovy Saputra Nugeraha.png', 'ktp.png');
 
 -- --------------------------------------------------------
@@ -91,7 +90,6 @@ CREATE TABLE `biodata_ayah` (
 --
 
 INSERT INTO `biodata_ayah` (`id_ayah`, `id_siswa`, `nama_ayah`, `pekerjaan_ayah`, `alamat_ayah`, `no_hp_ayah`, `tgl_lahir_ayah`, `tempat_lahir_ayah`, `pend_terakhir_ayah`) VALUES
-(1, 1, 'Budi Gunawan Syahrul', 'PNS', 'Jalan Kenangan 2', '089978965431', '1980-10-17', 'Batam', 'S1'),
 (11, 7, 'Prabowo Gibran', 'Presiden RI', 'Jalan dekat markas banteng', '0899789875324', '1945-10-25', 'Jakarta', 'S3');
 
 -- --------------------------------------------------------
@@ -117,7 +115,6 @@ CREATE TABLE `biodata_ibu` (
 --
 
 INSERT INTO `biodata_ibu` (`id_ibu`, `id_siswa`, `nama_ibu`, `pekerjaan_ibu`, `alamat_ibu`, `no_hp_ibu`, `tgl_lahir_ibu`, `tempat_lahir_ibu`, `pend_terakhir_ibu`) VALUES
-(1, 1, 'Siti Nurhasanah', 'PNS', 'Jalan Adem Ayem', '08764564321', '1990-09-15', 'Daik', 'S1'),
 (3, 7, 'Siti Nurhasanah', 'Ibu Rumah Tangga', 'Jalan Cempedak', '08653423143', '1945-04-03', 'Daik', 'S1');
 
 -- --------------------------------------------------------
@@ -146,7 +143,6 @@ CREATE TABLE `biodata_siswa` (
 --
 
 INSERT INTO `biodata_siswa` (`id_siswa`, `id_login_siswa`, `nama_siswa`, `tgl_lahir_siswa`, `tempat_lahir_siswa`, `alamat_siswa`, `nik_siswa`, `jk_siswa`, `agama_siswa`, `anak_ke`, `jumlah_saudara`, `status_keluarga`) VALUES
-(1, 1, 'Wahyudi Yudi Raekhal', '2002-12-13', 'Batam', 'Jl Kenangan', 123456789, 'Laki-Laki', 'Islam', 2, 3, 'Anak Angkat'),
 (7, 5, 'Rovy Saputra Nugeraha', '2002-10-10', 'Daik', 'Jalan Gang Murai', 987654321, 'Laki-Laki', 'Islam', 1, 2, 'Anak Kandung');
 
 -- --------------------------------------------------------
@@ -166,7 +162,7 @@ CREATE TABLE `countdown_login` (
 --
 
 INSERT INTO `countdown_login` (`id_countdown`, `target_datetime`, `status`) VALUES
-(1, '2024-02-07 19:00:00', 'Aktif');
+(1, '2024-02-02 19:00:00', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -202,6 +198,28 @@ INSERT INTO `data_guru` (`id_guru`, `nip_guru`, `nama_guru`, `alamat_guru`, `no_
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `e_learning`
+--
+
+CREATE TABLE `e_learning` (
+  `id_learning` int(11) NOT NULL,
+  `judul_konten` varchar(50) NOT NULL,
+  `link_yt` varchar(100) NOT NULL,
+  `kategori` enum('konten_yt','materi','game') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `e_learning`
+--
+
+INSERT INTO `e_learning` (`id_learning`, `judul_konten`, `link_yt`, `kategori`) VALUES
+(5, 'Makanan Khas Melayu', 'https://wordwall.net/resource/68565169', 'game'),
+(7, 'GURINDAM 12 RAJA ALI HAJI │Pasal 1 s.d Pasal 4', 'https://www.youtube.com/embed/g2BjRfdQfTA', 'konten_yt'),
+(8, 'INI GURINDAM PASAL KELIMA', 'https://www.youtube.com/embed/V8PNqTgc6-s', 'konten_yt');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `e_learning_login`
 --
 
@@ -232,13 +250,6 @@ CREATE TABLE `hasil_seleksi` (
   `status_penerimaan` enum('Sudah di Setujui','Tidak di Setujui') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `hasil_seleksi`
---
-
-INSERT INTO `hasil_seleksi` (`id_seleksi`, `id_siswa`, `tgl_penerimaan`, `jalur_penerimaan`, `status_penerimaan`) VALUES
-(11, 1, '2023-11-06', 'Zonasi', 'Sudah di Setujui');
-
 -- --------------------------------------------------------
 
 --
@@ -259,10 +270,7 @@ CREATE TABLE `login_admin` (
 
 INSERT INTO `login_admin` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `level`) VALUES
 (1, 'Rovy Saputra Nugeraha', 'rovy', 'c4ca4238a0b923820dcc509a6f75849b', 'Administrator'),
-(2, 'Hardi Prayuda', 'hardi', 'c4ca4238a0b923820dcc509a6f75849b', ''),
 (12, 'user', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator'),
-(14, 'sekretaris', 'sekretaris', 'ce1023b227de5c34b98c470cda4699bb', ''),
-(15, 'pegawai', 'pegawai', '047aeeb234644b9e2d4138ed3bc7976a', ''),
 (16, 'Farel Putra Albana', 'farel', '$2y$10$UHb./mfKwyYmCQJf00I/0.TRDIUi79Z.Oz8IVK1.zfSU8MccGy976', 'Administrator');
 
 -- --------------------------------------------------------
@@ -285,7 +293,6 @@ CREATE TABLE `login_siswa` (
 --
 
 INSERT INTO `login_siswa` (`id_login_siswa`, `nik`, `nama_pendek`, `email`, `password`, `status`) VALUES
-(1, '1234567892', 'farel', 'farelptraalbana@gmail.com', '', 1),
 (5, '987654321', 'Rovy', '2101020057@student.umrah.ac.id', '$2y$10$62JI8TUJQyIW6STwkiOHpeZjvayig.wcMN57Y47goxfaT92uE.dXq', 1);
 
 -- --------------------------------------------------------
@@ -357,6 +364,12 @@ ALTER TABLE `countdown_login`
 --
 ALTER TABLE `data_guru`
   ADD PRIMARY KEY (`id_guru`);
+
+--
+-- Indeks untuk tabel `e_learning`
+--
+ALTER TABLE `e_learning`
+  ADD PRIMARY KEY (`id_learning`);
 
 --
 -- Indeks untuk tabel `e_learning_login`
@@ -434,6 +447,12 @@ ALTER TABLE `countdown_login`
 --
 ALTER TABLE `data_guru`
   MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT untuk tabel `e_learning`
+--
+ALTER TABLE `e_learning`
+  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `e_learning_login`
