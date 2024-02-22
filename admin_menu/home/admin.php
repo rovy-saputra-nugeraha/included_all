@@ -65,7 +65,7 @@ while ($data = $sql->fetch_assoc()) {
 <?php
 $sql = $koneksi->query("SELECT count(biodata_siswa.id_siswa) as belum_disetujui from biodata_siswa LEFT JOIN hasil_seleksi ON biodata_siswa.id_siswa = hasil_seleksi.id_siswa WHERE hasil_seleksi.status_penerimaan IS NULL");
 while ($data = $sql->fetch_assoc()) {
-    $belum_disetujui = $data['belum_disetujui'];
+	$belum_disetujui = $data['belum_disetujui'];
 }
 ?>
 
@@ -169,3 +169,4 @@ while ($data = $sql->fetch_assoc()) {
 			</a>
 		</div>
 	</div>
+</div>

@@ -131,7 +131,7 @@ while ($data = $sql->fetch_assoc()) {
 								</a>
 							</li>
 
-							<!-- PPDB -->
+							<!-- Informasi -->
 							<li class="nav-item has-treeview">
 								<a href="#" class="nav-link">
 									<i class="nav-icon far fa fa-info-circle"></i>
@@ -151,6 +151,31 @@ while ($data = $sql->fetch_assoc()) {
 										<a href="?page=data-berita" class="nav-link">
 											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
 											<p>Berita</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+							<!-- E-Learning -->
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
+									<i class="nav-icon far fa fa-info-circle"></i>
+									<p>
+										E-Learning
+										<i class="right fas fa-angle-left"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview" style="font-size: 12px;">
+									<li class="nav-item">
+										<a href="?page=data-muatan-lokal" class="nav-link">
+											<i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+											<p>Muatan Lokal</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-muatan-pengetahuan-umum" class="nav-link">
+											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+											<p>Muatan Pengetahuan Umum</p>
 										</a>
 									</li>
 								</ul>
@@ -369,6 +394,35 @@ while ($data = $sql->fetch_assoc()) {
 								break;
 							case 'data-setting-ppdb':
 								include "admin/ppdb/edit_setting_ppdb.php";
+								break;
+
+								//Muatan Lokal
+							case 'data-muatan-lokal':
+								include "admin/e-learning/muatan-lokal/muatan_lokal.php";
+								break;
+							case 'konten-yt':
+								include "admin/e-learning/muatan-lokal/konten_yt.php";
+								break;
+							case 'add-konten-yt':
+								include "admin/e-learning/muatan-lokal/add_konten_yt.php";
+								break;
+							case 'edit-konten-yt':
+								include "admin/e-learning/muatan-lokal/edit_konten_yt.php";
+								break;
+							case 'del-konten-yt':
+								include "admin/e-learning/muatan-lokal/del_konten_yt.php";
+								break;
+							case 'game-interaktif':
+								include "admin/e-learning/muatan-lokal/game_interaktif.php";
+								break;
+							case 'add-game-interaktif':
+								include "admin/e-learning/muatan-lokal/add_game_interaktif.php";
+								break;
+							case 'edit-game-interaktif':
+								include "admin/e-learning/muatan-lokal/edit_game_interaktif.php";
+								break;
+							case 'del-game-interaktif':
+								include "admin/e-learning/muatan-lokal/del_game_interaktif.php";
 								break;
 
 								//biodata

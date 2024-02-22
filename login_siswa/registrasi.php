@@ -352,7 +352,7 @@ if ($status == 'NonAktif') {
 
         <body>
             <div id="countdown-container">
-                <img src="assets/img/logo.png" alt="Logo" style="width: 100px; height: auto; margin-bottom: 10px;">
+                <img src="../assets/img/clients/ppdbnew.png" alt="Logo" style="width: 100px; height: auto; margin-bottom: 10px;">
                 <p id="countdown">Pendaftaran Ulang PPDB SDN 013 TPI Barat Dibuka Pada</p>
                 <div id="datetime">
                     <div class="time-container">
