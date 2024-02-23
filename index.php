@@ -471,51 +471,48 @@ if (isset($_POST['send'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Mitra</h2>
-          <p>SD Negeri 013 Tanjungpinang Barat memiliki keberuntungan memiliki mitra yang berdedikasi untuk mendukung perkembangan pendidikan anak-anak. Mitra sekolah ini terlibat aktif dalam berbagai kegiatan pembelajaran, mulai dari mendukung fasilitas belajar hingga memberikan kontribusi positif dalam pengembangan kurikulum.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div align="center">
-                <img src="assets/img/clients/Tutwurihandayani.png" alt="" style="width: 50%; height: auto;">
-              </div><br>
-              <h4 align="center">Kementrian pendidikan</h4>
-            
+          <h2>Ekstrakurikuler</h2>
+          <p>SD Negeri 013 Tanjungpinang Barat memiliki beberapa Ekstrakurikuler yang mengajak siswa dan siswinya berpartisipasi dalam kegiatan tersebut. Dengan adanya kegiatan ini dapat membentuk minat dan bakat para siswa/siswi yang di terapkan sejak dini dan menjadi bekal untuk kedepannya</p><br><br>
+          <div class="row">
+            <div class="col-xl-3 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div align="center">
+                  <img src="assets/img/clients/Tutwurihandayani.png" alt="" style="width: 50%; height: auto;">
+                </div><br>
+                <h4 align="center">Karate</h4>
+              
+              </div>
             </div>
-          </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div align="center"><br>
-                <img src="assets/img/clients/MB.png" alt="" style="width: 50%; height: auto;">
-              </div><br>
-              <h4 align="center">Merdeka Belajar</h4>
-             
+            <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div align="center"><br>
+                  <img src="assets/img/clients/MB.png" alt="" style="width: 50%; height: auto;">
+                </div><br>
+                <h4 align="center">Pramuka</h4>
+              
+              </div>
             </div>
-          </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div align="center"><br>
-                <img src="assets/img/clients/mengajar.png" alt="" style="width: 50%; height: auto;">
-              </div><br>
-              <h4 align="center">Merdeka Mengajar</h4>
-            
+            <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+              <div class="icon-box">
+                <div align="center"><br>
+                  <img src="assets/img/clients/mengajar.png" alt="" style="width: 50%; height: auto;">
+                </div><br>
+                <h4 align="center">Menari</h4>
+              </div>
             </div>
-          </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div align="center"><br>
-                <img src="assets/img/clients/Kurikulum.png" alt="" style="width: 50%; height: auto;">
-              </div><br>
-              <h4 align="center">Kurikulum Merdeka</h4>
-             
+            <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+              <div class="icon-box">
+                <div align="center"><br>
+                  <img src="assets/img/clients/mengajar.png" alt="" style="width: 50%; height: auto;">
+                </div><br>
+                <h4 align="center">Paduan Suara</h4>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </section><!-- End Services Section -->

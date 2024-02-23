@@ -161,10 +161,10 @@ mysqli_close($koneksi);
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>SIDIKAT</strong>. All Rights Reserved
+                &copy; Copyright <strong>SDN 013 Tanjungpinang Barat.</strong> All Rights Reserved
             </div>
             <div class="credits">
-                Designed by <a href="#">Mamang UI 2024</a>
+                Designed by <a href="#">PKM-PM24</a>
             </div>
         </div>
     </footer><!-- End Footer -->

@@ -33,7 +33,7 @@ include "inc/koneksi.php";
 		<div class="card">
 			<div class="card-body login-card-body">
 				<center>
-					<img src="dist/img/LOGO SINDIKAT.png" width="270px" height="170px"/>
+					<img src="../assets/img/clients/sidikatbiru.png" width="300px" height="190px"/>
 				</center>
 				<div class="login-logo">
 					<a href="login.php">

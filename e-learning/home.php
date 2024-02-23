@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container d-flex justify-content-between">
 
       <div class="logo">
-        <a href="index.html"><img src="../assets/img/clients/LOGO SINDIKAT.png" alt="" class="img-fluid" width="200" height="100"></a>
+        <a href="index.html"><img src="../assets/img/clients/sidikatbiru.png" alt="" class="img-fluid" width="200" height="100"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h3>E-Learning</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+          <p><Strong>Selamat Datang di Sistem Pembelajaran Elektronik SDN 013 Tanjungpinang</Strong></p>
         </header>
 
         <div class="row row-eq-height justify-content-center">
@@ -133,16 +133,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>NewBiz</strong>. All Rights Reserved
+        &copy; Copyright <strong>SDN 013 Tanjungpinang Barat.</strong> All Rights Reserved
       </div>
       <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-      -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="#">PKM-PM24</a>
       </div>
     </div>
   </footer><!-- End Footer -->

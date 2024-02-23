@@ -127,7 +127,7 @@ while ($data = $sql->fetch_assoc()) {
 				<p>Status Verifikasi Disetujui</p>
 			</div>
 			<div class="icon">
-				<i class="ion ion-pie-graph"></i>
+				<i class="ion ion-ios-checkmark"></i>
 			</div>
 			<a href="?page=data-verifikasi-sudah" class="small-box-footer">Cek Data
 			</a>
@@ -145,7 +145,7 @@ while ($data = $sql->fetch_assoc()) {
 				<p>Status Verifikasi Tidak Disetujui</p>
 			</div>
 			<div class="icon">
-				<i class="ion ion-pie-graph"></i>
+				<i class="ion ion-ios-close"></i>
 			</div>
 			<a href="?page=data-verifikasi-tidak" class="small-box-footer">Cek Data
 			</a>
@@ -163,7 +163,7 @@ while ($data = $sql->fetch_assoc()) {
 				<p>Status Belum di Verifikasi</p>
 			</div>
 			<div class="icon">
-				<i class="ion ion-pie-graph"></i>
+				<i class="ion ion-loop"></i>
 			</div>
 			<a href="?page=data-verifikasi-belum" class="small-box-footer">Cek Data
 			</a>

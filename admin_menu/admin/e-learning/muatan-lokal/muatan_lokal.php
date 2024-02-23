@@ -57,7 +57,7 @@
 	<div class="row">
 		<div class="col-lg-3 col-6">
 			<!-- small box -->
-			<div class="small-box bg-primary">
+			<div class="small-box bg-danger">
 				<div class="inner">
 					<h3>
 						<?php echo $konten_yt;  ?>
@@ -66,7 +66,7 @@
 					<p>Konten YT</p>
 				</div>
 				<div class="icon">
-					<i class="ion ion-person-add"></i>
+					<i class="ion ion-social-youtube"></i>
 				</div>
 				<a href="?page=konten-yt" class="small-box-footer">Selengkapnya
 					<i class="fas fa-arrow-circle-right"></i>
@@ -84,7 +84,7 @@
 					<p>Materi Pembelajaran</p>
 				</div>
 				<div class="icon">
-					<i class="ion ion-person-add"></i>
+					<i class="ion ion-ios-paper"></i>
 				</div>
 				<a href="?page=materi-pembelajaran" class="small-box-footer">Selengkapnya
 					<i class="fas fa-arrow-circle-right"></i>
@@ -103,7 +103,7 @@
 					<p>Game Interaktif</p>
 				</div>
 				<div class="icon">
-					<i class="ion ion-pie-graph"></i>
+					<i class="ion ion-ios-game-controller-b"></i>
 				</div>
 				<a href="?page=game-interaktif" class="small-box-footer">Selengkapnya
 					<i class="fas fa-arrow-circle-right"></i>

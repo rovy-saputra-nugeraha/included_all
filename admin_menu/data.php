@@ -159,7 +159,8 @@ while ($data = $sql->fetch_assoc()) {
 							<!-- E-Learning -->
 							<li class="nav-item has-treeview">
 								<a href="#" class="nav-link">
-									<i class="nav-icon far fa fa-info-circle"></i>
+									<i class="nav-icon fas fa-solid fa-bell"></i>
+				
 									<p>
 										E-Learning
 										<i class="right fas fa-angle-left"></i>
@@ -168,7 +169,7 @@ while ($data = $sql->fetch_assoc()) {
 								<ul class="nav nav-treeview" style="font-size: 12px;">
 									<li class="nav-item">
 										<a href="?page=data-muatan-lokal" class="nav-link">
-											<i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+											<i class="nav-icon fa fa-archive" style="font-size: 12px;"></i>
 											<p>Muatan Lokal</p>
 										</a>
 									</li>
