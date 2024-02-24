@@ -229,29 +229,63 @@ if ($status == 'NonAktif') {
 
                             <div class="card-body">
                                 <form action="#" method="POST" name="register">
+                                    <!-- Username input -->
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control form-control-lg bg-light fs-6" name="nama_pendek" required placeholder="Username" />
                                     </div>
+
+                                    <!-- NIK input -->
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control form-control-lg bg-light fs-6" name="nik" required placeholder="NIK Siswa" />
                                     </div>
+
+                                    <!-- Email input -->
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control form-control-lg bg-light fs-6" name="email" required placeholder="Alamat Email" />
                                     </div>
+
+                                    <!-- Password input with custom eye icon -->
                                     <div class="input-group mb-1">
-                                        <input type="password" class="form-control form-control-lg bg-light fs-6" name="password" required placeholder="Password" />
-                                        <i class="bi bi-eye-slash" id="togglePassword" style="cursor: pointer;"></i>
+                                        <input type="password" class="form-control form-control-lg bg-light fs-6" name="password" id="password" required pattern=".{6,}" title="Password Harus 6 Karakter" placeholder="Password" />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <img src="eye-icon.png" alt="Toggle Password" id="eye-icon" style="width: 20px; height: 30px;">
+                                            </span>
+                                        </div>
                                     </div>
+
+                                    <!-- Other input fields (if any) -->
+
+                                    <!-- Submit button -->
                                     <div class="input-group mb-5 d-flex justify-content-between"></div>
                                     <div class="input-group mb-3">
                                         <button class="btn btn-lg btn-primary w-100 fs-6" name="register">Daftar</button>
                                     </div>
+
+                                    <!-- Login link -->
                                     <div class="row">
                                         <small>Sudah punya akun? <a href="login.php">Login</a></small>
                                     </div>
                                 </form>
-                            </div>
 
+                                <script>
+                                    // JavaScript to toggle password visibility
+                                    const passwordInput = document.getElementById('password');
+                                    const eyeIcon = document.getElementById('eye-icon');
+
+                                    eyeIcon.src = '../assets/eye/close.png'; // Set the default image source
+
+                                    eyeIcon.addEventListener('click', function () {
+                                        if (passwordInput.type === 'password') {
+                                            passwordInput.type = 'text';
+                                            eyeIcon.src = '../assets/eye/open.png'; // Change to closed eye icon image
+                                        } else {
+                                            passwordInput.type = 'password';
+                                            eyeIcon.src = '../assets/eye/close.png'; // Change to open eye icon image
+                                        }
+                                    });
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>

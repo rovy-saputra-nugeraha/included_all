@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container d-flex justify-content-between">
 
       <div class="logo">
-        <a href="index.html"><img src="../assets/img/clients/sidikatbiru.png" alt="" class="img-fluid" width="200" height="100"></a>
+        <a href="home.php"><img src="../assets/img/clients/sidikatbiru.png" alt="" class="img-fluid" width="200" height="100"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h3>E-Learning</h3>
-          <p><Strong>Selamat Datang di Sistem Pembelajaran Elektronik SDN 013 Tanjungpinang</Strong></p>
+          <p><Strong>Selamat Datang di Sistem Pembelajaran Elektronik SDN 013 Tanjungpinang Barat</Strong></p>
         </header>
 
         <div class="row row-eq-height justify-content-center">
@@ -93,9 +93,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="card" data-aos="zoom-in" data-aos-delay="100">
               <i class="bi bi-youtube"></i>
               <div class="card-body">
-                <h5 class="card-title">Konten YT</h5>
-                <p class="card-text">Akses Materi Pembelajaran dalam bentuk Video YT</p>
-                <a href="konten_yt.php" class="readmore">Read more </a>
+                <h5 class="card-title">Konten YouTube</h5>
+                <p class="card-text">Akses Materi Pembelajaran dalam bentuk Video YouTube</p>
+                <a href="konten_yt.php" class="readmore">Lihat</a>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <div class="card-body">
                 <h5 class="card-title">Materi Pembelajaran</h5>
                 <p class="card-text">Akses Materi Pembelajaran dalam bentuk Perpustakaan Digital</p>
-                <a href="#" class="readmore">Read more </a>
+                <a href="#" class="readmore">Lihat</a>
               </div>
             </div>
           </div>
@@ -116,8 +116,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <i class="bi bi-joystick"></i>
               <div class="card-body">
                 <h5 class="card-title">Game Interaktif</h5>
-                <p class="card-text">Autem quod nesciunt eos ea aut amet laboriosam ab. Eos quis porro in non nemo ex. </p>
-                <a href="#" class="readmore">Read more </a>
+                <p class="card-text">Akses Permainan Interaktif untuk Membantu Proses Belajar dan Mengajar</p>
+                <a href="#" class="readmore">Lihat</a>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         &copy; Copyright <strong>SDN 013 Tanjungpinang Barat.</strong> All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="#">PKM-PM24</a>
+        Designed by <a href="home.php">PKM-PM24</a>
       </div>
     </div>
   </footer><!-- End Footer -->

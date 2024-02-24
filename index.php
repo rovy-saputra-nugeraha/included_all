@@ -65,6 +65,7 @@ if (isset($_POST['send'])) {
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css?= time();?>" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -88,7 +89,7 @@ if (isset($_POST['send'])) {
                   <li><a href="#kepsek">Kepala Sekolah</a></li>
                   <li><a href="#tenaga_pendidik">Tenaga Pendidik</a></li>
                   <li><a href="#fasilitas">Fasilitas Sekolah</a></li>
-                  <li><a href="#mitra">Mitra</a></li>
+                  <li><a href="#mitra">Ekstrakurikuler</a></li>
                 </ul>
               </li>
             </ul>
@@ -477,7 +478,7 @@ if (isset($_POST['send'])) {
             <div class="col-xl-3 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon-box">
                 <div align="center">
-                  <img src="assets/img/clients/Tutwurihandayani.png" alt="" style="width: 50%; height: auto;">
+                  <img src="assets/img/portfolio/karate.jpg" alt="" style="width: 50%; height: auto;">
                 </div><br>
                 <h4 align="center">Karate</h4>
               
@@ -487,7 +488,7 @@ if (isset($_POST['send'])) {
             <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon-box">
                 <div align="center"><br>
-                  <img src="assets/img/clients/MB.png" alt="" style="width: 50%; height: auto;">
+                  <img src="assets/img/portfolio/pramuka.png" alt="" style="width: 50%; height: auto;">
                 </div><br>
                 <h4 align="center">Pramuka</h4>
               
@@ -497,7 +498,7 @@ if (isset($_POST['send'])) {
             <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
               <div class="icon-box">
                 <div align="center"><br>
-                  <img src="assets/img/clients/mengajar.png" alt="" style="width: 50%; height: auto;">
+                  <img src="assets/img/portfolio/menari.png" alt="" style="width: 50%; height: auto;">
                 </div><br>
                 <h4 align="center">Menari</h4>
               </div>
@@ -506,7 +507,7 @@ if (isset($_POST['send'])) {
             <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
               <div class="icon-box">
                 <div align="center"><br>
-                  <img src="assets/img/clients/mengajar.png" alt="" style="width: 50%; height: auto;">
+                  <img src="assets/img/portfolio/paduan.png" alt="" style="width: 50%; height: auto;">
                 </div><br>
                 <h4 align="center">Paduan Suara</h4>
               </div>
@@ -518,33 +519,35 @@ if (isset($_POST['send'])) {
     </section><!-- End Services Section -->
 
     <!-- ======= Youtube Section ======= -->
-    <section id="youtube" class="cta">
-      <div class="container" data-aos="zoom-in">
-        <div class="row">
-          <!-- Video Frame 1 -->
-          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="500">
-            <div class="icon-box">
-              <div align="center">
-                <iframe style="border: 5px solid white; border-radius: 10px;" width="100%" height="300" src="https://www.youtube.com/embed/d0809-x7R6g" frameborder="0" allowfullscreen></iframe>
-              </div><br>
-              <h1 style="color: red"><strong>Pendidikan Indonesia</strong></h1>
-              <p>Pendidikan Indonesia mencakup sistem pendidikan nasional yang terdiri dari pendidikan formal, informal, dan nonformal. Terkait Undang-Undang Sistem Pendidikan Nasional (UU No. 20 Tahun 2003), pendidikan di Indonesia dibagi menjadi tiga tingkatan, yaitu dasar, menengah, dan tinggi. Pendidikan dasar dan menengah wajib, sementara perguruan tinggi menyediakan berbagai program studi.</p>
-            </div>
-          </div>
-
-          <!-- Video Frame 2 -->
-          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="600">
-            <div class="icon-box">
-              <div align="center">
-                <iframe style="border: 5px solid white; border-radius: 10px;" width="100%" height="300" src="https://www.youtube.com/embed/d7mb5uhDliM" frameborder="0" allowfullscreen></iframe>
-              </div><br>
-              <h1 style="color:white;"><strong>Merdeka Belajar</strong></h1>
-              <p>Merdeka Belajar, sebagai paradigma pendidikan di Indonesia, memberikan siswa keleluasaan untuk memilih mata pelajaran, metode pembelajaran, dan kegiatan ekstrakurikuler sesuai dengan minat dan bakat mereka. Guru, sebagai fasilitator, mendukung pengembangan keterampilan abad ke-21 seperti berpikir kritis, kreativitas, dan komunikasi.</p>
-            </div>
-          </div>
+<section id="youtube" class="cta">
+  <div class="container" data-aos="zoom-in">
+    <div class="row">
+      <!-- Video Frame 1 -->
+      <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="500">
+        <div class="icon-box video-box">
+          <div class="video-container">
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/d0809-x7R6g" frameborder="0" allowfullscreen></iframe>
+          </div><br>
+          <h1 style="color:aqua" align="center"><strong>Pendidikan Indonesia</strong></h1>
+          <p align="center">Pendidikan Indonesia mencakup sistem pendidikan nasional yang terdiri dari pendidikan formal, informal, dan nonformal. Terkait Undang-Undang Sistem Pendidikan Nasional (UU No. 20 Tahun 2003), pendidikan di Indonesia dibagi menjadi tiga tingkatan, yaitu dasar, menengah, dan tinggi. Pendidikan dasar dan menengah wajib, sementara perguruan tinggi menyediakan berbagai program studi.</p>
         </div>
       </div>
-    </section><!-- End Youtube Section -->
+
+      <!-- Video Frame 2 -->
+      <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="600">
+        <div class="icon-box video-box">
+          <div class="video-container">
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/d7mb5uhDliM" frameborder="0" allowfullscreen></iframe>
+          </div><br>
+          <h1 style="color:aqua" align="center"><strong>Merdeka Belajar</strong></h1>
+          <p align="center">Merdeka Belajar, sebagai paradigma pendidikan di Indonesia, memberikan siswa keleluasaan untuk memilih mata pelajaran, metode pembelajaran, dan kegiatan ekstrakurikuler sesuai dengan minat dan bakat mereka. Guru, sebagai fasilitator, mendukung pengembangan keterampilan abad ke-21 seperti berpikir kritis, kreativitas, dan komunikasi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Youtube Section -->
+
 
     <!-- ======= Berita Section ======= -->
     <section id="berita" class="testimonials">

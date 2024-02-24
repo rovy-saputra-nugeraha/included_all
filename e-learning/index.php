@@ -41,10 +41,10 @@
             </div>
             <div class="col-md-6">
                 <form method="post" class="form-horizontal">
-                    <label class="center-text">SCAN QR CODE HERE</label>
-                    <input type="text" name="qrcode_text" id="text" readonyy="" placeholder="INPUT QR CODE" class="form-control" readonly>
+                    <label class="center-text">SCAN QR CODE</label>
+                    <input type="text" name="qrcode_text" id="text" readonyy="" placeholder="Masukkan Code QR" class="form-control" readonly> <br>
+                    <button align="center"><a href="../index.php">Kembali</a></button>
                 </form>
-
             </div>
         </div>
     </form>
@@ -56,7 +56,7 @@
             if (cameras.length > 0) {
                 scanner.start(cameras[0]);
             } else {
-                alert('No cameras found');
+                alert('Tidak ada kamera yang ditemukan');
             }
 
         }).catch(function(e) {

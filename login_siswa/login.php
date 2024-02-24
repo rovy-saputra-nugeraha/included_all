@@ -93,9 +93,15 @@ if (isset($_POST["login"])) {
               <div class="input-group mb-3">
                 <input type="text" name="nik" required class="form-control form-control-lg bg-light fs-6" placeholder="NIK Siswa" />
               </div>
+              <!-- Password input with custom eye icon -->
               <div class="input-group mb-1">
-                <input type="password" name="password" required class="form-control form-control-lg bg-light fs-6" placeholder="Password" />
-              </div>
+                  <input type="password" class="form-control form-control-lg bg-light fs-6" name="password" id="password" required pattern=".{6,}" title="Password Harus 6 Karakter" placeholder="Password" />
+                    <div class="input-group-append">
+                       <span class="input-group-text">
+                          <img src="eye-icon.png" alt="Toggle Password" id="eye-icon" style="width: 20px; height: 30px;">
+                        </span>
+                     </div>
+                </div>
               <div class="input-group mb-5 d-flex justify-content-between">
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="formCheck" />
@@ -112,6 +118,23 @@ if (isset($_POST["login"])) {
                 <small>Belum punya akun? <a href="registrasi.php">Daftar akun</a></small>
               </div>
               </form>
+              <script>
+                // JavaScript to toggle password visibility
+                const passwordInput = document.getElementById('password');
+                const eyeIcon = document.getElementById('eye-icon');
+
+                eyeIcon.src = '../assets/eye/close.png'; // Set the default image source
+
+                eyeIcon.addEventListener('click', function () {
+                   if (passwordInput.type === 'password') {
+                      passwordInput.type = 'text';
+                      eyeIcon.src = '../assets/eye/open.png'; // Change to closed eye icon image
+                      } else {
+                        passwordInput.type = 'password';
+                        eyeIcon.src = '../assets/eye/close.png'; // Change to open eye icon image
+                      }
+                       });
+              </script>
             </div> 
            
           </div>

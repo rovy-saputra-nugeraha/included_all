@@ -305,7 +305,7 @@ include "inc/koneksi.php";
 					<strong>Sistem Informasi || SDN 013 Tanjungpinang Barat</strong>
 				</a>
 			</div>
-			<b>Project Mamang UI 2023</b>
+			<b>PKM-PM24</b>
 		</footer>
 
 		<!-- Control Sidebar -->

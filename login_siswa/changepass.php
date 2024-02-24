@@ -58,7 +58,7 @@
 
         <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe">
           <div class="featured-image mb-3">
-            <img src="../assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
+            <img src="../assets/img/clients/logoputih.png" class="img-fluid" style="width: 250px" />
           </div>
           <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Segera Daftar</p>
           <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan input berkas yang di perlukan.</small>
@@ -74,17 +74,40 @@
             </div>
             <div class="card-body">
               <form action="#" method="POST" name="login">
-                <div class="input-group mb-3">
-                <input type="text" class="form-control form-control-lg bg-light fs-6" name="password" autofocus placeholder="Password Baru" />
+                <!-- Password input with custom eye icon -->
+              <div class="input-group mb-1">
+                  <input type="password" class="form-control form-control-lg bg-light fs-6" name="password" id="password" required pattern=".{6,}" title="Password Harus 6 Karakter" placeholder="Password" />
+                    <div class="input-group-append">
+                       <span class="input-group-text">
+                          <img src="eye-icon.png" alt="Toggle Password" id="eye-icon" style="width: 20px; height: 30px;">
+                        </span>
+                     </div>
                 </div>
                 <div class="input-group mb-5 d-flex justify-content-between"></div>
                 <div class="input-group mb-3">
                   <button class="btn btn-lg btn-primary w-100 fs-6" name="reset">Kirim</button>
                 </div>
                 <div class="row">
-                  <small>Belum punya akun? <a href="registrasi.php">Daftar akun</a></small>
+                  <small>Sudah punya akun? <a href="login_siswa.php">Login</a></small>
                 </div>
               </form> 
+              <script>
+                // JavaScript to toggle password visibility
+                const passwordInput = document.getElementById('password');
+                const eyeIcon = document.getElementById('eye-icon');
+
+                eyeIcon.src = '../assets/eye/close.png'; // Set the default image source
+
+                eyeIcon.addEventListener('click', function () {
+                   if (passwordInput.type === 'password') {
+                      passwordInput.type = 'text';
+                      eyeIcon.src = '../assets/eye/open.png'; // Change to closed eye icon image
+                      } else {
+                        passwordInput.type = 'password';
+                        eyeIcon.src = '../assets/eye/close.png'; // Change to open eye icon image
+                      }
+                       });
+              </script>
             </div>
 
           </div>

@@ -45,24 +45,29 @@ mysqli_close($koneksi);
     <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?= time();?>" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css?= time();?>" rel="stylesheet">
 
     <style>
         /*--------------------------------------------------------------
     # Cta
     --------------------------------------------------------------*/
         .cta {
-            background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/gedung.png") fixed center center;
+            background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../assets/img/gedung.png") fixed center center;
             background-size: cover;
             padding: 120px 0;
         }
@@ -114,61 +119,80 @@ mysqli_close($koneksi);
         <div class="container d-flex justify-content-between">
 
             <div class="logo">
-                <a href="index.html"><img src="../assets/img/clients/LOGO SINDIKAT.png" alt="" class="img-fluid" width="200" height="100"></a>
+                <a href="konten_yt.php"><img src="../assets/img/clients/sidikatbiru.png" alt="" class="img-fluid" width="150" height="100"></a>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="getstarted scrollto" href="logout.php">Logout</a></li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
+                <i class="bi bi-list mobile-nav-toggle text-dark"></i>
+
             </nav><!-- .navbar -->
 
         </div>
     </header><!-- #header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="clearfix">
-        <div class="container" data-aos="fade-up">
+    <main id="main"><br><br>
+    <!-- ======= Mitra Section ======= -->
+    <section id="mitra" class="services section-bg">
+      <div class="container" data-aos="fade-up">
 
-        </div>
-    </section><!-- End Hero Section -->
+        <div class="section-title">
+          <h2>Konten YouTube</h2>
+          <h5>Materi yang tersedia merupakan materi yang diambil dari berbagai sumber media pembelajaran ayo lihat dan pelajari!</h5>
+    </div>
+      </div>
+    </section><!-- End Services Section -->
 
-    <main id="main">
-
-        <!-- ======= Youtube Section ======= -->
-        <section id="youtube" class="cta">
-            <div class="container" data-aos="zoom-in">
-                <div class="row">
-                    <?php foreach ($videos as $video) : ?>
-                        <!-- Video Frame -->
-                        <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="500">
-                            <div class="icon-box">
-                                <div align="center">
-                                    <iframe style="border: 5px solid white; border-radius: 10px;" width="100%" height="300" src="<?php echo $video['link_yt']; ?>" frameborder="0" allowfullscreen></iframe>
-                                </div><br>
-                                <h1 style="color: red"><strong><?php echo $video['judul_konten']; ?></strong></h1>
-                            </div>
+    <section id="youtube" class="cta">
+    <div class="container" data-aos="zoom-in">
+        <div class="row">
+            <?php foreach ($videos as $video) : ?>
+                <!-- Video Frame -->
+                <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="icon-box" style="margin-bottom: 20px; background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
+                        <div align="center">
+                            <iframe style="border: 3px solid black; border-radius: 5px;" width="100%" height="100%" src="<?php echo $video['link_yt']; ?>" frameborder="0" allowfullscreen></iframe>
                         </div>
-                    <?php endforeach; ?>
+                        <div>
+                        <h2 style="color: coral; font-size: 18px;"><strong><?php echo $video['judul_konten']; ?></strong></h2>
+                        </div>
+                    </div>
+                    
                 </div>
-            </div>
-        </section><!-- End Youtube Section -->
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
 
     </main><!-- End #main -->
 
-    <!-- ======= Footer ======= -->
     <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong>SDN 013 Tanjungpinang Barat.</strong> All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by <a href="#">PKM-PM24</a>
-            </div>
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <img src="../assets/img/clients/sidikathitam.png" class="img-fluid animated" alt="">
+          </div>
         </div>
-    </footer><!-- End Footer -->
+      </div>
+    </div>
 
+    </footer>
+
+   <!-- ======= Footer ======= -->
+    <footer id="footerr">
+
+    <div class="container footer-bottom clearfix">
+        <div class="copyright">
+            &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
+        </div>
+        <div class="creditss">
+            Designed by<a href="#">PKM-PM24</a>
+        </div>
+    </div>
+    </footer><!-- End Footer -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->

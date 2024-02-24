@@ -98,7 +98,7 @@
 
         <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe">
           <div class="featured-image mb-3">
-            <img src="../assets/img/clients/ppdbnew.png" class="img-fluid" style="width: 250px" />
+            <img src="../assets/img/clients/logoputih.png" class="img-fluid" style="width: 250px" />
           </div>
           <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Segera Daftar</p>
           <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace">Masuk dan input berkas yang di perlukan.</small>
@@ -122,7 +122,7 @@
                   <button class="btn btn-lg btn-primary w-100 fs-6" name="recover">Kirim</button>
                 </div>
                 <div class="row">
-                  <small>Belum punya akun? <a href="registrasi.php">Daftar akun</a></small>
+                  <small>Sudah Punya akun? <a href="login_siswa.php">Login</a></small>
                 </div>
             </div>
             
