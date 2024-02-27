@@ -74,7 +74,7 @@ if (isset($_POST['send'])) {
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
       <div class="logo me-auto">
-        <img src="assets/img/clients/LOGO SINDIKAT.png" alt="Logo" width="200" height="100">
+        <img src="assets/img/clients/LOGO SINDIKAT.png" alt="Logo" width="220" height="100">
       </div>
 
       <nav id="navbar" class="navbar">
@@ -232,8 +232,8 @@ if (isset($_POST['send'])) {
             <div class="accordion-list">
               <ul>
                 <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>A.</span> <strong>Bagi Siswa</strong> <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>A.</span> <strong>Bagi Siswa</strong><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                     <ol><i class="ri-check-double-line"></i> 1. Setiap hari kegiatan pagi dimulai pukul 07.00 wib.</ol>
                     <ol><i class="ri-check-double-line"></i> 2. Sepuluh menit sebelum kegiatan dimulai, semuasiswa harus sudah ada di sekolah.</ol>
@@ -254,8 +254,8 @@ if (isset($_POST['send'])) {
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>B.</span> <strong>Bagi Guru</strong><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>B.</span> <strong>Bagi Guru</strong><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                     <ol><i class="ri-check-double-line"></i> 1. Setiap hari pelajaran dimulai pukul 07.30 WIB. </ol>
                     <ol><i class="ri-check-double-line"></i> 2. Lima belas menit sebelum pelajaran dimulai , semua guru harus sudah ada di sekolah.</ol>
@@ -267,8 +267,8 @@ if (isset($_POST['send'])) {
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>C.</span> <strong>Sanksi</strong><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>C.</span> <strong>Sanksi</strong><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       Sekolah dapat memberikan sanksi kepada warga ( siswa / guru ) yang melanggar Tata Tertib ini dengan alternatif sanksi sebagai berikut ini :
                     <ol><i class="ri-check-double-line"></i> 1. Peringatan lisan.</ol>
@@ -390,74 +390,178 @@ if (isset($_POST['send'])) {
           <li data-filter=".filter-luar">Luar Ruangan</li>
         </ul>
 
+        <!--Bagian Luar-->
+
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/kelas.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Ruang Kelas</h4>
-              <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/portfolio/kelas.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Kelas Tampak Luar"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
-            <div class="portfolio-img"><img src="assets/img/portfolio/lapangan.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/sekolah/lapangan2.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Lapangan Upacara</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/portfolio/lapangan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara"><i class="bx bx-plus"></i></a>
+              <a href="assets/img/sekolah/lapangan2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
-            <div class="portfolio-img"><img src="assets/img/portfolio/mushola.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/sekolah/luarmushola.JPG" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Mushola</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/portfolio/mushola.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Mushola"><i class="bx bx-plus"></i></a>
+              <a href="assets/img/sekolah/luarmushola.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Mushola"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/mushola.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Mushola</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/mushola.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Mushola"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
-            <div class="portfolio-img"><img src="assets/img/portfolio/parkiran.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/sekolah/parkiran.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Parkiran Guru dan Staf</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/portfolio/parkiran.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Parkiran Kendaraan"><i class="bx bx-plus"></i></a>
+              <a href="assets/img/sekolah/parkiran.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Parkiran Kendaraan"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/rapat.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Ruang Rapat</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/rapat.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Rapat"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
-            <div class="portfolio-img"><img src="assets/img/portfolio/perpustakaan.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/sekolah/perpustakaan.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Perpustakaan</h4>
                 <p>SDN 013 TPIBARAT</p>
-                <a href="assets/img/portfolio/perpustakaan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Perpustakaan"><i class="bx bx-plus"></i></a>
+                <a href="assets/img/sekolah/perpustakaan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Perpustakaan"><i class="bx bx-plus"></i></a>
                 <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
-            <div class="portfolio-img"><img src="assets/img/portfolio/uks.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/sekolah/uks2.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>UKS</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/portfolio/uks.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Unit Kesehatan Sekolah"><i class="bx bx-plus"></i></a>
+              <a href="assets/img/sekolah/uks2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Unit Kesehatan Sekolah"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
-            <div class="portfolio-img"><img src="assets/img/portfolio/papan-sekolah.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/sekolah/papan.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Papan Sekolah</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/portfolio/papan-sekolah.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Papan Nama Sekolah"><i class="bx bx-plus"></i></a>
+              <a href="assets/img/sekolah/papan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Papan Nama Sekolah"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          
+          <!--Bagian Dalam-->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/kelas.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Ruang Kelas</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/kelas.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Kelas"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/guru.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Ruang Guru</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/guru.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Guru"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/mading.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Majalah Dinding</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/mading.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Majalah Dinding"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/perpustakaan.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Perpustakaan</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/perpustakaan.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Perpustakaan"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/uks.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Unit Kesehatan Siswa</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/uks.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Unit Kesehatan Siswa"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/tu.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Ruang Tata Usaha</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/tu.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Tata Usaha"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
+            <div class="portfolio-img"><img src="assets/img/sekolah/wc.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Toilet Siswa</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/wc.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Toilet Siswa"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
+            <div class="portfolio-img"><img src="assets/img/sekolah/tampakatas.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Ruang Kelas Dari Atas</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/tampakatas.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Kelas Dari Atas"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-luar">
+            <div class="portfolio-img"><img src="assets/img/sekolah/lapangan.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Lapangan Olahraga</h4>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/lapangan.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Olahraga"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
