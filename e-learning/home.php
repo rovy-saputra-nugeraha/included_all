@@ -3,21 +3,21 @@ session_start();
 
 // Jika tidak ada sesi atau sesi sudah tidak aktif
 if (!isset($_SESSION['id']) || !isset($_SESSION['qrcode'])) {
-    header("Location: index.php");
-    exit();
+  header("Location: index.php");
+  exit();
 }
 
 // Melakukan logout
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Hapus semua data sesi
-    session_unset();
+  // Hapus semua data sesi
+  session_unset();
 
-    // Hancurkan sesi
-    session_destroy();
+  // Hancurkan sesi
+  session_destroy();
 
-    // Redirect kembali ke halaman login
-    header("Location: index.php");
-    exit();
+  // Redirect kembali ke halaman login
+  header("Location: index.php");
+  exit();
 }
 ?>
 
@@ -42,7 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
@@ -106,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <div class="card-body">
                 <h5 class="card-title">Materi Pembelajaran</h5>
                 <p class="card-text">Akses Materi Pembelajaran dalam bentuk Perpustakaan Digital</p>
-                <a href="#" class="readmore">Lihat</a>
+                <a href="materi_pembelajaran.php" class="readmore">Lihat</a>
               </div>
             </div>
           </div>
@@ -117,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <div class="card-body">
                 <h5 class="card-title">Game Interaktif</h5>
                 <p class="card-text">Akses Permainan Interaktif untuk Membantu Proses Belajar dan Mengajar</p>
-                <a href="#" class="readmore">Lihat</a>
+                <a href="game_interaktif.php" class="readmore">Lihat</a>
               </div>
             </div>
           </div>
@@ -130,13 +132,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
+  <footer id="footerr">
+
+    <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong>SDN 013 Tanjungpinang Barat.</strong> All Rights Reserved
+        &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
       </div>
-      <div class="credits">
-        Designed by <a href="home.php">PKM-PM24</a>
+      <div class="creditss">
+        Designed by<a href="#">PKM-PM24</a>
       </div>
     </div>
   </footer><!-- End Footer -->

@@ -160,7 +160,7 @@ while ($data = $sql->fetch_assoc()) {
 							<li class="nav-item has-treeview">
 								<a href="#" class="nav-link">
 									<i class="nav-icon fas fa-solid fa-bell"></i>
-				
+
 									<p>
 										E-Learning
 										<i class="right fas fa-angle-left"></i>
@@ -174,7 +174,7 @@ while ($data = $sql->fetch_assoc()) {
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=data-muatan-pengetahuan-umum" class="nav-link">
+										<a href="?page=data-pengetahuan-umum" class="nav-link">
 											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
 											<p>Muatan Pengetahuan Umum</p>
 										</a>
@@ -424,6 +424,23 @@ while ($data = $sql->fetch_assoc()) {
 								break;
 							case 'del-game-interaktif':
 								include "admin/e-learning/muatan-lokal/del_game_interaktif.php";
+								break;
+
+								//Pengetahuan Umum
+							case 'data-pengetahuan-umum':
+								include "admin/e-learning/pengetahuan-umum/pengetahuan_umum.php";
+								break;
+							case 'materi-pembelajaran':
+								include "admin/e-learning/pengetahuan-umum/materi_pembelajaran.php";
+								break;
+							case 'add-materi-pembelajaran':
+								include "admin/e-learning/pengetahuan-umum/add_materi_pembelajaran.php";
+								break;
+							case 'edit-materi-pembelajaran':
+								include "admin/e-learning/pengetahuan-umum/edit_materi_pembelajaran.php";
+								break;
+							case 'del-materi-pembelajaran':
+								include "admin/e-learning/pengetahuan-umum/del_materi_pembelajaran.php";
 								break;
 
 								//biodata

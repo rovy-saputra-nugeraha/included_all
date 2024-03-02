@@ -39,15 +39,6 @@
 	?>
 
 	<?php
-	$sql = $koneksi->query("SELECT count(id_learning) as materi from e_learning where kategori='materi'");
-	while ($data = $sql->fetch_assoc()) {
-	
-		$materi = $data['materi'];
-	}
-	?>
-
-
-	<?php
 	$sql = $koneksi->query("SELECT count(id_learning) as game from e_learning where kategori='game'");
 	while ($data = $sql->fetch_assoc()) {
 	
@@ -69,24 +60,6 @@
 					<i class="ion ion-social-youtube"></i>
 				</div>
 				<a href="?page=konten-yt" class="small-box-footer">Selengkapnya
-					<i class="fas fa-arrow-circle-right"></i>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3 col-6">
-			<!-- small box -->
-			<div class="small-box bg-purple">
-				<div class="inner">
-					<h3>
-						<?php echo $materi;  ?>
-					</h3>
-
-					<p>Materi Pembelajaran</p>
-				</div>
-				<div class="icon">
-					<i class="ion ion-ios-paper"></i>
-				</div>
-				<a href="?page=materi-pembelajaran" class="small-box-footer">Selengkapnya
 					<i class="fas fa-arrow-circle-right"></i>
 				</a>
 			</div>

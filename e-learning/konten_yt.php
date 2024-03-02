@@ -134,64 +134,62 @@ mysqli_close($koneksi);
     </header><!-- #header -->
 
     <main id="main"><br><br>
-    <!-- ======= Mitra Section ======= -->
-    <section id="mitra" class="services section-bg">
-      <div class="container" data-aos="fade-up">
+        <!-- ======= Mitra Section ======= -->
+        <section id="mitra" class="services section-bg">
+            <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Konten YouTube</h2>
-          <h5>Materi yang tersedia merupakan materi yang diambil dari berbagai sumber media pembelajaran ayo lihat dan pelajari!</h5>
-    </div>
-      </div>
-    </section><!-- End Services Section -->
-
-    <section id="youtube" class="cta">
-    <div class="container" data-aos="zoom-in">
-        <div class="row">
-            <?php foreach ($videos as $video) : ?>
-                <!-- Video Frame -->
-                <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="icon-box" style="margin-bottom: 20px; background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
-                        <div align="center">
-                            <iframe style="border: 3px solid black; border-radius: 5px;" width="100%" height="100%" src="<?php echo $video['link_yt']; ?>" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div>
-                        <h2 style="color: coral; font-size: 18px;"><strong><?php echo $video['judul_konten']; ?></strong></h2>
-                        </div>
-                    </div>
-                    
+                <div class="section-title">
+                    <h2>Konten YouTube</h2>
+                    <h5>Materi yang tersedia merupakan materi yang diambil dari berbagai sumber media pembelajaran ayo lihat dan pelajari!</h5>
                 </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
+            </div>
+        </section><!-- End Services Section -->
+
+        <section id="youtube" class="cta">
+            <div class="container" data-aos="zoom-in">
+                <div class="row justify-content-center align-items-center">
+                    <?php foreach ($videos as $video) : ?>
+                        <div class="col-xl-6 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="icon-box" style="margin-bottom: 20px; background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
+                                <div align="center">
+                                    <iframe class="video-frame" style="border: 3px solid black; border-radius: 5px; width: 100%; height: 50vh;" src="<?php echo $video['link_yt']; ?>" frameborder="0" allowfullscreen></iframe>
+                                    <div class="judul_konten mt-3" style="text-align: center;">
+                                        <h2 style="color: coral; font-size: 20px;"><strong><?php echo $video['judul_konten']; ?></strong></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
 
     </main><!-- End #main -->
 
     <footer id="footer">
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <img src="../assets/img/clients/sidikathitam.png" class="img-fluid animated" alt="">
-          </div>
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <img src="../assets/img/clients/sidikathitam.png" class="img-fluid animated" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
     </footer>
 
-   <!-- ======= Footer ======= -->
+    <!-- ======= Footer ======= -->
     <footer id="footerr">
 
-    <div class="container footer-bottom clearfix">
-        <div class="copyright">
-            &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
+            </div>
+            <div class="creditss">
+                Designed by<a href="#">PKM-PM24</a>
+            </div>
         </div>
-        <div class="creditss">
-            Designed by<a href="#">PKM-PM24</a>
-        </div>
-    </div>
     </footer><!-- End Footer -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
