@@ -8,22 +8,21 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-// Melakukan query untuk mengambil data game interaktif
+// Melakukan query untuk mengambil jumlah data materi pembelajaran
+$query_count = "SELECT COUNT(*) as total FROM e_learning WHERE kategori = 'materi'";
+$result_count = mysqli_query($koneksi, $query_count);
+$row_count = mysqli_fetch_assoc($result_count);
+$total_materi = $row_count['total'];
+
+// Melakukan query untuk mengambil data materi pembelajaran
 $query = "SELECT * FROM e_learning WHERE kategori = 'materi'";
 $result = mysqli_query($koneksi, $query);
 
 // Memeriksa apakah query berhasil dieksekusi
-if ($result) {
-    // Menyiapkan array untuk menyimpan data game interaktif
-    $videos = array();
-
-    // Mengambil hasil query dan menyimpannya ke dalam array
-    while ($row = mysqli_fetch_assoc($result)) {
-        $videos[] = $row;
-    }
-} else {
+if (!$result) {
     // Jika query gagal, tampilkan pesan error atau lakukan penanganan yang sesuai
     echo "Gagal mengambil data materi pembelajaran: " . mysqli_error($koneksi);
+    exit();
 }
 
 // Menutup koneksi database
@@ -40,6 +39,8 @@ mysqli_close($koneksi);
     <title>E-LEARNING</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+
+    <link rel="stylesheet" href="fontawesome-free-5/css/all.min.css">
 
     <!-- Favicons -->
     <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
@@ -186,9 +187,8 @@ mysqli_close($koneksi);
         }
 
         .features .icon-box .download i {
-            font-size: 28px;
+            font-size: 15px;
             color: #fff;
-            margin-left: 5px;
             /* Menambah margin agar ikon terpisah dari teks */
         }
 
@@ -292,58 +292,48 @@ mysqli_close($koneksi);
         </div>
     </header><!-- #header -->
 
-    <main id="main"><br><br>
-        <!-- ======= Mitra Section ======= -->
+    <main id="main">
         <section id="mitra" class="services section-bg">
             <div class="container" data-aos="fade-up">
-
                 <div class="section-title">
-                    <h2>Materi Pembelajaran</h2>
+                    <h2 class="mt-4">Materi Pembelajaran</h2>
                     <h5>Materi yang tersedia merupakan materi yang diambil dari berbagai sumber media pembelajaran ayo lihat dan pelajari!</h5>
                 </div>
-            </div>
-        </section><!-- End Services Section -->
-
-        <!-- ======= Features Section ======= -->
-        <section id="features" class="features">
-            <div class="container" data-aos="fade-up">
                 <div class="section-title1 mt-5">
                     <h2>Materi Pembelajaran</h2>
                     <p>Silahkan Lihat Materi Pembelajaran</p>
+                    <h2>Total Materi: <?php echo $total_materi; ?></h2>
                 </div>
-
-                <div class="row">
-                    <?php foreach ($videos as $video) : ?>
-                        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            </div>
+        </section>
+        <!-- Kode section Features di sini -->
+        <section id="features" class="features">
+            <div class="container" data-aos="fade-up">
+                <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+                    <div class="row">
+                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
                             <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
                                 <i class="bx bx-receipt"></i>
-                                <h4>Judul Materi : <?php echo $video['judul_konten']; ?></h4>
-                                <?php if (filter_var($video['link_yt'], FILTER_VALIDATE_URL)) : ?>
-                                    <p>Link Materi : <a href="<?php echo $video['link_yt']; ?>" target="_blank"><?php echo $video['link_yt']; ?></a></p>
-                                <?php endif; ?>
+                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
                                 <div class="date mt-2">
-                                    Link Materi :
-                                    <?php if (filter_var($video['link_yt'], FILTER_VALIDATE_URL)) : ?>
-                                        <!-- Tidak ada teks tanggal di sini -->
+                                    <?php if ($row['link_yt'] != '-') : ?>
+                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
                                     <?php else : ?>
-                                        <i class="bx bx-calendar"><?php echo $video['link_yt']; ?></i>
+                                        Link Materi: <?php echo $row['link_yt']; ?>
                                     <?php endif; ?>
                                 </div>
-                                <div class="download mt-2">
-                                    <a href="<?php echo $video['file']; ?>" download="<?php echo $video['file']; ?>.pdf" class="btn-download-certificate">
-                                        Download Materi Pembelajaran
-                                        <i class="fa fa-download"></i>
+                                <div class="download mt-2 mb-2">
+                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                        <i class="fas fa-download"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
-                </div>
-
+                    </div>
+                <?php endwhile; ?>
             </div>
-        </section><!-- End Features Section -->
-
-    </main><!-- End #main -->
+        </section>
+    </main>
 
     <footer id="footer">
         <div class="footer-newsletter">

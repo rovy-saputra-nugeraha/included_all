@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Feb 2024 pada 17.00
+-- Waktu pembuatan: 02 Mar 2024 pada 17.02
 -- Versi server: 10.4.32-MariaDB-log
 -- Versi PHP: 8.1.25
 
@@ -205,6 +205,7 @@ CREATE TABLE `e_learning` (
   `id_learning` int(11) NOT NULL,
   `judul_konten` varchar(50) NOT NULL,
   `link_yt` varchar(100) NOT NULL,
+  `file` varchar(500) NOT NULL,
   `kategori` enum('konten_yt','materi','game') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -212,10 +213,17 @@ CREATE TABLE `e_learning` (
 -- Dumping data untuk tabel `e_learning`
 --
 
-INSERT INTO `e_learning` (`id_learning`, `judul_konten`, `link_yt`, `kategori`) VALUES
-(5, 'Makanan Khas Melayu', 'https://wordwall.net/resource/68565169', 'game'),
-(7, 'GURINDAM 12 RAJA ALI HAJI │Pasal 1 s.d Pasal 4', 'https://www.youtube.com/embed/g2BjRfdQfTA', 'konten_yt'),
-(8, 'INI GURINDAM PASAL KELIMA', 'https://www.youtube.com/embed/V8PNqTgc6-s', 'konten_yt');
+INSERT INTO `e_learning` (`id_learning`, `judul_konten`, `link_yt`, `file`, `kategori`) VALUES
+(5, 'Makanan Khas Melayu', 'https://wordwall.net/embed/ae6dda6f2ba647b3b57dab1c568dca2f', '', 'game'),
+(7, 'GURINDAM 12 RAJA ALI HAJI │Pasal 1 s.d Pasal 4', 'https://www.youtube.com/embed/g2BjRfdQfTA', '', 'konten_yt'),
+(8, 'INI GURINDAM PASAL KELIMA', 'https://www.youtube.com/embed/V8PNqTgc6-s', '', 'konten_yt'),
+(9, 'INI GURINDAM PASAL KE-12', 'https://www.youtube.com/embed/28DYvldu8N0', '', 'konten_yt'),
+(10, 'INI GURINDAM PASAL KE-11', 'https://www.youtube.com/embed/HrDBqquLhho', '', 'konten_yt'),
+(12, 'Buku MTK Siswa Kelas 9', '-', 'Buku_Siswa_Matematika_Kelas_9_Revisi 2018_kadek.pdf', 'materi'),
+(13, 'Buku Guru MTK kelas 9', 'https://www.kherysuryawan.id/2019/12/materi-pelajaran-matematika-kelas-7.html', 'Buku_Guru _Matematika_SMP_Kelas_9_Revisi_2018.pdf', 'materi'),
+(14, 'Kelas VIII Matematika BS Sem 1', '-', 'Kelas VIII Matematika BS Sem 1.pdf', 'materi'),
+(15, 'Pulau Penyegat', 'https://wordwall.net/embed/f458e34f787044eb82795c3b87c08300', '', 'game'),
+(17, 'Kelas VIII Matematika BS Sem 1', '-', 'Kelas VIII Matematika BS Sem 2.pdf', 'materi');
 
 -- --------------------------------------------------------
 
@@ -293,7 +301,8 @@ CREATE TABLE `login_siswa` (
 --
 
 INSERT INTO `login_siswa` (`id_login_siswa`, `nik`, `nama_pendek`, `email`, `password`, `status`) VALUES
-(5, '987654321', 'Rovy', '2101020057@student.umrah.ac.id', '$2y$10$62JI8TUJQyIW6STwkiOHpeZjvayig.wcMN57Y47goxfaT92uE.dXq', 1);
+(5, '987654321', 'Rovy', '2101020057@student.umrah.ac.id', '$2y$10$62JI8TUJQyIW6STwkiOHpeZjvayig.wcMN57Y47goxfaT92uE.dXq', 1),
+(6, '2101020057', 'Farel', 'farelptraalbana@gmail.com', '$2y$10$iUQF8ricThRSYHrSMiE0vOePbHk6Ny9P/ML5ZStAOTTa9NjVzJ87e', 1);
 
 -- --------------------------------------------------------
 
@@ -452,7 +461,7 @@ ALTER TABLE `data_guru`
 -- AUTO_INCREMENT untuk tabel `e_learning`
 --
 ALTER TABLE `e_learning`
-  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `e_learning_login`
@@ -476,7 +485,7 @@ ALTER TABLE `login_admin`
 -- AUTO_INCREMENT untuk tabel `login_siswa`
 --
 ALTER TABLE `login_siswa`
-  MODIFY `id_login_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_login_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_profil`

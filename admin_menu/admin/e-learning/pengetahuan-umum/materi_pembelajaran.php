@@ -67,7 +67,7 @@
                                     <?php echo $data['link_yt']; ?>
                                 </td>
                                 <td>
-                                    <a href="file_materi/<?php echo $data['file']; ?>.pdf" title="Download File" class="btn btn-success btn-sm" download>
+                                    <a href="file_materi/<?php echo $data['file']; ?>" title="Download File" class="btn btn-success btn-sm" download>
                                         <i class="fa fa-download"></i>
                                     </a>
                                 </td>

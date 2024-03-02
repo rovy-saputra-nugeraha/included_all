@@ -53,59 +53,88 @@ if (isset($_POST['Simpan'])) {
     // Memeriksa apakah file berhasil diunggah
     if ($file_error === 0) {
         // Pindahkan file ke direktori yang ditentukan
-        $file_destination = 'file_materi/' . $file_name;
-        if (move_uploaded_file($file_tmp, $file_destination)) {
-            // Mulai proses simpan data
-            $judul_konten = $_POST['judul_konten'];
-            $link_yt = $_POST['link_yt'];
-            $kategori = $_POST['kategori'];
+        $upload_directory = 'file_materi/';
+        $file_destination = $upload_directory . $file_name;
+        
+        // Memeriksa apakah file dengan nama yang sama sudah ada
+        if (file_exists($file_destination)) {
+            echo "<script>
+                Swal.fire({
+                    title: 'File Sudah Ada',
+                    text: 'Silakan ubah nama file atau unggah file dengan nama yang berbeda.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            </script>";
+        } else {
+            // Jika belum ada file dengan nama yang sama, pindahkan file
+            if (move_uploaded_file($file_tmp, $file_destination)) {
+                // Mulai proses simpan data
+                $judul_konten = $_POST['judul_konten'];
+                $link_yt = $_POST['link_yt'];
+                $kategori = $_POST['kategori'];
 
-            $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, file, kategori) VALUES (
-                '$judul_konten',
-                '$link_yt',
-                '$file_destination',
-                '$kategori'
-            )";
+                $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, file, kategori) VALUES (
+                    '$judul_konten',
+                    '$link_yt',
+                    '$file_name',
+                    '$kategori'
+                )";
 
-            // Melanjutkan dengan kueri SQL
-            $query_simpan = mysqli_query($koneksi, $sql_simpan);
-            mysqli_close($koneksi);
+                // Melanjutkan dengan kueri SQL
+                $query_simpan = mysqli_query($koneksi, $sql_simpan);
+                mysqli_close($koneksi);
 
-            // Menangani kesalahan jika kueri tidak berhasil
-            if ($query_simpan) {
-                echo "<script>
-                    Swal.fire({
-                        title: 'Tambah Data Berhasil',
-                        text: '',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    }).then((result) => {
-                        if (result.value) {
-                            window.location = 'data.php?page=materi-pembelajaran';
-                        }
-                    });
-                </script>";
+                // Menangani kesalahan jika kueri tidak berhasil
+                if ($query_simpan) {
+                    echo "<script>
+                        Swal.fire({
+                            title: 'Tambah Data Berhasil',
+                            text: '',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.value) {
+                                window.location = 'data.php?page=materi-pembelajaran';
+                            }
+                        });
+                    </script>";
+                } else {
+                    echo "<script>
+                        Swal.fire({
+                            title: 'Tambah Data Gagal',
+                            text: '',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.value) {
+                                window.location = 'data.php?page=add-materi-pembelajaran';
+                            }
+                        });
+                    </script>";
+                }
             } else {
+                // Penanganan kesalahan jika file gagal dipindahkan
                 echo "<script>
                     Swal.fire({
-                        title: 'Tambah Data Gagal',
-                        text: '',
+                        title: 'Gagal Mengunggah File',
+                        text: 'Maaf, terjadi kesalahan saat mengunggah file.',
                         icon: 'error',
                         confirmButtonText: 'OK'
-                    }).then((result) => {
-                        if (result.value) {
-                            window.location = 'data.php?page=add-materi-pembelajaran';
-                        }
                     });
                 </script>";
             }
-        } else {
-            // Penanganan kesalahan jika file gagal dipindahkan
-            echo "Maaf, terjadi kesalahan saat mengunggah file.";
         }
     } else {
         // Penanganan kesalahan jika file gagal diunggah
-        echo "Maaf, terjadi kesalahan saat mengunggah file.";
+        echo "<script>
+            Swal.fire({
+                title: 'Gagal Mengunggah File',
+                text: 'Maaf, terjadi kesalahan saat mengunggah file.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        </script>";
     }
 }
 ?>
