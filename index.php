@@ -84,6 +84,7 @@ if (isset($_POST['send'])) {
             <ul>
               <li><a class="nav-link scrollto active" href="#visi">Visi & Misi</a></li>
               <li><a class="nav-link scrollto active" href="#tatib">Tata Tertib</a></li>
+              <li><a class="nav-link scrollto active" href="keluarga.html">Keluarga Besar</a></li>
               <li class="dropdown"><a href="#"><span>Sumber Daya</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#kepsek">Kepala Sekolah</a></li>
