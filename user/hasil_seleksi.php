@@ -23,15 +23,20 @@
   <!-- Tambahkan tag script ini ke dalam bagian <head> file HTML Anda -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
-  <link href="../style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="../style/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="../style/vendor/aos/aos.css" rel="stylesheet" />
-  <link href="../style/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-  <link href="../style/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-<!-- Template Main CSS File -->
-<link href="../style/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../style/assets/css/styles.css">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css?= time();?>" rel="stylesheet">
   <style>
     .pengumuman {
       color: #278194;
@@ -50,47 +55,6 @@
       color: white;
       background-color: blue;
     }
-
-    /* Animasi Tulisan Mengetik */
-    @keyframes typing {
-      from {
-        width: 0;
-      }
-
-      to {
-        width: 100%;
-      }
-    }
-
-    .animated-text1 {
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 3s steps(40) infinite alternate;
-      color: blue;
-    }
-
-    .animated-text1::after {
-      content: "|";
-      display: inline-block;
-      animation: blink 0.7s infinite;
-      color: whitesmoke;
-    }
-
-    @keyframes blink {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-    }
-
-    .kotak {
-      width: 20rem;
-    }
   </style>
 </head>
 
@@ -99,39 +63,75 @@
   <?php
   include('../connect/connection.php');
   ?>
-  <!--=============== HEADER ===============-->
-  <header class="header">
-    <nav class="nav container">
-      <div class="nav__data">
-        <a href="#" class="nav__logo">
-          <img src="../style/assets/navbar_logo.png" alt="navbar_logo">
-        </a>
-
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-menu-line nav__burger"></i>
-          <i class="ri-close-line nav__close"></i>
-        </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+      <div class="logo me-auto">
+        <img src="../assets/img/clients/LOGO SINDIKAT.png" alt="Logo" width="220" height="100">
       </div>
-    </nav>
-  </header>
-  <!-- End Header -->
 
-  <!-- Carousel Start -->
-  <div id="header" class="container-fluid p-0 mb-5">
-    <div id="blog-carousel" class="carousel slide overlay-bottom" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="w-100" src="../style/img/background.png" alt="Image" />
-          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center carousel-caption">
-            <h1 id="animated-text1" class="display-1 text-white m-0 animated-text1 bg-danger">- PENGUMUMAN HASIL SELEKSI -</h1>
-            <h2 class="text-white m-0">Selamat bergabung di SDN 013 Tanjungpinang Barat. Kami berharap anda merasa nyaman dan terinspirasi di sekolah ini.</h2>
-            <a href="#cek-hasil" class="btn btn-kotak mt-3">CEK HASIL SELEKSI</a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../index.php">Beranda</a></li>
+          <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto active" href="../index.php">Visi & Misi</a></li>
+              <li><a class="nav-link scrollto active" href="../index.php">Tata Tertib</a></li>
+              <li><a class="nav-link scrollto active" href="../keluarga.html">Keluarga Besar</a></li>
+              <li class="dropdown"><a href="#"><span>Sumber Daya</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../index.php">Kepala Sekolah</a></li>
+                  <li><a href="../index.php">Tenaga Pendidik</a></li>
+                  <li><a href="../index.php">Fasilitas Sekolah</a></li>
+                  <li><a href="../index.php">Ekstrakurikuler</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>PPDB</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../alurpendaftaran.html">Petunjuk Teknis</a></li>
+              <li><a href="../login_siswa/registrasi.php">Pendaftaran Ulang</a></li>
+              <li><a href="../user/hasil_seleksi.php">Pengumuman Hasil Seleksi</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../e-learning/index.php">E-Learning</a></li>
+          <li><a class="nav-link scrollto" href="../index.php">Informasi</a></li>
+          <li><a class="nav-link scrollto" href="../index.php">Berita</a></li>
+          <li><a class="nav-link scrollto" href="../index.php">Kontak</a></li>
+          <li class="dropdown"><a class="getstarted scrollto">Login<i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../login_siswa/login_siswa.php">Siswa</a></li>
+              <li><a href="../admin_menu/login.php">Admin</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1 class="pengumuman fw-bold">Pengumuman PPDB 2024</h1>
+          <h2>Sistem Informasi SD Negeri 013 Tanjungpinang Barat Sekolah Pusat Keunggulan Bidang Seni dan Ekonomi Kreatif</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#berita" class="btn-get-started scrollto">Informasi</a>
+            <a href="https://www.youtube.com/watch?v=d0809-x7R6g" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Lihat Video</span></a>
           </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="../assets/img/clients/pengumuman.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
-  </div>
-  <!-- Carousel End -->
+
+  </section><!-- End Hero -->
 
   <!-- Pengumuman Hasil Seleksi -->
   <div class="container-fluid mt-4">
@@ -208,7 +208,6 @@
   </div>
   <!-- Pengumuman Hasil Seleksi -->
 
-
   <!-- Template Javascript -->
   <script src="../style/js/main.js"></script>
 
@@ -238,6 +237,21 @@
   <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
   <!--=============== MAIN JS ===============-->
   <script src="../style/assets/js/main.js"></script>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
 
 </body>
 

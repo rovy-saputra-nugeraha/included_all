@@ -10,7 +10,7 @@ if (isset($_GET['kode'])) {
 		<div class="card card-success">
 			<div class="card-header">
 				<h3 class="card-title">
-					<i class="fa fa-edit"></i>Ubah Data Ayah - <span style="color: white;"><?php echo $data_cek['nama_siswa']; ?></span>
+					<i class="fa fa-edit"></i>Ubah Data Verifikasi - <span style="color: white;"><?php echo $data_cek['nama_siswa']; ?></span>
 				</h3>
 			</div>
 			<form action="" method="post" enctype="multipart/form-data">

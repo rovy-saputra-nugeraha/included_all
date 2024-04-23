@@ -107,7 +107,6 @@ if (isset($_GET['kode'])) {
                         </table>
                         <div class="card-footer">
                             <a href="?page=data-siswa" class="btn btn-warning">Kembali</a>
-                            <a href="./report/cetak-siswa.php?id_siswa=<?php echo $data_cek['id_siswa']; ?>" target="_blank" title="Cetak Data Siswa" class="btn btn-primary">Print</a>
                         </div>
                     </div>
                 </div>

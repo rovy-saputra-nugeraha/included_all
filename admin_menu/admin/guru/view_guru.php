@@ -119,9 +119,6 @@
 				</table>
 				<div class="card-footer">
 					<a href="?page=data-guru" class="btn btn-warning">Kembali</a>
-
-					<a href="./report/cetak-pegawai.php?nip_guru=<?php echo $data_cek['nip_guru']; ?>" target=" _blank"
-					 title="Cetak Data Guru" class="btn btn-primary">Print</a>
 				</div>
 			</div>
 		</div>

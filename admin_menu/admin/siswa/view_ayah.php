@@ -79,7 +79,6 @@ if (isset($_GET['kode'])) {
 						</table>
 						<div class="card-footer">
 							<a href="?page=data-siswa" class="btn btn-warning">Kembali</a>
-							<a href="./report/cetak-ayah.php?nip=<?php echo $data_cek['id_ayah']; ?>" target=" _blank" title="Cetak Data Siswa" class="btn btn-primary">Print</a>
 						</div>
 					</div>
 				</div>

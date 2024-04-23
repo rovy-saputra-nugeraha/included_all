@@ -188,9 +188,9 @@ if (isset($_POST['send'])) {
 
         <div class="row content">
           <div class="col-lg-6">
-              <img src="assets/img/clients/Kurikulum.png" class="img-fluid animated" alt="">
-              <img src="assets/img/clients/MB.png" class="img-fluid animated" alt="">
-              <img src="assets/img/clients/mengajar.png" class="img-fluid animated" alt="">
+            <img src="assets/img/clients/Kurikulum.png" class="img-fluid animated" alt="">
+            <img src="assets/img/clients/MB.png" class="img-fluid animated" alt="">
+            <img src="assets/img/clients/mengajar.png" class="img-fluid animated" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
@@ -212,7 +212,7 @@ if (isset($_POST['send'])) {
               <li><i class="ri-check-double-line"></i> Mengintegrasikan materi lingkungan hidup (LH) dalam mata pelajaran.</li>
               <li><i class="ri-check-double-line"></i> Membiasakan diri ikut kegiatan aksi lingkungan bersih.</li>
               <li><i class="ri-check-double-line"></i> Menjaga kelestarian lingkungan dengan mencegah pencemaran dan kerusakan lingkungan dengan program 7-K (Keamanan, Kebersihan, Keimanan, Keindahan, Ketertiban dan Kekeluargaan).</li>
-              <li><i class="ri-check-double-line"></i> Mebangun lingkungan sekolah yang bertoleransi dalam kebhinekaan golbal, mencintai budaya local dan menjungung nilai gotong royonh.</li>    
+              <li><i class="ri-check-double-line"></i> Mebangun lingkungan sekolah yang bertoleransi dalam kebhinekaan golbal, mencintai budaya local dan menjungung nilai gotong royonh.</li>
             </ul>
           </div>
         </div>
@@ -233,7 +233,7 @@ if (isset($_POST['send'])) {
             <div class="accordion-list">
               <ul>
                 <li>
-                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>A.</span> <strong>Bagi Siswa</strong><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>A.</span> <strong>Bagi Siswa</strong><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                     <ol><i class="ri-check-double-line"></i> 1. Setiap hari kegiatan pagi dimulai pukul 07.00 wib.</ol>
@@ -400,8 +400,7 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Lapangan Upacara</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/lapangan2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/lapangan2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara"><i class="bx bx-camera"></i></a>
             </div>
           </div>
 
@@ -410,8 +409,7 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Mushola</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/luarmushola.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Mushola"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/luarmushola.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Mushola"><i class="bx  bx-camera"></i></a>
             </div>
           </div>
 
@@ -420,8 +418,7 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Mushola</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/mushola.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Mushola"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/mushola.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Mushola"><i class="bx  bx-camera"></i></a>
             </div>
           </div>
 
@@ -430,8 +427,7 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Parkiran Guru dan Staf</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/parkiran.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Parkiran Kendaraan"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/parkiran.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Parkiran Kendaraan"><i class="bx  bx-camera"></i></a>
             </div>
           </div>
 
@@ -440,8 +436,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Ruang Rapat</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/rapat.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Rapat"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/rapat.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Rapat"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -449,9 +445,9 @@ if (isset($_POST['send'])) {
             <div class="portfolio-img"><img src="assets/img/sekolah/perpustakaan.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Perpustakaan</h4>
-                <p>SDN 013 TPIBARAT</p>
-                <a href="assets/img/sekolah/perpustakaan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Perpustakaan"><i class="bx bx-plus"></i></a>
-                <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <p>SDN 013 TPIBARAT</p>
+              <a href="assets/img/sekolah/perpustakaan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Perpustakaan"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -460,8 +456,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>UKS</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/uks2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Unit Kesehatan Sekolah"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/uks2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Unit Kesehatan Sekolah"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -470,11 +466,11 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Papan Sekolah</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/papan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Papan Nama Sekolah"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/papan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Papan Nama Sekolah"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
-          
+
           <!--Bagian Dalam-->
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-dalam">
@@ -482,8 +478,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Ruang Kelas</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/kelas.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Kelas"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/kelas.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Kelas"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -492,8 +488,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Ruang Guru</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/guru.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Guru"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/guru.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Guru"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -502,8 +498,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Majalah Dinding</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/mading.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Majalah Dinding"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/mading.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Majalah Dinding"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -512,8 +508,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Perpustakaan</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/perpustakaan.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Perpustakaan"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/perpustakaan.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Perpustakaan"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -522,8 +518,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Unit Kesehatan Siswa</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/uks.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Unit Kesehatan Siswa"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/uks.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Unit Kesehatan Siswa"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -532,8 +528,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Ruang Tata Usaha</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/tu.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Tata Usaha"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/tu.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Tata Usaha"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -542,8 +538,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Toilet Siswa</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/wc.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Toilet Siswa"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/wc.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Toilet Siswa"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -552,8 +548,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Ruang Kelas Dari Atas</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/tampakatas.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Kelas Dari Atas"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/tampakatas.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ruang Kelas Dari Atas"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -562,8 +558,8 @@ if (isset($_POST['send'])) {
             <div class="portfolio-info">
               <h4>Lapangan Olahraga</h4>
               <p>SDN 013 TPIBARAT</p>
-              <a href="assets/img/sekolah/lapangan.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Olahraga"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/sekolah/lapangan.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Olahraga"><i class="bx  bx-camera"></i></a>
+
             </div>
           </div>
 
@@ -586,7 +582,7 @@ if (isset($_POST['send'])) {
                   <img src="assets/img/portfolio/karate.jpg" alt="" style="width: 50%; height: auto;">
                 </div><br>
                 <h4 align="center">Karate</h4>
-              
+
               </div>
             </div>
 
@@ -596,7 +592,7 @@ if (isset($_POST['send'])) {
                   <img src="assets/img/portfolio/pramuka.png" alt="" style="width: 50%; height: auto;">
                 </div><br>
                 <h4 align="center">Pramuka</h4>
-              
+
               </div>
             </div>
 
@@ -624,34 +620,34 @@ if (isset($_POST['send'])) {
     </section><!-- End Services Section -->
 
     <!-- ======= Youtube Section ======= -->
-<section id="youtube" class="cta">
-  <div class="container" data-aos="zoom-in">
-    <div class="row">
-      <!-- Video Frame 1 -->
-      <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="500">
-        <div class="icon-box video-box">
-          <div class="video-container">
-            <iframe width="100%" height="300" src="https://www.youtube.com/embed/d0809-x7R6g" frameborder="0" allowfullscreen></iframe>
-          </div><br>
-          <h1 style="color:aqua" align="center"><strong>Pendidikan Indonesia</strong></h1>
-          <p align="center">Pendidikan Indonesia mencakup sistem pendidikan nasional yang terdiri dari pendidikan formal, informal, dan nonformal. Terkait Undang-Undang Sistem Pendidikan Nasional (UU No. 20 Tahun 2003), pendidikan di Indonesia dibagi menjadi tiga tingkatan, yaitu dasar, menengah, dan tinggi. Pendidikan dasar dan menengah wajib, sementara perguruan tinggi menyediakan berbagai program studi.</p>
-        </div>
-      </div>
+    <section id="youtube" class="cta">
+      <div class="container" data-aos="zoom-in">
+        <div class="row">
+          <!-- Video Frame 1 -->
+          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="500">
+            <div class="icon-box video-box">
+              <div class="video-container">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/d0809-x7R6g" frameborder="0" allowfullscreen></iframe>
+              </div><br>
+              <h1 style="color:aqua" align="center"><strong>Pendidikan Indonesia</strong></h1>
+              <p align="center">Pendidikan Indonesia mencakup sistem pendidikan nasional yang terdiri dari pendidikan formal, informal, dan nonformal. Terkait Undang-Undang Sistem Pendidikan Nasional (UU No. 20 Tahun 2003), pendidikan di Indonesia dibagi menjadi tiga tingkatan, yaitu dasar, menengah, dan tinggi. Pendidikan dasar dan menengah wajib, sementara perguruan tinggi menyediakan berbagai program studi.</p>
+            </div>
+          </div>
 
-      <!-- Video Frame 2 -->
-      <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="600">
-        <div class="icon-box video-box">
-          <div class="video-container">
-            <iframe width="100%" height="300" src="https://www.youtube.com/embed/d7mb5uhDliM" frameborder="0" allowfullscreen></iframe>
-          </div><br>
-          <h1 style="color:aqua" align="center"><strong>Merdeka Belajar</strong></h1>
-          <p align="center">Merdeka Belajar, sebagai paradigma pendidikan di Indonesia, memberikan siswa keleluasaan untuk memilih mata pelajaran, metode pembelajaran, dan kegiatan ekstrakurikuler sesuai dengan minat dan bakat mereka. Guru, sebagai fasilitator, mendukung pengembangan keterampilan abad ke-21 seperti berpikir kritis, kreativitas, dan komunikasi.</p>
+          <!-- Video Frame 2 -->
+          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-in" data-aos-delay="600">
+            <div class="icon-box video-box">
+              <div class="video-container">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/d7mb5uhDliM" frameborder="0" allowfullscreen></iframe>
+              </div><br>
+              <h1 style="color:aqua" align="center"><strong>Merdeka Belajar</strong></h1>
+              <p align="center">Merdeka Belajar, sebagai paradigma pendidikan di Indonesia, memberikan siswa keleluasaan untuk memilih mata pelajaran, metode pembelajaran, dan kegiatan ekstrakurikuler sesuai dengan minat dan bakat mereka. Guru, sebagai fasilitator, mendukung pengembangan keterampilan abad ke-21 seperti berpikir kritis, kreativitas, dan komunikasi.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End Youtube Section -->
+    </section>
+    <!-- End Youtube Section -->
 
 
     <!-- ======= Berita Section ======= -->
@@ -758,28 +754,28 @@ if (isset($_POST['send'])) {
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form action="#" method="post" role="form" class="emaill">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Nama</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
-                  </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Nama</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
                 </div>
-                <div class="form-group">
-                  <label for="subject">Subjek</label>
-                  <input type="text" class="form-control" name="subject" id="subject" required>
+                <div class="form-group col-md-6">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
                 </div>
-                <div class="form-group">
-                  <label for="message">Pesan</label>
-                  <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
-                </div>
-                <div class="text-center">
-                  <button type="submit" name="send">Kirim</button>
-                </div>
-              </form>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subjek</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" name="send">Kirim</button>
+              </div>
+            </form>
           </div>
 
         </div>
