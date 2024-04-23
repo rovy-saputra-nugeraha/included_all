@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Mar 2024 pada 17.02
+-- Waktu pembuatan: 23 Apr 2024 pada 15.48
 -- Versi server: 10.4.32-MariaDB-log
 -- Versi PHP: 8.1.25
 
@@ -258,6 +258,13 @@ CREATE TABLE `hasil_seleksi` (
   `status_penerimaan` enum('Sudah di Setujui','Tidak di Setujui') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `hasil_seleksi`
+--
+
+INSERT INTO `hasil_seleksi` (`id_seleksi`, `id_siswa`, `tgl_penerimaan`, `jalur_penerimaan`, `status_penerimaan`) VALUES
+(12, 7, '2024-04-21', 'Zonasi', 'Sudah di Setujui');
+
 -- --------------------------------------------------------
 
 --
@@ -473,7 +480,7 @@ ALTER TABLE `e_learning_login`
 -- AUTO_INCREMENT untuk tabel `hasil_seleksi`
 --
 ALTER TABLE `hasil_seleksi`
-  MODIFY `id_seleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_seleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `login_admin`
