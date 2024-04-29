@@ -84,7 +84,7 @@ if (isset($_POST['send'])) {
             <ul>
               <li><a class="nav-link scrollto active" href="#visi">Visi & Misi</a></li>
               <li><a class="nav-link scrollto active" href="#tatib">Tata Tertib</a></li>
-              <li><a class="nav-link scrollto active" href="keluarga.html">Keluarga Besar</a></li>
+              <li><a class="nav-link scrollto active" href="keluarga.php">Keluarga Besar</a></li>
               <li class="dropdown"><a href="#"><span>Sumber Daya</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#kepsek">Kepala Sekolah</a></li>
@@ -382,7 +382,7 @@ if (isset($_POST['send'])) {
 
         <div class="section-title">
           <h2>Fasilitas</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Berikut merupakan fasilitas yang disediakan oleh SDN 013 Tanjungpinang Barat untuk menunjang proses belajar dan mengajar.</p>
         </div>
 
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
