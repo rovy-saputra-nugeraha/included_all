@@ -8,22 +8,40 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-// Melakukan query untuk mengambil data konten YouTube
-$query = "SELECT * FROM e_learning WHERE kategori = 'konten_yt'";
-$result = mysqli_query($koneksi, $query);
+// Melakukan query untuk mengambil data konten yt Muatan Lokal
+$query_muatan_lokal = "SELECT * FROM e_learning WHERE kategori = 'konten_yt' AND jenis = 'muatan_lokal'";
+$result_muatan_lokal = mysqli_query($koneksi, $query_muatan_lokal);
 
 // Memeriksa apakah query berhasil dieksekusi
-if ($result) {
-    // Menyiapkan array untuk menyimpan data konten YouTube
-    $videos = array();
+if (!$result_muatan_lokal) {
+    // Jika query gagal, tampilkan pesan error atau lakukan penanganan yang sesuai
+    echo "Gagal mengambil data konten yt Muatan Lokal: " . mysqli_error($koneksi);
+} else {
+    // Menyiapkan array untuk menyimpan data konten yt Muatan Lokal
+    $videos_muatan_lokal = array();
 
     // Mengambil hasil query dan menyimpannya ke dalam array
-    while ($row = mysqli_fetch_assoc($result)) {
-        $videos[] = $row;
+    while ($row = mysqli_fetch_assoc($result_muatan_lokal)) {
+        $videos_muatan_lokal[] = $row;
     }
-} else {
+}
+
+// Melakukan query untuk mengambil data konten yt Muatan Pengetahuan Umum
+$query_muatan_umum = "SELECT * FROM e_learning WHERE kategori = 'konten_yt' AND jenis = 'muatan_umum'";
+$result_muatan_umum = mysqli_query($koneksi, $query_muatan_umum);
+
+// Memeriksa apakah query berhasil dieksekusi
+if (!$result_muatan_umum) {
     // Jika query gagal, tampilkan pesan error atau lakukan penanganan yang sesuai
-    echo "Gagal mengambil data konten YouTube: " . mysqli_error($koneksi);
+    echo "Gagal mengambil data konten yt Muatan Pengetahuan Umum: " . mysqli_error($koneksi);
+} else {
+    // Menyiapkan array untuk menyimpan data konten yt Muatan Pengetahuan Umum
+    $videos_muatan_umum = array();
+
+    // Mengambil hasil query dan menyimpannya ke dalam array
+    while ($row = mysqli_fetch_assoc($result_muatan_umum)) {
+        $videos_muatan_umum[] = $row;
+    }
 }
 
 // Menutup koneksi database
@@ -62,54 +80,6 @@ mysqli_close($koneksi);
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css?= time();?>" rel="stylesheet">
 
-    <style>
-        /*--------------------------------------------------------------
-    # Cta
-    --------------------------------------------------------------*/
-        .cta {
-            background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../assets/img/gedung.png") fixed center center;
-            background-size: cover;
-            padding: 120px 0;
-        }
-
-        .cta h3 {
-            color: #fff;
-            font-size: 28px;
-            font-weight: 700;
-        }
-
-        .cta p {
-            color: #fff;
-        }
-
-        .cta .cta-btn {
-            font-family: "Jost", sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            letter-spacing: 1px;
-            display: inline-block;
-            padding: 12px 40px;
-            border-radius: 50px;
-            transition: 0.5s;
-            margin: 10px;
-            border: 2px solid #fff;
-            color: #fff;
-        }
-
-        .cta .cta-btn:hover {
-            background: #47b2e4;
-            border: 2px solid #47b2e4;
-        }
-
-        @media (min-width: 769px) {
-            .cta .cta-btn-container {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-            }
-        }
-    </style>
-
 </head>
 
 <body>
@@ -142,27 +112,68 @@ mysqli_close($koneksi);
                     <h2>Konten YouTube</h2>
                     <h5>Materi yang tersedia merupakan materi yang diambil dari berbagai sumber media pembelajaran ayo lihat dan pelajari!</h5>
                 </div>
-            </div>
-        </section><!-- End Services Section -->
-
-        <section id="youtube" class="cta">
-            <div class="container" data-aos="zoom-in">
-                <div class="row justify-content-center align-items-center">
-                    <?php foreach ($videos as $video) : ?>
-                        <div class="col-xl-6 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
-                            <div class="icon-box" style="margin-bottom: 20px; background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
-                                <div align="center">
-                                    <iframe class="video-frame" style="border: 3px solid black; border-radius: 5px; width: 100%; height: 50vh;" src="<?php echo $video['link_yt']; ?>" frameborder="0" allowfullscreen></iframe>
-                                    <div class="judul_konten mt-3" style="text-align: center;">
-                                        <h2 style="color: coral; font-size: 20px;"><strong><?php echo $video['judul_konten']; ?></strong></h2>
+                <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="muatan-lokal-tab" data-bs-toggle="tab" data-bs-target="#muatan-lokal" type="button" role="tab" aria-controls="muatan-lokal" aria-selected="true">Muatan Lokal</button>
+                        <br>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="muatan-umum-tab" data-bs-toggle="tab" data-bs-target="#muatan-umum" type="button" role="tab" aria-controls="muatan-umum" aria-selected="false">Muatan Pengetahuan Umum</button>
+                        <br>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="muatan-lokal" role="tabpanel" aria-labelledby="muatan-lokal-tab">
+                        <div class="row">
+                            <?php $count = 0; ?>
+                            <?php foreach ($videos_muatan_lokal as $video) : ?>
+                                <?php $count++; ?>
+                                <div class="col-xl-6 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                                    <div class="icon-box" style="margin-bottom: 20px; background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
+                                        <div align="center">
+                                            <a href="<?php echo $video['link_yt']; ?>" target="_blank" rel="noopener noreferrer">
+                                                <iframe class="video-frame" style="border: 3px solid black; border-radius: 5px; width: 100%; height: 50vh;" src="<?php echo $video['link_yt']; ?>" frameborder="0" allowfullscreen></iframe>
+                                            </a>
+                                            <div class="judul_konten mt-3" style="text-align: center;">
+                                                <h2 style="color: coral; font-size: 20px;"><strong><?php echo $video['judul_konten']; ?></strong></h2>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <?php if ($count % 2 == 0) : ?>
                         </div>
+                        <div class="row">
+                        <?php endif; ?>
                     <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="muatan-umum" role="tabpanel" aria-labelledby="muatan-umum-tab">
+                        <div class="row">
+                            <?php $count = 0; ?>
+                            <?php foreach ($videos_muatan_umum as $video) : ?>
+                                <?php $count++; ?>
+                                <div class="col-xl-6 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                                    <div class="icon-box" style="margin-bottom: 20px; background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
+                                        <div align="center">
+                                            <a href="<?php echo $video['link_yt']; ?>" target="_blank" rel="noopener noreferrer">
+                                                <iframe class="video-frame" style="border: 3px solid black; border-radius: 5px; width: 100%; height: 50vh;" src="<?php echo $video['link_yt']; ?>" frameborder="0" allowfullscreen></iframe>
+                                            </a>
+                                            <div class="judul_konten mt-3" style="text-align: center;">
+                                                <h2 style="color: coral; font-size: 20px;"><strong><?php echo $video['judul_konten']; ?></strong></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php if ($count % 2 == 0) : ?>
+                        </div>
+                        <div class="row">
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section><!-- End Services Section -->
 
     </main><!-- End #main -->
 
@@ -187,7 +198,7 @@ mysqli_close($koneksi);
                 &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
             </div>
             <div class="creditss">
-                Designed by<a href="#">PKM-PM24</a>
+                Designed by<a href="#">TIM PKM-PM RBM</a>
             </div>
         </div>
     </footer><!-- End Footer -->

@@ -51,7 +51,7 @@
                         <?php
                         $no = 1;
                         $sql = $koneksi->query("SELECT * from e_learning
-                            WHERE kategori='game'");
+                            WHERE kategori='game' AND jenis = 'muatan_lokal'");
 
                         while ($data = $sql->fetch_assoc()) {
                         ?>

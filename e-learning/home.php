@@ -139,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
       </div>
       <div class="creditss">
-        Designed by<a href="#">PKM-PM24</a>
+        Designed by<a href="#">TIM PKM-PM RBM</a>
       </div>
     </div>
   </footer><!-- End Footer -->

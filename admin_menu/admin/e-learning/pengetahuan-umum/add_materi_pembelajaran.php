@@ -35,6 +35,14 @@
                 </div>
             </div>
 
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Jenis</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="jenis" name="jenis" value="Muatan Pengetahuan Umum" readonly>
+                    <input type="hidden" name="jenis" value="muatan_umum">
+                </div>
+            </div>
+
         </div>
         <div class="card-footer">
             <input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
@@ -73,12 +81,14 @@ if (isset($_POST['Simpan'])) {
                 $judul_konten = $_POST['judul_konten'];
                 $link_yt = $_POST['link_yt'];
                 $kategori = $_POST['kategori'];
+                $jenis = $_POST['jenis'];
 
-                $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, file, kategori) VALUES (
+                $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, file, kategori, jenis) VALUES (
                     '$judul_konten',
                     '$link_yt',
                     '$file_name',
-                    '$kategori'
+                    '$kategori',
+                    '$jenis'
                 )";
 
                 // Melanjutkan dengan kueri SQL

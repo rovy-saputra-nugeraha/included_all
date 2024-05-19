@@ -85,8 +85,8 @@ include "inc/koneksi.php";
 			<!-- Brand Logo -->
 			<a href="data.php" class="brand-link text-center">
 				<div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-				<img src="dist/img/LOGO SINDIKAT.png" alt="AdminLTE Logo" class="brand-image" style="height: 50px;">
-				</div>				
+					<img src="dist/img/LOGO SINDIKAT.png" alt="AdminLTE Logo" class="brand-image" style="height: 50px;">
+				</div>
 			</a>
 
 			<!-- Sidebar -->
@@ -305,7 +305,7 @@ include "inc/koneksi.php";
 					<strong>Sistem Informasi || SDN 013 Tanjungpinang Barat</strong>
 				</a>
 			</div>
-			<b>PKM-PM24</b>
+			<b>TIM PKM-PM RBM</b>
 		</footer>
 
 		<!-- Control Sidebar -->

@@ -28,6 +28,14 @@
 				</div>
 			</div>
 
+            <div class="form-group row">
+				<label class="col-sm-2 col-form-label">Jenis</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="muatan_lokal" name="muatan_lokal" value="Muatan Lokal" readonly>
+                    <input type="hidden" name="muatan_lokal" value="muatan_lokal">
+				</div>
+			</div>
+
 		</div>
 		<div class="card-footer">
 			<input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
@@ -42,11 +50,13 @@ if (isset($_POST['Simpan'])) {
     $judul_konten = $_POST['judul_konten'];
     $link_yt = $_POST['link_yt'];
     $kategori = $_POST['kategori'];
+    $jenis = $_POST['muatan_lokal'];
 
-    $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, kategori) VALUES (
+    $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, kategori, jenis) VALUES (
         '$judul_konten',
         '$link_yt',
-        '$kategori'
+        '$kategori',
+        '$jenis'
     )";
 
     $query_simpan = mysqli_query($koneksi, $sql_simpan);

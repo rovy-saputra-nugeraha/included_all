@@ -568,6 +568,10 @@ if (isset($_POST['send'])) {
       </div>
     </section><!-- End Portfolio Section -->
 
+    <h1>hbfj ahd </h1>
+    <section>ini adalah codingan </section>
+    <h2><title></title></h2>
+
     <!-- ======= Mitra Section ======= -->
     <section id="mitra" class="services section-bg">
       <div class="container" data-aos="fade-up">
@@ -851,7 +855,7 @@ if (isset($_POST['send'])) {
         &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
       </div>
       <div class="credits">
-        Designed by <a href="#">PKM-PM24</a>
+        Designed by <a href="#">TIM PKM-PM RBM</a>
       </div>
     </div>
   </footer><!-- End Footer -->

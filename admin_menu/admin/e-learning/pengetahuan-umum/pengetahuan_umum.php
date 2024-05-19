@@ -32,17 +32,67 @@
 	</div>
 
 	<?php
-	$sql = $koneksi->query("SELECT count(id_learning) as materi from e_learning where kategori='materi'");
+	$sql = $koneksi->query("SELECT count(id_learning) as konten_yt from e_learning where kategori='konten_yt' AND jenis='muatan_lokal'");
 	while ($data = $sql->fetch_assoc()) {
-	
-		$materi = $data['materi'];
+
+		$konten_yt = $data['konten_yt'];
 	}
 	?>
 
+	<?php
+	$sql = $koneksi->query("SELECT count(id_learning) as game from e_learning where kategori='game' AND jenis='muatan_lokal'");
+	while ($data = $sql->fetch_assoc()) {
+
+		$game = $data['game'];
+	}
+	?>
+	<?php
+	$sql = $koneksi->query("SELECT count(id_learning) as materi from e_learning where kategori='materi' AND jenis='muatan_lokal'");
+	while ($data = $sql->fetch_assoc()) {
+
+		$materi = $data['materi'];
+	}
+	?>
 	<div class="row">
-		
 		<div class="col-lg-3 col-6">
 			<!-- small box -->
+			<div class="small-box bg-danger">
+				<div class="inner">
+					<h3>
+						<?php echo $konten_yt;  ?>
+					</h3>
+
+					<p>Konten YT</p>
+				</div>
+				<div class="icon">
+					<i class="ion ion-social-youtube"></i>
+				</div>
+				<a href="?page=konten-yt" class="small-box-footer">Selengkapnya
+					<i class="fas fa-arrow-circle-right"></i>
+				</a>
+			</div>
+		</div>
+		<!-- ./col -->
+		<div class="col-lg-3 col-6">
+			<!-- small box -->
+			<div class="small-box bg-success">
+				<div class="inner">
+					<h3>
+						<?php echo $game;  ?>
+					</h3>
+
+					<p>Game Interaktif</p>
+				</div>
+				<div class="icon">
+					<i class="ion ion-ios-game-controller-b"></i>
+				</div>
+				<a href="?page=game-interaktif" class="small-box-footer">Selengkapnya
+					<i class="fas fa-arrow-circle-right"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-6">
 			<div class="small-box bg-purple">
 				<div class="inner">
 					<h3>
@@ -59,7 +109,8 @@
 				</a>
 			</div>
 		</div>
-		
+
+
 	</div>
 </body>
 
