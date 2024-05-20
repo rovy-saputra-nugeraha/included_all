@@ -37,7 +37,7 @@ $link_yt = isset($_POST['link_yt']) ? mysqli_real_escape_string($koneksi, $_POST
 
         <div class="card-footer">
             <input type="submit" name="Ubah" value="Simpan" class="btn btn-success">
-            <a href="?page=konten-yt-lokal" title="Kembali" class="btn btn-secondary">Batal</a>
+            <a href="?page=konten-yt-umum" title="Kembali" class="btn btn-secondary">Batal</a>
         </div>
     </form>
 </div>
@@ -56,7 +56,7 @@ if (isset($_POST['Ubah'])) {
                 Swal.fire({title: 'Ubah Data Berhasil', text: '', icon: 'success', confirmButtonText: 'OK'
                 }).then((result) => {
                         if (result.value) {
-                                window.location = 'data.php?page=konten-yt-lokal';
+                                window.location = 'data.php?page=konten-yt-umum';
                         }
                 })</script>";
     } else {
@@ -64,7 +64,7 @@ if (isset($_POST['Ubah'])) {
                 Swal.fire({title: 'Ubah Data Gagal', text: '', icon: 'error', confirmButtonText: 'OK'
                 }).then((result) => {
                         if (result.value) {
-                                window.location = 'data.php?page=konten-yt-lokal';
+                                window.location = 'data.php?page=konten-yt-umum';
                         }
                 })</script>";
     }

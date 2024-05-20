@@ -39,7 +39,7 @@ if (isset($_POST['Ubah'])) {
                         Swal.fire({title: 'Ubah Data Berhasil', text: '', icon: 'success', confirmButtonText: 'OK'
                         }).then((result) => {
                                 if (result.value) {
-                                        window.location = 'data.php?page=materi-pembelajaran-umum';
+                                        window.location = 'data.php?page=materi-pembelajaran-lokal';
                                 }
                         })</script>";
             } else {
@@ -47,7 +47,7 @@ if (isset($_POST['Ubah'])) {
                         Swal.fire({title: 'Ubah Data Gagal', text: '', icon: 'error', confirmButtonText: 'OK'
                         }).then((result) => {
                                 if (result.value) {
-                                        window.location = 'data.php?page=materi-pembelajaran-umum';
+                                        window.location = 'data.php?page=materi-pembelajaran-lokal';
                                 }
                         })</script>";
             }
@@ -56,7 +56,7 @@ if (isset($_POST['Ubah'])) {
                     Swal.fire({title: 'Unggah File Gagal', text: '', icon: 'error', confirmButtonText: 'OK'
                     }).then((result) => {
                             if (result.value) {
-                                    window.location = 'data.php?page=materi-pembelajaran-umum';
+                                    window.location = 'data.php?page=materi-pembelajaran-lokal';
                             }
                     })</script>";
         }
@@ -75,7 +75,7 @@ if (isset($_POST['Ubah'])) {
                     Swal.fire({title: 'Ubah Data Berhasil', text: '', icon: 'success', confirmButtonText: 'OK'
                     }).then((result) => {
                             if (result.value) {
-                                    window.location = 'data.php?page=materi-pembelajaran-umum';
+                                    window.location = 'data.php?page=materi-pembelajaran-lokal';
                             }
                     })</script>";
         } else {
@@ -83,7 +83,7 @@ if (isset($_POST['Ubah'])) {
                     Swal.fire({title: 'Ubah Data Gagal', text: '', icon: 'error', confirmButtonText: 'OK'
                     }).then((result) => {
                             if (result.value) {
-                                    window.location = 'data.php?page=materi-pembelajaran-umum';
+                                    window.location = 'data.php?page=materi-pembelajaran-lokal';
                             }
                     })</script>";
         }
@@ -125,14 +125,18 @@ if (isset($_POST['Ubah'])) {
                 <label class="col-sm-2 col-form-label">Jenis Materi</label>
                 <div class="col-sm-5">
                     <select class="form-control" name="materi">
-                        <option value="agama" <?php if ($materi == 'agama') echo 'selected'; ?>>Agama</option>
-                        <option value="bahasa_indonesia" <?php if ($materi == 'bahasa_indonesia') echo 'selected'; ?>>Bahasa Indonesia</option>
-                        <option value="ipa" <?php if ($materi == 'ipa') echo 'selected'; ?>>IPA</option>
-                        <option value="ips" <?php if ($materi == 'ips') echo 'selected'; ?>>IPS</option>
-                        <option value="pkn" <?php if ($materi == 'pkn') echo 'selected'; ?>>PKN</option>
-                        <option value="pjok" <?php if ($materi == 'pjok') echo 'selected'; ?>>PJOK</option>
-                        <option value="seni_budaya" <?php if ($materi == 'seni_budaya') echo 'selected'; ?>>Seni Budaya</option>
-                        <option value="mtk" <?php if ($materi == 'mtk') echo 'selected'; ?>>Matematika</option>
+                        <option value="pantun" <?php if ($materi == 'pantun') echo 'selected'; ?>>Pantun</option>
+                        <option value="pulau_penyengat" <?php if ($materi == 'pulau_penyengat') echo 'selected'; ?>>Pulau Penyengat</option>
+                        <option value="pencak_silat" <?php if ($materi == 'pencak_silat') echo 'selected'; ?>>Pencak Silat</option>
+                        <option value="cerita_rakyat" <?php if ($materi == 'cerita_rakyat') echo 'selected'; ?>>Cerita Rakyat</option>
+                        <option value="tanaman_obat" <?php if ($materi == 'tanaman_obat') echo 'selected'; ?>>Tanaman Obat Keluarga</option>
+                        <option value="makanan_tradisional" <?php if ($materi == 'makanan_tradisional') echo 'selected'; ?>>Makanan Tradisional</option>
+                        <option value="rumah_adat" <?php if ($materi == 'rumah_adat') echo 'selected'; ?>>Rumah Adat</option>
+                        <option value="kepri" <?php if ($materi == 'kepri') echo 'selected'; ?>>Provinsi Kepulauan Riau</option>
+                        <option value="seni_musik" <?php if ($materi == 'seni_musik') echo 'selected'; ?>>Seni Musik Tradisional Melayu</option>
+                        <option value="seni_pentas" <?php if ($materi == 'seni_pentas') echo 'selected'; ?>>Seni Pentas Melayu</option>
+                        <option value="ornamen_melayu" <?php if ($materi == 'ornamen_melayu') echo 'selected'; ?>>Ornamen Melayu</option>
+                        <option value="tulisan_arab_melayu" <?php if ($materi == 'tulisan_arab_melayu') echo 'selected'; ?>>Tulisan Arab Melayu</option>
                     </select>
                 </div>
             </div>
@@ -141,7 +145,7 @@ if (isset($_POST['Ubah'])) {
 
         <div class="card-footer">
             <input type="submit" name="Ubah" value="Simpan" class="btn btn-success">
-            <a href="?page=materi-pembelajaran-umum" title="Kembali" class="btn btn-secondary">Batal</a>
+            <a href="?page=materi-pembelajaran-lokal" title="Kembali" class="btn btn-secondary">Batal</a>
         </div>
     </form>
 </div>

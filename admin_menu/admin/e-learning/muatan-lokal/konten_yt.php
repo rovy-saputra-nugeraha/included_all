@@ -26,7 +26,7 @@
     <div class="card card-info">
         <div class="card-header">
             <h3 class="card-title">
-                <i class="fa fa-table"></i> Data Konten YT
+                <i class="fa fa-table"></i> Data Konten YT - Muatan Lokal
             </h3>
         </div>
         <!-- /.card-header -->
@@ -51,7 +51,7 @@
                         <?php
                         $no = 1;
                         $sql = $koneksi->query("SELECT * from e_learning
-                            WHERE kategori='konten_yt'");
+                            WHERE kategori='konten_yt' AND jenis='muatan_lokal'");
 
                         while ($data = $sql->fetch_assoc()) {
                         ?>
@@ -69,10 +69,10 @@
                                 <!-- Aksi Konten YT -->
                                 <td>
                                     <?php if ($data) : ?>
-                                        <a href="?page=edit-konten-yt&kode=<?php echo $data['id_learning']; ?>" title="Ubah Konten" class="btn btn-success btn-sm">
+                                        <a href="?page=edit-konten-yt-lokal&kode=<?php echo $data['id_learning']; ?>" title="Ubah Konten" class="btn btn-success btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a href="?page=del-konten-yt&kode=<?php echo $data['id_learning']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus Konten" class="btn btn-danger btn-sm">
+                                        <a href="?page=del-konten-yt-lokal&kode=<?php echo $data['id_learning']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus Konten" class="btn btn-danger btn-sm">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     <?php else : ?>

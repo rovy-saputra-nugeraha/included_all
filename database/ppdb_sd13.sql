@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Apr 2024 pada 15.48
--- Versi server: 10.4.32-MariaDB-log
+-- Waktu pembuatan: 20 Bulan Mei 2024 pada 14.59
+-- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -60,13 +60,6 @@ CREATE TABLE `berkas` (
   `ktp` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `berkas`
---
-
-INSERT INTO `berkas` (`id_berkas`, `id_siswa`, `kartu_keluarga`, `akta_lahir`, `pas_foto`, `ktp`) VALUES
-(18, 7, 'kk.jpg', 'akta.jpg', 'Rovy Saputra Nugeraha.png', 'ktp.png');
-
 -- --------------------------------------------------------
 
 --
@@ -85,13 +78,6 @@ CREATE TABLE `biodata_ayah` (
   `pend_terakhir_ayah` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `biodata_ayah`
---
-
-INSERT INTO `biodata_ayah` (`id_ayah`, `id_siswa`, `nama_ayah`, `pekerjaan_ayah`, `alamat_ayah`, `no_hp_ayah`, `tgl_lahir_ayah`, `tempat_lahir_ayah`, `pend_terakhir_ayah`) VALUES
-(11, 7, 'Prabowo Gibran', 'Presiden RI', 'Jalan dekat markas banteng', '0899789875324', '1945-10-25', 'Jakarta', 'S3');
-
 -- --------------------------------------------------------
 
 --
@@ -109,13 +95,6 @@ CREATE TABLE `biodata_ibu` (
   `tempat_lahir_ibu` varchar(30) NOT NULL,
   `pend_terakhir_ibu` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `biodata_ibu`
---
-
-INSERT INTO `biodata_ibu` (`id_ibu`, `id_siswa`, `nama_ibu`, `pekerjaan_ibu`, `alamat_ibu`, `no_hp_ibu`, `tgl_lahir_ibu`, `tempat_lahir_ibu`, `pend_terakhir_ibu`) VALUES
-(3, 7, 'Siti Nurhasanah', 'Ibu Rumah Tangga', 'Jalan Cempedak', '08653423143', '1945-04-03', 'Daik', 'S1');
 
 -- --------------------------------------------------------
 
@@ -137,13 +116,6 @@ CREATE TABLE `biodata_siswa` (
   `jumlah_saudara` int(10) NOT NULL,
   `status_keluarga` enum('Anak Kandung','Anak Angkat','Lainnya') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `biodata_siswa`
---
-
-INSERT INTO `biodata_siswa` (`id_siswa`, `id_login_siswa`, `nama_siswa`, `tgl_lahir_siswa`, `tempat_lahir_siswa`, `alamat_siswa`, `nik_siswa`, `jk_siswa`, `agama_siswa`, `anak_ke`, `jumlah_saudara`, `status_keluarga`) VALUES
-(7, 5, 'Rovy Saputra Nugeraha', '2002-10-10', 'Daik', 'Jalan Gang Murai', 987654321, 'Laki-Laki', 'Islam', 1, 2, 'Anak Kandung');
 
 -- --------------------------------------------------------
 
@@ -206,24 +178,21 @@ CREATE TABLE `e_learning` (
   `judul_konten` varchar(50) NOT NULL,
   `link_yt` varchar(100) NOT NULL,
   `file` varchar(500) NOT NULL,
-  `kategori` enum('konten_yt','materi','game') NOT NULL
+  `kategori` enum('konten_yt','materi','game') NOT NULL,
+  `jenis` varchar(50) NOT NULL,
+  `materi` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `e_learning`
 --
 
-INSERT INTO `e_learning` (`id_learning`, `judul_konten`, `link_yt`, `file`, `kategori`) VALUES
-(5, 'Makanan Khas Melayu', 'https://wordwall.net/embed/ae6dda6f2ba647b3b57dab1c568dca2f', '', 'game'),
-(7, 'GURINDAM 12 RAJA ALI HAJI │Pasal 1 s.d Pasal 4', 'https://www.youtube.com/embed/g2BjRfdQfTA', '', 'konten_yt'),
-(8, 'INI GURINDAM PASAL KELIMA', 'https://www.youtube.com/embed/V8PNqTgc6-s', '', 'konten_yt'),
-(9, 'INI GURINDAM PASAL KE-12', 'https://www.youtube.com/embed/28DYvldu8N0', '', 'konten_yt'),
-(10, 'INI GURINDAM PASAL KE-11', 'https://www.youtube.com/embed/HrDBqquLhho', '', 'konten_yt'),
-(12, 'Buku MTK Siswa Kelas 9', '-', 'Buku_Siswa_Matematika_Kelas_9_Revisi 2018_kadek.pdf', 'materi'),
-(13, 'Buku Guru MTK kelas 9', 'https://www.kherysuryawan.id/2019/12/materi-pelajaran-matematika-kelas-7.html', 'Buku_Guru _Matematika_SMP_Kelas_9_Revisi_2018.pdf', 'materi'),
-(14, 'Kelas VIII Matematika BS Sem 1', '-', 'Kelas VIII Matematika BS Sem 1.pdf', 'materi'),
-(15, 'Pulau Penyegat', 'https://wordwall.net/embed/f458e34f787044eb82795c3b87c08300', '', 'game'),
-(17, 'Kelas VIII Matematika BS Sem 1', '-', 'Kelas VIII Matematika BS Sem 2.pdf', 'materi');
+INSERT INTO `e_learning` (`id_learning`, `judul_konten`, `link_yt`, `file`, `kategori`, `jenis`, `materi`) VALUES
+(7, 'GURINDAM 12 RAJA ALI HAJI │Pasal 1 s.d Pasal 4', 'https://www.youtube.com/embed/g2BjRfdQfTA', '', 'konten_yt', 'muatan_lokal', ''),
+(8, 'INI GURINDAM PASAL KELIMA', 'https://www.youtube.com/embed/V8PNqTgc6-s', '', 'konten_yt', 'muatan_umum', ''),
+(10, 'Pulau Penyegat', 'https://wordwall.net/embed/f458e34f787044eb82795c3b87c08300', '', 'game', 'muatan_umum', ''),
+(13, 'Makanan Khas Melayu', 'https://wordwall.net/embed/ae6dda6f2ba647b3b57dab1c568dca2f', '', 'game', 'muatan_umum', ''),
+(14, 'Kelas VIII Matematika BS Sem 1', 'https://www.instagram.com/p/C6BzeGQpVsy/', 'Kelas VIII Matematika BS Sem 1.pdf', 'materi', 'muatan_umum', 'ipa');
 
 -- --------------------------------------------------------
 
@@ -258,13 +227,6 @@ CREATE TABLE `hasil_seleksi` (
   `status_penerimaan` enum('Sudah di Setujui','Tidak di Setujui') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `hasil_seleksi`
---
-
-INSERT INTO `hasil_seleksi` (`id_seleksi`, `id_siswa`, `tgl_penerimaan`, `jalur_penerimaan`, `status_penerimaan`) VALUES
-(12, 7, '2024-04-21', 'Zonasi', 'Sudah di Setujui');
-
 -- --------------------------------------------------------
 
 --
@@ -284,9 +246,8 @@ CREATE TABLE `login_admin` (
 --
 
 INSERT INTO `login_admin` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `level`) VALUES
-(1, 'Rovy Saputra Nugeraha', 'rovy', 'c4ca4238a0b923820dcc509a6f75849b', 'Administrator'),
-(12, 'user', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator'),
-(16, 'Farel Putra Albana', 'farel', '$2y$10$UHb./mfKwyYmCQJf00I/0.TRDIUi79Z.Oz8IVK1.zfSU8MccGy976', 'Administrator');
+(16, 'Farel Putra Albana', 'farel', '$2y$10$TB/lZ5NuEppH/7ULy2p6i.wtN07gSYdV3w7fwHNXVHNJETJPjXlZ2', 'Administrator'),
+(17, 'Rovy Saputra Nugeraha', 'rovy', '$2y$10$p584Td8GOTlfa7QYGwWiiupeiQvLR4uaj2i1HkAdxf5C2XXMCZ08q', 'Guru');
 
 -- --------------------------------------------------------
 
@@ -308,8 +269,72 @@ CREATE TABLE `login_siswa` (
 --
 
 INSERT INTO `login_siswa` (`id_login_siswa`, `nik`, `nama_pendek`, `email`, `password`, `status`) VALUES
-(5, '987654321', 'Rovy', '2101020057@student.umrah.ac.id', '$2y$10$62JI8TUJQyIW6STwkiOHpeZjvayig.wcMN57Y47goxfaT92uE.dXq', 1),
-(6, '2101020057', 'Farel', 'farelptraalbana@gmail.com', '$2y$10$iUQF8ricThRSYHrSMiE0vOePbHk6Ny9P/ML5ZStAOTTa9NjVzJ87e', 1);
+(6, '2101020012', 'Rovy', 'rovysaputra10@gmail.com', '$2y$10$9ai5xuHYP8MlhHDguRoDjub6k9T8t6wHI8aNBKtJoFySRO70WQH.O', 1),
+(7, '2172021010020004', 'Vy', 'rovysaputra06@gmail.com', '$2y$10$g8qr7f.6bx0HJoOGmhlAMOUcYUKkcm4hX/TJIflbOknFBlj1GtIly', 1),
+(8, '11202300158', 'UMAR', 'muhdhorcs@gmail.com', '$2y$10$vQbNssv71cG5Z3.qbaimsOGEea93qE3chCIIj2NcCg8gnDXCu/P.a', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_absen`
+--
+
+CREATE TABLE `tb_absen` (
+  `id` varchar(50) NOT NULL,
+  `masuk` varchar(15) NOT NULL,
+  `keluar` varchar(15) NOT NULL,
+  `date` date NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `Keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `tb_absen`
+--
+
+INSERT INTO `tb_absen` (`id`, `masuk`, `keluar`, `date`, `status`, `Keterangan`) VALUES
+('E3A23535', '', '20:37:26', '2024-05-16', 'B', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_id`
+--
+
+CREATE TABLE `tb_id` (
+  `id` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `chatid` varchar(50) NOT NULL,
+  `notifikasi` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `tb_id`
+--
+
+INSERT INTO `tb_id` (`id`, `nama`, `chatid`, `notifikasi`) VALUES
+('338D3735', 'Rovy Saputra Nugeraha ', '1436647086', 0),
+('E3A23535', 'Rovy Saputra Nugeraha ', '1436647086', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_pengguna`
+--
+
+CREATE TABLE `tb_pengguna` (
+  `no` int(10) NOT NULL,
+  `username` varchar(22) NOT NULL,
+  `password` varchar(22) NOT NULL,
+  `level` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `tb_pengguna`
+--
+
+INSERT INTO `tb_pengguna` (`no`, `username`, `password`, `level`) VALUES
+(6, 'admin', 'admin', 0);
 
 -- --------------------------------------------------------
 
@@ -330,6 +355,44 @@ CREATE TABLE `tb_profil` (
 
 INSERT INTO `tb_profil` (`id_profil`, `nama_profil`, `alamat`, `bidang`) VALUES
 (1, 'SDN 013 TANJUNGPINANG BARAT', 'Jl. Yus Sudarso, TANJUNGPINANG BARAT, Kec. Tanjung Pinang Barat, Kota Tanjungpinang Prov. Kepulauan Riau', 'PENDIDIKAN');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_rfid`
+--
+
+CREATE TABLE `tb_rfid` (
+  `id` varchar(50) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `status` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_settings`
+--
+
+CREATE TABLE `tb_settings` (
+  `masuk_mulai` time NOT NULL,
+  `masuk_akhir` time NOT NULL,
+  `keluar_mulai` time NOT NULL,
+  `keluar_akhir` time NOT NULL,
+  `libur1` varchar(10) NOT NULL,
+  `libur2` varchar(10) NOT NULL,
+  `timezone` varchar(22) NOT NULL,
+  `admin_uid` varchar(50) NOT NULL,
+  `bot_token` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `tb_settings`
+--
+
+INSERT INTO `tb_settings` (`masuk_mulai`, `masuk_akhir`, `keluar_mulai`, `keluar_akhir`, `libur1`, `libur2`, `timezone`, `admin_uid`, `bot_token`) VALUES
+('00:00:00', '08:15:00', '16:00:00', '22:30:00', 'Sabtu', 'Minggu', 'Asia/Jakarta', '338D3735', '6751977753:AAEwU5UFhwBbeIfupfrr7xg4_Utmbrnxefk');
 
 --
 -- Indexes for dumped tables
@@ -413,10 +476,28 @@ ALTER TABLE `login_siswa`
   ADD PRIMARY KEY (`id_login_siswa`);
 
 --
+-- Indeks untuk tabel `tb_id`
+--
+ALTER TABLE `tb_id`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tb_pengguna`
+--
+ALTER TABLE `tb_pengguna`
+  ADD PRIMARY KEY (`no`);
+
+--
 -- Indeks untuk tabel `tb_profil`
 --
 ALTER TABLE `tb_profil`
   ADD PRIMARY KEY (`id_profil`);
+
+--
+-- Indeks untuk tabel `tb_rfid`
+--
+ALTER TABLE `tb_rfid`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -468,7 +549,7 @@ ALTER TABLE `data_guru`
 -- AUTO_INCREMENT untuk tabel `e_learning`
 --
 ALTER TABLE `e_learning`
-  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `e_learning_login`
@@ -480,19 +561,25 @@ ALTER TABLE `e_learning_login`
 -- AUTO_INCREMENT untuk tabel `hasil_seleksi`
 --
 ALTER TABLE `hasil_seleksi`
-  MODIFY `id_seleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_seleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `login_admin`
 --
 ALTER TABLE `login_admin`
-  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `login_siswa`
 --
 ALTER TABLE `login_siswa`
-  MODIFY `id_login_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_login_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_pengguna`
+--
+ALTER TABLE `tb_pengguna`
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_profil`

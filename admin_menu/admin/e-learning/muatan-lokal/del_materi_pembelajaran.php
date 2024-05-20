@@ -18,12 +18,12 @@ if(isset($_GET['kode'])){
     if ($query_hapus) {
         echo "<script>
         Swal.fire({title: 'Hapus Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
-        }).then((result) => {if (result.value) {window.location = 'data.php?page=materi-pembelajaran-umum'
+        }).then((result) => {if (result.value) {window.location = 'data.php?page=materi-pembelajaran-lokal'
         ;}})</script>";
     } else {
         echo "<script>
         Swal.fire({title: 'Hapus Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
-        }).then((result) => {if (result.value) {window.location = 'data.php?page=materi-pembelajaran-umum'
+        }).then((result) => {if (result.value) {window.location = 'data.php?page=materi-pembelajaran-lokal'
         ;}})</script>";
     }
 }

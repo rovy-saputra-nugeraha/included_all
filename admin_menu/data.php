@@ -248,13 +248,30 @@ while ($data = $sql->fetch_assoc()) {
 								</a>
 							</li>
 
-							<li class="nav-item">
-								<a href="?page=data-kepegawaian" class="nav-link">
-									<i class="nav-icon far fa fa-users"></i>
+							<!-- E-Learning -->
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
+									<i class="nav-icon fas fa-solid fa-bell"></i>
+
 									<p>
-										Data Pegawai
+										E-Learning
+										<i class="right fas fa-angle-left"></i>
 									</p>
 								</a>
+								<ul class="nav nav-treeview" style="font-size: 12px;">
+									<li class="nav-item">
+										<a href="?page=data-muatan-lokal" class="nav-link">
+											<i class="nav-icon fa fa-archive" style="font-size: 12px;"></i>
+											<p>Muatan Lokal</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-pengetahuan-umum" class="nav-link">
+											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+											<p>Muatan Pengetahuan Umum</p>
+										</a>
+									</li>
+								</ul>
 							</li>
 
 							<li class="nav-header">Setting</li>
@@ -296,8 +313,8 @@ while ($data = $sql->fetch_assoc()) {
 							case 'admin':
 								include "home/admin.php";
 								break;
-							case 'sekretaris':
-								include "home/sekretaris.php";
+							case 'guru':
+								include "home/guru.php";
 								break;
 							case 'pegawai':
 								include "home/pegawai.php";
@@ -401,46 +418,82 @@ while ($data = $sql->fetch_assoc()) {
 							case 'data-muatan-lokal':
 								include "admin/e-learning/muatan-lokal/muatan_lokal.php";
 								break;
-							case 'konten-yt':
+							case 'konten-yt-lokal':
 								include "admin/e-learning/muatan-lokal/konten_yt.php";
 								break;
-							case 'add-konten-yt':
+							case 'add-konten-yt-lokal':
 								include "admin/e-learning/muatan-lokal/add_konten_yt.php";
 								break;
-							case 'edit-konten-yt':
+							case 'edit-konten-yt-lokal':
 								include "admin/e-learning/muatan-lokal/edit_konten_yt.php";
 								break;
-							case 'del-konten-yt':
+							case 'del-konten-yt-lokal':
 								include "admin/e-learning/muatan-lokal/del_konten_yt.php";
 								break;
-							case 'game-interaktif':
+							case 'game-interaktif-lokal':
 								include "admin/e-learning/muatan-lokal/game_interaktif.php";
 								break;
-							case 'add-game-interaktif':
+							case 'add-game-interaktif-lokal':
 								include "admin/e-learning/muatan-lokal/add_game_interaktif.php";
 								break;
-							case 'edit-game-interaktif':
+							case 'edit-game-interaktif-lokal':
 								include "admin/e-learning/muatan-lokal/edit_game_interaktif.php";
 								break;
-							case 'del-game-interaktif':
+							case 'del-game-interaktif-lokal':
 								include "admin/e-learning/muatan-lokal/del_game_interaktif.php";
+								break;
+							case 'materi-pembelajaran-lokal':
+								include "admin/e-learning/muatan-lokal/materi_pembelajaran.php";
+								break;
+							case 'add-materi-pembelajaran-lokal':
+								include "admin/e-learning/muatan-lokal/add_materi_pembelajaran.php";
+								break;
+							case 'edit-materi-pembelajaran-lokal':
+								include "admin/e-learning/muatan-lokal/edit_materi_pembelajaran.php";
+								break;
+							case 'del-materi-pembelajaran-lokal':
+								include "admin/e-learning/muatan-lokal/del_materi_pembelajaran.php";
 								break;
 
 								//Pengetahuan Umum
 							case 'data-pengetahuan-umum':
 								include "admin/e-learning/pengetahuan-umum/pengetahuan_umum.php";
 								break;
-							case 'materi-pembelajaran':
+							case 'materi-pembelajaran-umum':
 								include "admin/e-learning/pengetahuan-umum/materi_pembelajaran.php";
 								break;
-							case 'add-materi-pembelajaran':
+							case 'add-materi-pembelajaran-umum':
 								include "admin/e-learning/pengetahuan-umum/add_materi_pembelajaran.php";
 								break;
-							case 'edit-materi-pembelajaran':
+							case 'edit-materi-pembelajaran-umum':
 								include "admin/e-learning/pengetahuan-umum/edit_materi_pembelajaran.php";
 								break;
-							case 'del-materi-pembelajaran':
+							case 'del-materi-pembelajaran-umum':
 								include "admin/e-learning/pengetahuan-umum/del_materi_pembelajaran.php";
+								break;
+							case 'konten-yt-umum':
+								include "admin/e-learning/pengetahuan-umum/konten_yt.php";
+								break;
+							case 'add-konten-yt-umum':
+								include "admin/e-learning/pengetahuan-umum/add_konten_yt.php";
+								break;
+							case 'edit-konten-yt-umum':
+								include "admin/e-learning/pengetahuan-umum/edit_konten_yt.php";
+								break;
+							case 'del-konten-yt-umum':
+								include "admin/e-learning/pengetahuan-umum/del_konten_yt.php";
+								break;
+							case 'game-interaktif-umum':
+								include "admin/e-learning/pengetahuan-umum/game_interaktif.php";
+								break;
+							case 'add-game-interaktif-umum':
+								include "admin/e-learning/pengetahuan-umum/add_game_interaktif.php";
+								break;
+							case 'edit-game-interaktif-umum':
+								include "admin/e-learning/pengetahuan-umum/edit_game_interaktif.php";
+								break;
+							case 'del-game-interaktif-umum':
+								include "admin/e-learning/pengetahuan-umum/del_game_interaktif.php";
 								break;
 
 								//biodata

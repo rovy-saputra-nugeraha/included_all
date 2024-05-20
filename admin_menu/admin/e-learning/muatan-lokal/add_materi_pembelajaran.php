@@ -33,14 +33,18 @@
                 <div class="col-sm-6">
                     <select class="form-control" id="materi" name="materi" required>
                         <option value="" disabled selected>Pilih Materi</option>
-                        <option value="agama">Agama</option>
-                        <option value="bahasa_indonesia">Bahasa Indonesia</option>
-                        <option value="ipa">IPA</option>
-                        <option value="ips">IPS</option>
-                        <option value="pkn">PKN</option>
-                        <option value="pjok">PJOK</option>
-                        <option value="seni_budaya">Seni Budaya</option>
-                        <option value="mtk">Matematika</option>
+                        <option value="pantun">Pantun</option>
+                        <option value="pulau_penyengat">Pulau Penyengat</option>
+                        <option value="pencak_silat">Pencak Silat</option>
+                        <option value="cerita_rakyat">Cerita Rakyat</option>
+                        <option value="tanaman_obat">Tanaman Obat Keluarga</option>
+                        <option value="makanan_tradisional">Makanan Tradisional</option>
+                        <option value="rumah_adat">Rumah Adat</option>
+                        <option value="kepri">Provinsi Kepulauan Riau</option>
+                        <option value="seni_musik">Seni Musik Tradisional Melayu</option>
+                        <option value="seni_pentas">Seni Pentas Melayu</option>
+                        <option value="ornamen_melayu">Ornamen Melayu</option>
+                        <option value="tulisan_arab_melayu">Tulisan Arab Melayu</option>
                     </select>
                 </div>
             </div>
@@ -56,7 +60,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Jenis</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="jenis" name="jenis" value="Muatan Pengetahuan Umum" readonly>
+                    <input type="text" class="form-control" id="jenis" name="jenis" value="Muatan Pengetahuan Lokal" readonly>
                     <input type="hidden" name="jenis" value="muatan_umum">
                 </div>
             </div>
@@ -64,7 +68,7 @@
         </div>
         <div class="card-footer">
             <input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
-            <a href="?page=materi-pembelajaran-umum" title="Kembali" class="btn btn-secondary">Batal</a>
+            <a href="?page=materi-pembelajaran-lokal" title="Kembali" class="btn btn-secondary">Batal</a>
         </div>
     </form>
 </div>
@@ -125,7 +129,7 @@ if (isset($_POST['Simpan'])) {
                             confirmButtonText: 'OK'
                         }).then((result) => {
                             if (result.value) {
-                                window.location = 'data.php?page=materi-pembelajaran-umum';
+                                window.location = 'data.php?page=materi-pembelajaran-lokal';
                             }
                         });
                     </script>";
@@ -138,7 +142,7 @@ if (isset($_POST['Simpan'])) {
                             confirmButtonText: 'OK'
                         }).then((result) => {
                             if (result.value) {
-                                window.location = 'data.php?page=add-materi-pembelajaran-umum';
+                                window.location = 'data.php?page=add-materi-pembelajaran-lokal';
                             }
                         });
                     </script>";

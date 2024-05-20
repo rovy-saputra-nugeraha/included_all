@@ -26,14 +26,14 @@
     <div class="card card-info">
         <div class="card-header">
             <h3 class="card-title">
-                <i class="fa fa-table"></i> Data Materi Pembelajaran - Muatan Pengetahuan Umum
+                <i class="fa fa-table"></i> Data Materi Pembelajaran - Muatan Lokal
             </h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
             <div class="table-responsive">
                 <div>
-                    <a href="?page=add-materi-pembelajaran-umum" class="btn btn-primary">
+                    <a href="?page=add-materi-pembelajaran-lokal" class="btn btn-primary">
                         <i class="fa fa-edit"></i> Tambah Data</a>
                 </div>
                 <br>
@@ -68,7 +68,7 @@
                         );
                         $no = 1;
                         // Mengambil data dari database
-                        $sql = $koneksi->query("SELECT * FROM e_learning WHERE kategori='materi' AND jenis='muatan_umum'");
+                        $sql = $koneksi->query("SELECT * FROM e_learning WHERE kategori='materi' AND jenis='muatan_lokal'");
 
                         while ($data = $sql->fetch_assoc()) {
                         ?>

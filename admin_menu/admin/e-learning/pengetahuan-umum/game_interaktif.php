@@ -26,14 +26,14 @@
     <div class="card card-info">
         <div class="card-header">
             <h3 class="card-title">
-                <i class="fa fa-table"></i> Data Game Interaktif - Muatan Lokal
+                <i class="fa fa-table"></i> Data Game Interaktif - Muatan Pengetahuan Umum
             </h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
             <div class="table-responsive">
                 <div>
-                    <a href="?page=add-game-interaktif" class="btn btn-primary">
+                    <a href="?page=add-game-interaktif-umum" class="btn btn-primary">
                         <i class="fa fa-edit"></i> Tambah Data</a>
                 </div>
                 <br>
@@ -51,7 +51,7 @@
                         <?php
                         $no = 1;
                         $sql = $koneksi->query("SELECT * from e_learning
-                            WHERE kategori='game' AND jenis = 'muatan_lokal'");
+                            WHERE kategori='game' AND jenis = 'muatan_umum'");
 
                         while ($data = $sql->fetch_assoc()) {
                         ?>
@@ -69,10 +69,10 @@
                                 <!-- Aksi Game Interaktif -->
                                 <td>
                                     <?php if ($data) : ?>
-                                        <a href="?page=edit-game-interaktif&kode=<?php echo $data['id_learning']; ?>" title="Ubah Game" class="btn btn-success btn-sm">
+                                        <a href="?page=edit-game-interaktif-umum&kode=<?php echo $data['id_learning']; ?>" title="Ubah Game" class="btn btn-success btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a href="?page=del-game-interaktif&kode=<?php echo $data['id_learning']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus Konten" class="btn btn-danger btn-sm">
+                                        <a href="?page=del-game-interaktif-umum&kode=<?php echo $data['id_learning']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus Konten" class="btn btn-danger btn-sm">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     <?php else : ?>

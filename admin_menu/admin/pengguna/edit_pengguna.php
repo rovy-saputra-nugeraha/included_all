@@ -38,6 +38,7 @@ if (isset($_GET['kode'])) {
                     <select name="level" id="level" class="form-control">
                         <option value="">-- Pilih Level --</option>
                         <option value="Administrator" <?php echo ($data_cek['level'] == "Administrator") ? "selected" : ""; ?>>Administrator</option>
+                        <option value="Guru" <?php echo ($data_cek['level'] == "Guru") ? "selected" : ""; ?>>Guru</option>
                     </select>
 
                 </div>

@@ -31,8 +31,8 @@
             <div class="form-group row">
 				<label class="col-sm-2 col-form-label">Jenis</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="muatan_lokal" name="muatan_lokal" value="Muatan Lokal" readonly>
-                    <input type="hidden" name="muatan_lokal" value="muatan_lokal">
+					<input type="text" class="form-control" id="muatan_umum" name="muatan_umum" value="Muatan Pengetahuan Umum" readonly>
+                    <input type="hidden" name="muatan_umum" value="muatan_umum">
 				</div>
 			</div>
 
@@ -50,7 +50,7 @@ if (isset($_POST['Simpan'])) {
     $judul_konten = $_POST['judul_konten'];
     $link_yt = $_POST['link_yt'];
     $kategori = $_POST['kategori'];
-    $jenis = $_POST['muatan_lokal'];
+    $jenis = $_POST['muatan_umum'];
 
     $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, kategori, jenis) VALUES (
         '$judul_konten',

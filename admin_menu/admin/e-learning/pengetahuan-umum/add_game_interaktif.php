@@ -7,39 +7,39 @@
 		<div class="card-body">
 
 			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">Judul</label>
+				<label class="col-sm-2 col-form-label">Judul Game</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="judul_konten" name="judul_konten" placeholder="Masukkan Judul Konten" required>
+					<input type="text" class="form-control" id="judul_konten" name="judul_konten" placeholder="Masukkan Judul Game" required>
 				</div>
 			</div>
 
 			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">Link YT</label>
+				<label class="col-sm-2 col-form-label">Link Game</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="link_yt" name="link_yt" placeholder="Masukkan Link YT" required>
+					<input type="text" class="form-control" id="link_yt" name="link_yt" placeholder="Masukkan Link Game" required>
 				</div>
 			</div>
 
 			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Kategori</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="kategori" name="kategori" value="Konten YT" readonly>
-                    <input type="hidden" name="kategori" value="konten_yt">
+					<input type="text" class="form-control" id="kategori" name="kategori" value="Game Interaktif" readonly>
+                    <input type="hidden" name="kategori" value="game">
 				</div>
 			</div>
 
             <div class="form-group row">
 				<label class="col-sm-2 col-form-label">Jenis</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="muatan_lokal" name="muatan_lokal" value="Muatan Lokal" readonly>
-                    <input type="hidden" name="muatan_lokal" value="muatan_lokal">
+					<input type="text" class="form-control" id="muatan_umum" name="muatan_umum" value="Muatan Pengetahuan Umum" readonly>
+                    <input type="hidden" name="muatan_umum" value="muatan_umum">
 				</div>
 			</div>
 
 		</div>
 		<div class="card-footer">
 			<input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
-			<a href="?page=konten-yt" title="Kembali" class="btn btn-secondary">Batal</a>
+			<a href="?page=game-interaktif-umum" title="Kembali" class="btn btn-secondary">Batal</a>
 		</div>
 	</form>
 </div>
@@ -71,7 +71,7 @@ if (isset($_POST['Simpan'])) {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.value) {
-                    window.location = 'data.php?page=konten-yt';
+                    window.location = 'data.php?page=game-interaktif-umum';
                 }
             });
         </script>";
@@ -84,7 +84,7 @@ if (isset($_POST['Simpan'])) {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.value) {
-                    window.location = 'data.php?page=add-konten-yt';
+                    window.location = 'data.php?page=add-game-interaktif-umum';
                 }
             });
         </script>";
