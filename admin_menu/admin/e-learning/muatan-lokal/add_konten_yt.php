@@ -39,7 +39,7 @@
 		</div>
 		<div class="card-footer">
 			<input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
-			<a href="?page=konten-yt" title="Kembali" class="btn btn-secondary">Batal</a>
+			<a href="?page=konten-yt-lokal" title="Kembali" class="btn btn-secondary">Batal</a>
 		</div>
 	</form>
 </div>
@@ -71,7 +71,7 @@ if (isset($_POST['Simpan'])) {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.value) {
-                    window.location = 'data.php?page=konten-yt';
+                    window.location = 'data.php?page=konten-yt-lokal';
                 }
             });
         </script>";
@@ -84,7 +84,7 @@ if (isset($_POST['Simpan'])) {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.value) {
-                    window.location = 'data.php?page=add-konten-yt';
+                    window.location = 'data.php?page=add-konten-yt-lokal';
                 }
             });
         </script>";

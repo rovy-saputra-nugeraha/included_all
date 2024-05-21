@@ -39,7 +39,7 @@
 		</div>
 		<div class="card-footer">
 			<input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
-			<a href="?page=game-interaktif" title="Kembali" class="btn btn-secondary">Batal</a>
+			<a href="?page=game-interaktif-lokal" title="Kembali" class="btn btn-secondary">Batal</a>
 		</div>
 	</form>
 </div>
@@ -71,7 +71,7 @@ if (isset($_POST['Simpan'])) {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.value) {
-                    window.location = 'data.php?page=game-interaktif';
+                    window.location = 'data.php?page=game-interaktif-lokal';
                 }
             });
         </script>";
@@ -84,7 +84,7 @@ if (isset($_POST['Simpan'])) {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.value) {
-                    window.location = 'data.php?page=add-game-interaktif';
+                    window.location = 'data.php?page=add-game-interaktif-lokal';
                 }
             });
         </script>";

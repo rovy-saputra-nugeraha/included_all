@@ -33,7 +33,7 @@
         <div class="card-body">
             <div class="table-responsive">
                 <div>
-                    <a href="?page=add-game-interaktif" class="btn btn-primary">
+                    <a href="?page=add-game-interaktif-lokal" class="btn btn-primary">
                         <i class="fa fa-edit"></i> Tambah Data</a>
                 </div>
                 <br>
@@ -69,10 +69,10 @@
                                 <!-- Aksi Game Interaktif -->
                                 <td>
                                     <?php if ($data) : ?>
-                                        <a href="?page=edit-game-interaktif&kode=<?php echo $data['id_learning']; ?>" title="Ubah Game" class="btn btn-success btn-sm">
+                                        <a href="?page=edit-game-interaktif-lokal&kode=<?php echo $data['id_learning']; ?>" title="Ubah Game" class="btn btn-success btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a href="?page=del-game-interaktif&kode=<?php echo $data['id_learning']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus Konten" class="btn btn-danger btn-sm">
+                                        <a href="?page=del-game-interaktif-lokal&kode=<?php echo $data['id_learning']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus Konten" class="btn btn-danger btn-sm">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     <?php else : ?>

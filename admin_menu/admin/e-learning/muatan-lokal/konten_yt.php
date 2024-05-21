@@ -33,7 +33,7 @@
         <div class="card-body">
             <div class="table-responsive">
             <div>
-				<a href="?page=add-konten-yt" class="btn btn-primary">
+				<a href="?page=add-konten-yt-lokal" class="btn btn-primary">
 					<i class="fa fa-edit"></i> Tambah Data</a>
 			</div>
                 <br>

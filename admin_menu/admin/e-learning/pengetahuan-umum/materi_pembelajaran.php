@@ -84,10 +84,10 @@
                                 </td>
                                 <td>
                                     <?php if ($data) : ?>
-                                        <a href="?page=edit-materi-pembelajaran-lokal&kode=<?php echo $data['id_learning']; ?>" title="Ubah Materi Pembelajaran" class="btn btn-success btn-sm">
+                                        <a href="?page=edit-materi-pembelajaran-umum&kode=<?php echo $data['id_learning']; ?>" title="Ubah Materi Pembelajaran" class="btn btn-success btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a href="?page=del-materi-pembelajaran-lokal&kode=<?php echo $data['id_learning']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus Materi Pembelajaran" class="btn btn-danger btn-sm">
+                                        <a href="?page=del-materi-pembelajaran-umum&kode=<?php echo $data['id_learning']; ?>" onclick="return confirm('Apakah anda yakin hapus data ini ?')" title="Hapus Materi Pembelajaran" class="btn btn-danger btn-sm">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     <?php else : ?>

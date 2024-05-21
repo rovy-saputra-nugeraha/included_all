@@ -12,9 +12,49 @@ if (mysqli_connect_errno()) {
 $query_pantun = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'pantun'";
 $result_pantun = mysqli_query($koneksi, $query_pantun);
 
-// Query untuk Muatan Lokal - Gurindam
-$query_gurindam = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'gurindam'";
-$result_gurindam = mysqli_query($koneksi, $query_gurindam);
+// Query untuk Muatan Lokal - Pulau Penyengat
+$query_pulau_penyengat = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'pulau_penyengat'";
+$result_pulau_penyengat = mysqli_query($koneksi, $query_pulau_penyengat);
+
+// Query untuk Muatan Lokal - Pencak Silat
+$query_pencak_silat = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'pencak_silat'";
+$result_pencak_silat = mysqli_query($koneksi, $query_pencak_silat);
+
+// Query untuk Muatan Lokal - Cerita Rakyat
+$query_cerita_rakyat = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'cerita_rakyat'";
+$result_cerita_rakyat = mysqli_query($koneksi, $query_cerita_rakyat);
+
+// Query untuk Muatan Lokal - Tanaman Obat Keluarga
+$query_tanaman_obat = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'tanaman_obat'";
+$result_tanaman_obat = mysqli_query($koneksi, $query_tanaman_obat);
+
+// Query untuk Muatan Lokal - Makanan Tradisional Melayu
+$query_makanan_tradisional = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'makanan_tradisional'";
+$result_makanan_tradisional = mysqli_query($koneksi, $query_makanan_tradisional);
+
+// Query untuk Muatan Lokal - Rumah Adat
+$query_rumah_adat = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'rumah_adat'";
+$result_rumah_adat = mysqli_query($koneksi, $query_rumah_adat);
+
+// Query untuk Muatan Lokal - Kepulauan Riau
+$query_kepri = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'kepri'";
+$result_kepri = mysqli_query($koneksi, $query_kepri);
+
+// Query untuk Muatan Lokal - Seni Musik Tradisional Melayu
+$query_seni_musik = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'seni_musik'";
+$result_seni_musik = mysqli_query($koneksi, $query_seni_musik);
+
+// Query untuk Muatan Lokal - Seni Pentas Melayu
+$query_seni_pentas = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'seni_pentas'";
+$result_seni_pentas = mysqli_query($koneksi, $query_seni_pentas);
+
+// Query untuk Muatan Lokal - Ornamen Melayu
+$query_ornamen_melayu = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'ornamen_melayu'";
+$result_ornamen_melayu = mysqli_query($koneksi, $query_ornamen_melayu);
+
+// Query untuk Muatan Lokal - Tulisan Arab Melayu
+$query_tulisan_arab_melayu = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal' AND materi = 'tulisan_arab_melayu'";
+$result_tulisan_arab_melayu = mysqli_query($koneksi, $query_tulisan_arab_melayu);
 
 // Query untuk Muatan Pengetahuan Umum - Matematika
 $query_matematika = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_umum' AND materi = 'matematika'";
@@ -23,6 +63,30 @@ $result_matematika = mysqli_query($koneksi, $query_matematika);
 // Query untuk Muatan Pengetahuan Umum - IPA
 $query_ipa = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_umum' AND materi = 'ipa'";
 $result_ipa = mysqli_query($koneksi, $query_ipa);
+
+// Query untuk Muatan Pengetahuan Umum - AGAMA
+$query_agama = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_umum' AND materi = 'agama'";
+$result_agama = mysqli_query($koneksi, $query_agama);
+
+// Query untuk Muatan Pengetahuan Umum - Bahasa Indonesia
+$query_bahasa_indonesia = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_umum' AND materi = 'bahasa_indonesia'";
+$result_bahasa_indonesia = mysqli_query($koneksi, $query_bahasa_indonesia);
+
+// Query untuk Muatan Pengetahuan Umum - IPS
+$query_ips = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_umum' AND materi = 'ips'";
+$result_ips = mysqli_query($koneksi, $query_ips);
+
+// Query untuk Muatan Pengetahuan Umum - PKN
+$query_pkn = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_umum' AND materi = 'pkn'";
+$result_pkn = mysqli_query($koneksi, $query_pkn);
+
+// Query untuk Muatan Pengetahuan Umum - PJOK
+$query_pjok = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_umum' AND materi = 'pjok'";
+$result_pjok = mysqli_query($koneksi, $query_pjok);
+
+// Query untuk Muatan Pengetahuan Umum - Seni Budaya
+$query_seni_budaya = "SELECT * FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_umum' AND materi = 'seni_budaya'";
+$result_seni_budaya = mysqli_query($koneksi, $query_seni_budaya);
 
 // Melakukan query untuk mengambil jumlah data materi pembelajaran
 $query_count_lokal = "SELECT COUNT(*) as total FROM e_learning WHERE kategori = 'materi' AND jenis = 'muatan_lokal'";
@@ -290,6 +354,11 @@ mysqli_close($koneksi);
                 margin-bottom: -15px;
             }
         }
+
+        .nav-link.active-red {
+            background-color: red;
+            color: red !important;
+        }
     </style>
 
 </head>
@@ -350,7 +419,37 @@ mysqli_close($koneksi);
                             <button class="nav-link active" id="pantun-tab" data-bs-toggle="tab" data-bs-target="#pantun" type="button" role="tab" aria-controls="pantun" aria-selected="true">Pantun</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="gurindam-tab" data-bs-toggle="tab" data-bs-target="#gurindam" type="button" role="tab" aria-controls="gurindam" aria-selected="false">Gurindam</button>
+                            <button class="nav-link" id="pulau_penyengat-tab" data-bs-toggle="tab" data-bs-target="#pulau_penyengat" type="button" role="tab" aria-controls="pulau_penyengat" aria-selected="false">Pulau Penyengat</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pencak_silat-tab" data-bs-toggle="tab" data-bs-target="#pencak_silat" type="button" role="tab" aria-controls="pencak_silat" aria-selected="true">Pencak Silat</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="cerita_rakyat-tab" data-bs-toggle="tab" data-bs-target="#cerita_rakyat" type="button" role="tab" aria-controls="cerita_rakyat" aria-selected="false">Cerita Rakyat</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tanaman_obat-tab" data-bs-toggle="tab" data-bs-target="#tanaman_obat" type="button" role="tab" aria-controls="tanaman_obat" aria-selected="true">Tanaman Obat Keluarga</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="makanan_tradisional-tab" data-bs-toggle="tab" data-bs-target="#makanan_tradisional" type="button" role="tab" aria-controls="makanan_tradisional" aria-selected="false">Makanan Tradisional</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="rumah_adat-tab" data-bs-toggle="tab" data-bs-target="#rumah_adat" type="button" role="tab" aria-controls="rumah_adat" aria-selected="true">Rumah Adat</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="kepri-tab" data-bs-toggle="tab" data-bs-target="#kepri" type="button" role="tab" aria-controls="kepri" aria-selected="false">Provinsi Kepulauan Riau</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="seni_musik-tab" data-bs-toggle="tab" data-bs-target="seni_musik" type="button" role="tab" aria-controls="sen_musik" aria-selected="true">Seni Musik Tradisional Melayu</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="seni_pentas-tab" data-bs-toggle="tab" data-bs-target="#seni_pentas" type="button" role="tab" aria-controls="seni_pentas" aria-selected="false">Seni Pentas Melayu</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="ornamen_melayu-tab" data-bs-toggle="tab" data-bs-target="#ornamen_melayu" type="button" role="tab" aria-controls="ornamen_melayu" aria-selected="true">Ornamen Melayu</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tulisan_arab_melayu-tab" data-bs-toggle="tab" data-bs-target="#tulisan_arab_melayu" type="button" role="tab" aria-controls="tulisan_arab_melayu" aria-selected="false">Tulisan Arab Melayu</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="muatanLokalTabContent">
@@ -381,10 +480,10 @@ mysqli_close($koneksi);
                                 <?php endwhile; ?>
                             </div>
                         </div>
-                        <!-- Gurindam -->
-                        <div class="tab-pane fade" id="gurindam" role="tabpanel" aria-labelledby="gurindam-tab">
+                        <!-- Pulau Penyengat -->
+                        <div class="tab-pane fade" id="pulau_penyengat" role="tabpanel" aria-labelledby="pulau_penyengat-tab">
                             <div class="container" data-aos="fade-up">
-                                <?php while ($row = mysqli_fetch_assoc($result_gurindam)) : ?>
+                                <?php while ($row = mysqli_fetch_assoc($result_pulau_penyengat)) : ?>
                                     <div class="row">
                                         <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
                                             <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
@@ -408,6 +507,276 @@ mysqli_close($koneksi);
                                 <?php endwhile; ?>
                             </div>
                         </div>
+                        <!-- Pencak Silat -->
+                        <div class="tab-pane fade" id="pencak_silat" role="tabpanel" aria-labelledby="pencak_silat-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_pencak_silat)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- Cerita Rakyat -->
+                        <div class="tab-pane fade" id="cerita_rakyat" role="tabpanel" aria-labelledby="cerita_rakyat-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_cerita_rakyat)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- Tanaman Obat Keluarga -->
+                        <div class="tab-pane fade" id="tanaman_obat" role="tabpanel" aria-labelledby="tanaman_obat-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_tanaman_obat)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- Makanan Tradisional Melayu -->
+                        <div class="tab-pane fade" id="makanan_tradisional" role="tabpanel" aria-labelledby="makanan_tradisional-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_makanan_tradisional)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                            <!-- Rumah Adat -->
+                            <div class="tab-pane fade" id="rumah_adat" role="tabpanel" aria-labelledby="rumah_adat-tab">
+                                <div class="container" data-aos="fade-up">
+                                    <?php while ($row = mysqli_fetch_assoc($result_rumah_adat)) : ?>
+                                        <div class="row">
+                                            <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                                <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                    <i class="bx bx-receipt"></i>
+                                                    <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                    <div class="date mt-2">
+                                                        <?php if ($row['link_yt'] != '-') : ?>
+                                                            <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                        <?php else : ?>
+                                                            Link Materi: <?php echo $row['link_yt']; ?>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                    <div class="download mt-2 mb-2">
+                                                        <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                            <i class="fas fa-download"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                </div>
+                            </div>
+                            <!-- Provinsi Kepulauan Riau -->
+                            <div class="tab-pane fade" id="kepri" role="tabpanel" aria-labelledby="kepri-tab">
+                                <div class="container" data-aos="fade-up">
+                                    <?php while ($row = mysqli_fetch_assoc($result_kepri)) : ?>
+                                        <div class="row">
+                                            <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                                <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                    <i class="bx bx-receipt"></i>
+                                                    <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                    <div class="date mt-2">
+                                                        <?php if ($row['link_yt'] != '-') : ?>
+                                                            <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                        <?php else : ?>
+                                                            Link Materi: <?php echo $row['link_yt']; ?>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                    <div class="download mt-2 mb-2">
+                                                        <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                            <i class="fas fa-download"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                </div>
+                            </div>
+                            <!-- Seni Musik Tradisional -->
+                            <div class="tab-pane fade" id="seni_musik" role="tabpanel" aria-labelledby="seni_musik-tab">
+                                <div class="container" data-aos="fade-up">
+                                    <?php while ($row = mysqli_fetch_assoc($result_seni_musik)) : ?>
+                                        <div class="row">
+                                            <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                                <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                    <i class="bx bx-receipt"></i>
+                                                    <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                    <div class="date mt-2">
+                                                        <?php if ($row['link_yt'] != '-') : ?>
+                                                            <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                        <?php else : ?>
+                                                            Link Materi: <?php echo $row['link_yt']; ?>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                    <div class="download mt-2 mb-2">
+                                                        <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                            <i class="fas fa-download"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                </div>
+                            </div>
+                            <!-- Seni Pentas -->
+                            <div class="tab-pane fade" id="seni_pentas" role="tabpanel" aria-labelledby="seni_pentas-tab">
+                                <div class="container" data-aos="fade-up">
+                                    <?php while ($row = mysqli_fetch_assoc($result_seni_pentas)) : ?>
+                                        <div class="row">
+                                            <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                                <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                    <i class="bx bx-receipt"></i>
+                                                    <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                    <div class="date mt-2">
+                                                        <?php if ($row['link_yt'] != '-') : ?>
+                                                            <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                        <?php else : ?>
+                                                            Link Materi: <?php echo $row['link_yt']; ?>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                    <div class="download mt-2 mb-2">
+                                                        <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                            <i class="fas fa-download"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                </div>
+                                <!-- Ornamen Melayu -->
+                                <div class="tab-pane fade" id="ornamen_melayu" role="tabpanel" aria-labelledby="ornamen_melayu-tab">
+                                    <div class="container" data-aos="fade-up">
+                                        <?php while ($row = mysqli_fetch_assoc($result_ornamen_melayu)) : ?>
+                                            <div class="row">
+                                                <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                                    <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                        <i class="bx bx-receipt"></i>
+                                                        <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                        <div class="date mt-2">
+                                                            <?php if ($row['link_yt'] != '-') : ?>
+                                                                <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                            <?php else : ?>
+                                                                Link Materi: <?php echo $row['link_yt']; ?>
+                                                            <?php endif; ?>
+                                                        </div>
+                                                        <div class="download mt-2 mb-2">
+                                                            <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                                <i class="fas fa-download"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                </div>
+                                <!-- Tulisan Arab Melayu -->
+                                <div class="tab-pane fade" id="tulisan_arab_melayu" role="tabpanel" aria-labelledby="tulisan_arab_melayu-tab">
+                                    <div class="container" data-aos="fade-up">
+                                        <?php while ($row = mysqli_fetch_assoc($result_tulisan_arab_melayu)) : ?>
+                                            <div class="row">
+                                                <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                                    <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                        <i class="bx bx-receipt"></i>
+                                                        <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                        <div class="date mt-2">
+                                                            <?php if ($row['link_yt'] != '-') : ?>
+                                                                <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                            <?php else : ?>
+                                                                Link Materi: <?php echo $row['link_yt']; ?>
+                                                            <?php endif; ?>
+                                                        </div>
+                                                        <div class="download mt-2 mb-2">
+                                                            <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                                <i class="fas fa-download"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -419,6 +788,24 @@ mysqli_close($koneksi);
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="ipa-tab" data-bs-toggle="tab" data-bs-target="#ipa" type="button" role="tab" aria-controls="ipa" aria-selected="false">IPA</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="ips-tab" data-bs-toggle="tab" data-bs-target="#ips" type="button" role="tab" aria-controls="ips" aria-selected="true">IPS</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="bahasa_indonesia-tab" data-bs-toggle="tab" data-bs-target="#bahasa_indonesia" type="button" role="tab" aria-controls="bahasa_indonesia" aria-selected="false">Bahasa Indonesia</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pkn-tab" data-bs-toggle="tab" data-bs-target="#pkn" type="button" role="tab" aria-controls="pkn" aria-selected="true">PKN</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="agama-tab" data-bs-toggle="tab" data-bs-target="#agama" type="button" role="tab" aria-controls="agama" aria-selected="false">Agama</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="seni_budaya-tab" data-bs-toggle="tab" data-bs-target="#seni_budaya" type="button" role="tab" aria-controls="seni_budaya" aria-selected="true">Seni Budaya</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pjok-tab" data-bs-toggle="tab" data-bs-target="#pjok" type="button" role="tab" aria-controls="pjok" aria-selected="false">PJOK</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="muatanUmumTabContent">
@@ -453,6 +840,168 @@ mysqli_close($koneksi);
                         <div class="tab-pane fade" id="ipa" role="tabpanel" aria-labelledby="ipa-tab">
                             <div class="container" data-aos="fade-up">
                                 <?php while ($row = mysqli_fetch_assoc($result_ipa)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- AGAMA -->
+                        <div class="tab-pane fade" id="agama" role="tabpanel" aria-labelledby="agama-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_agama)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- IPS -->
+                        <div class="tab-pane fade" id="ips" role="tabpanel" aria-labelledby="ips-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_ips)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- PKN -->
+                        <div class="tab-pane fade" id="pkn" role="tabpanel" aria-labelledby="pkn-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_pkn)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- Bahasa Indonesia -->
+                        <div class="tab-pane fade" id="bahasa_indonesia" role="tabpanel" aria-labelledby="bahasa_indonesia-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_bahasa_indonesia)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- PJOK -->
+                        <div class="tab-pane fade" id="pjok" role="tabpanel" aria-labelledby="pjok-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_pjok)) : ?>
+                                    <div class="row">
+                                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                                            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                                                <i class="bx bx-receipt"></i>
+                                                <h4>Judul Materi: <?php echo $row['judul_konten']; ?></h4>
+                                                <div class="date mt-2">
+                                                    <?php if ($row['link_yt'] != '-') : ?>
+                                                        <a href="<?php echo $row['link_yt']; ?>" target="_blank">Link Materi - Klik Disini</a>
+                                                    <?php else : ?>
+                                                        Link Materi: <?php echo $row['link_yt']; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="download mt-2 mb-2">
+                                                    <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
+                                                        <i class="fas fa-download"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                        <!-- Seni Budaya -->
+                        <div class="tab-pane fade" id="seni_budaya" role="tabpanel" aria-labelledby="seni_budaya-tab">
+                            <div class="container" data-aos="fade-up">
+                                <?php while ($row = mysqli_fetch_assoc($result_seni_budaya)) : ?>
                                     <div class="row">
                                         <div class="col-lg-12" data-aos="fade-left" data-aos-delay="100">
                                             <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
@@ -520,6 +1069,32 @@ mysqli_close($koneksi);
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('#muatanLokalTab .nav-link');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    tabLinks.forEach(link => link.classList.remove('active-red'));
+                    this.classList.add('active-red');
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('#muatanUmumTab .nav-link');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    tabLinks.forEach(link => link.classList.remove('active-red'));
+                    this.classList.add('active-red');
+                });
+            });
+        });
+    </script>
 
 </body>
 
