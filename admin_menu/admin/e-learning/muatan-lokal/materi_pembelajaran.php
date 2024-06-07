@@ -44,6 +44,7 @@
                             <th>Judul Materi</th>
                             <th>Jenis Materi</th>
                             <th>Link Materi</th>
+                            <th>Created By</th>
                             <th>Download File</th>
                             <th>Aksi</th>
                         </tr>
@@ -77,6 +78,7 @@
                                 <td><?php echo $data['judul_konten']; ?></td>
                                 <td><?php echo isset($jenis_materi_labels[$data['materi']]) ? $jenis_materi_labels[$data['materi']] : 'Tidak Diketahui'; ?></td>
                                 <td><?php echo $data['link_yt']; ?></td>
+                                <td><?php echo $data['created_by']; ?></td>
                                 <td>
                                     <a href="file_materi/<?php echo $data['file']; ?>" title="Download File" class="btn btn-success btn-sm" download>
                                         <i class="fa fa-download"></i>

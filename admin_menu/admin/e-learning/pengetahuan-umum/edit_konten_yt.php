@@ -13,7 +13,7 @@ $link_yt = isset($_POST['link_yt']) ? mysqli_real_escape_string($koneksi, $_POST
 <div class="card card-success">
     <div class="card-header">
         <h3 class="card-title">
-            <i class="fa fa-edit"></i> Ubah Konten YT
+            <i class="fa fa-edit"></i> Ubah Konten YT - Muatan Pengetahuan Umum
         </h3>
     </div>
     <form action="" method="post" enctype="multipart/form-data">

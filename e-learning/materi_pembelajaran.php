@@ -469,6 +469,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -496,6 +497,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -523,6 +525,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -550,6 +553,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -577,6 +581,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -604,6 +609,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -630,6 +636,7 @@ mysqli_close($koneksi);
                                                             Link Materi: <?php echo $row['link_yt']; ?>
                                                         <?php endif; ?>
                                                     </div>
+                                                    <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                     <div class="download mt-2 mb-2">
                                                         <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                             <i class="fas fa-download"></i>
@@ -657,6 +664,7 @@ mysqli_close($koneksi);
                                                             Link Materi: <?php echo $row['link_yt']; ?>
                                                         <?php endif; ?>
                                                     </div>
+                                                    <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                     <div class="download mt-2 mb-2">
                                                         <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                             <i class="fas fa-download"></i>
@@ -684,6 +692,7 @@ mysqli_close($koneksi);
                                                             Link Materi: <?php echo $row['link_yt']; ?>
                                                         <?php endif; ?>
                                                     </div>
+                                                    <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                     <div class="download mt-2 mb-2">
                                                         <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                             <i class="fas fa-download"></i>
@@ -711,6 +720,7 @@ mysqli_close($koneksi);
                                                             Link Materi: <?php echo $row['link_yt']; ?>
                                                         <?php endif; ?>
                                                     </div>
+                                                    <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                     <div class="download mt-2 mb-2">
                                                         <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                             <i class="fas fa-download"></i>
@@ -737,6 +747,7 @@ mysqli_close($koneksi);
                                                                 Link Materi: <?php echo $row['link_yt']; ?>
                                                             <?php endif; ?>
                                                         </div>
+                                                        <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                         <div class="download mt-2 mb-2">
                                                             <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                                 <i class="fas fa-download"></i>
@@ -764,6 +775,7 @@ mysqli_close($koneksi);
                                                                 Link Materi: <?php echo $row['link_yt']; ?>
                                                             <?php endif; ?>
                                                         </div>
+                                                        <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                         <div class="download mt-2 mb-2">
                                                             <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                                 <i class="fas fa-download"></i>
@@ -825,6 +837,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -852,6 +865,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -879,6 +893,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -906,6 +921,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -933,6 +949,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -960,6 +977,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -987,6 +1005,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>
@@ -1014,6 +1033,7 @@ mysqli_close($koneksi);
                                                         Link Materi: <?php echo $row['link_yt']; ?>
                                                     <?php endif; ?>
                                                 </div>
+                                                <h5>Created by: <?php echo $row['created_by']; ?></h5>
                                                 <div class="download mt-2 mb-2">
                                                     <a href="../admin_menu/file_materi/<?php echo $row['file']; ?>" download="<?php echo $row['file']; ?>" class="btn-download-certificate">
                                                         <i class="fas fa-download"></i>

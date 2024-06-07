@@ -1,3 +1,9 @@
+<?php
+// Meng-include file yang memulai session, pastikan ini dilakukan sebelum ada output lain
+include_once 'data.php'; // Pastikan file ini sudah mengandung session_start() dan pengecekan login
+
+// Tidak perlu memanggil session_start() lagi jika sudah dipanggil di 'dashboard.php'
+?>
 <div class="card card-primary">
     <div class="card-header">
         <h3 class="card-title">
@@ -61,7 +67,7 @@
                 <label class="col-sm-2 col-form-label">Jenis</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="jenis" name="jenis" value="Muatan Pengetahuan Lokal" readonly>
-                    <input type="hidden" name="jenis" value="muatan_umum">
+                    <input type="hidden" name="jenis" value="muatan_lokal">
                 </div>
             </div>
 
@@ -103,16 +109,18 @@ if (isset($_POST['Simpan'])) {
                 $judul_konten = $_POST['judul_konten'];
                 $link_yt = $_POST['link_yt'];
                 $kategori = $_POST['kategori'];
-                $jenis = $_POST['muatan_umum'];
+                $jenis = $_POST['jenis'];
                 $materi = $_POST['materi'];
+                $created_by = $data_nama; // Ambil nama pengguna dari session
 
-                $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, file, kategori, jenis, materi) VALUES (
+                $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, file, kategori, jenis, materi, created_by) VALUES (
                     '$judul_konten',
                     '$link_yt',
                     '$file_name',
                     '$kategori',
                     '$jenis',
-                    '$materi'
+                    '$materi',
+                    '$created_by'
                 )";
 
                 // Melanjutkan dengan kueri SQL

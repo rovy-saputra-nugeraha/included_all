@@ -44,6 +44,7 @@
                             <th>Judul Materi</th>
                             <th>Jenis Materi</th>
                             <th>Link Materi</th>
+                            <th>Created By</th>
                             <th>Download File</th>
                             <th>Aksi</th>
                         </tr>
@@ -53,18 +54,14 @@
                         <?php
                         // Array asosiatif untuk memetakan nilai di database ke label jenis materi
                         $jenis_materi_labels = array(
-                            'pulau_penyengat' => 'Pulau Penyengat',
-                            'pantun' => 'Pantun',
-                            'pencak_silat' => 'Pencak Silat',
-                            'cerita_rakyat' => 'Cerita Rakyat',
-                            'tanaman_obat' => 'Tanaman Obat Keluarga',
-                            'makanan_tradisional' => 'Makanan Tradisional',
-                            'rumah_adat' => 'Rumah Adat',
-                            'kepri' => 'Provinsi Kepulauan Riau',
-                            'seni_musik' => 'Seni Musik Tradisional Melayu',
-                            'seni_pentas' => 'Seni Pentas Melayu',
-                            'ornamen_melayu' => 'Ornamen Melayu',
-                            'tulisan_arab_melayu' => 'Tulisan Arab Melayu'
+                            'mtk' => 'Matematika',
+                            'ipa' => 'IPA',
+                            'ips' => 'IPS',
+                            'pkn' => 'pkn',
+                            'bahasa_indonesia' => 'Bahasa Indonesia',
+                            'pjok' => 'PJOK',
+                            'agama' => 'Agama',
+                            'seni_budaya' => 'Seni Budaya'
                         );
                         $no = 1;
                         // Mengambil data dari database
@@ -77,6 +74,7 @@
                                 <td><?php echo $data['judul_konten']; ?></td>
                                 <td><?php echo isset($jenis_materi_labels[$data['materi']]) ? $jenis_materi_labels[$data['materi']] : 'Tidak Diketahui'; ?></td>
                                 <td><?php echo $data['link_yt']; ?></td>
+                                <td><?php echo $data['created_by']; ?></td>
                                 <td>
                                     <a href="file_materi/<?php echo $data['file']; ?>" title="Download File" class="btn btn-success btn-sm" download>
                                         <i class="fa fa-download"></i>

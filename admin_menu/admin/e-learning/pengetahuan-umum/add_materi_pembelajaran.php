@@ -1,3 +1,9 @@
+<?php
+// Meng-include file yang memulai session, pastikan ini dilakukan sebelum ada output lain
+include_once 'data.php'; // Pastikan file ini sudah mengandung session_start() dan pengecekan login
+
+// Tidak perlu memanggil session_start() lagi jika sudah dipanggil di 'dashboard.php'
+?>
 <div class="card card-primary">
     <div class="card-header">
         <h3 class="card-title">
@@ -81,7 +87,7 @@ if (isset($_POST['Simpan'])) {
         // Pindahkan file ke direktori yang ditentukan
         $upload_directory = 'file_materi/';
         $file_destination = $upload_directory . $file_name;
-        
+
         // Memeriksa apakah file dengan nama yang sama sudah ada
         if (file_exists($file_destination)) {
             echo "<script>
@@ -99,16 +105,18 @@ if (isset($_POST['Simpan'])) {
                 $judul_konten = $_POST['judul_konten'];
                 $link_yt = $_POST['link_yt'];
                 $kategori = $_POST['kategori'];
-                $jenis = $_POST['muatan_umum'];
+                $jenis = $_POST['jenis'];
                 $materi = $_POST['materi'];
+                $created_by = $data_nama; // Ambil nama pengguna dari session
 
-                $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, file, kategori, jenis, materi) VALUES (
+                $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, file, kategori, jenis, materi, created_by) VALUES (
                     '$judul_konten',
                     '$link_yt',
                     '$file_name',
                     '$kategori',
                     '$jenis',
-                    '$materi'
+                    '$materi',
+                    '$created_by'
                 )";
 
                 // Melanjutkan dengan kueri SQL

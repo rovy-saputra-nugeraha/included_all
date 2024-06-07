@@ -94,7 +94,7 @@ if (isset($_POST['Ubah'])) {
 <div class="card card-success">
     <div class="card-header">
         <h3 class="card-title">
-            <i class="fa fa-edit"></i> Ubah Materi Pembelajaran
+            <i class="fa fa-edit"></i> Ubah Materi Pembelajaran - Muatan Lokal Budaya Melayu
         </h3>
     </div>
     <form action="" method="post" enctype="multipart/form-data">
