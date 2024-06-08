@@ -46,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -91,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="row row-eq-height justify-content-center">
 
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-3 mb-4">
             <div class="card" data-aos="zoom-in" data-aos-delay="100">
               <i class="bi bi-youtube"></i>
               <div class="card-body">
@@ -102,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
           </div>
 
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-3 mb-4">
             <div class="card" data-aos="zoom-in" data-aos-delay="200">
               <i class="bi bi-journal-bookmark-fill"></i>
               <div class="card-body">
@@ -113,13 +114,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
           </div>
 
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-3 mb-4">
             <div class="card" data-aos="zoom-in" data-aos-delay="300">
               <i class="bi bi-joystick"></i>
               <div class="card-body">
                 <h5 class="card-title">Game Interaktif</h5>
                 <p class="card-text">Akses Permainan Interaktif untuk Membantu Proses Belajar dan Mengajar</p>
                 <a href="game_interaktif.php" class="readmore">Lihat</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-dice"></i>
+              <div class="card-body">
+                <h5 class="card-title">Penghitungan Poin Game</h5>
+                <p class="card-text">Perhitungan Permainan Game Monopoli Kepulauan Riau</p>
+                <a href="penghitungpoin.html" class="readmore">Lihat</a>
               </div>
             </div>
           </div>

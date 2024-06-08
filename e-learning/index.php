@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Login | E-Learnig</title>
+    <title>Login | E-Learning</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Favicons -->
     <link href="../assets/img/clients/Tutwurihandayani.png" rel="icon">
@@ -23,12 +23,79 @@
         input::placeholder {
             text-align: center;
         }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-md-6 {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .form-horizontal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-horizontal label,
+        .form-horizontal input,
+        .form-horizontal button {
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-horizontal input {
+            padding: 10px;
+        }
+
+        .form-horizontal button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-horizontal button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            form .kotak{
+                height: 200px;
+            }
+
+            .col-md-6 {
+                flex-basis: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .form-horizontal button {
+                width: 100%;
+            }
+
+            .form-horizontal label,
+            .form-horizontal input {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <form action="login.php" method="post">
-
+    <form class="kotak" action="login.php" method="post">
         <h2><strong>Masuk E-Learning <br> SD Negeri 013 Tanjungpinang Barat</strong></h2>
 
         <?php if (isset($_GET['error'])) { ?>
@@ -42,7 +109,7 @@
             <div class="col-md-6">
                 <form method="post" class="form-horizontal">
                     <label class="center-text">SCAN QR CODE</label>
-                    <input type="text" name="qrcode_text" id="text" readonyy="" placeholder="Masukkan Code QR" class="form-control" readonly> <br>
+                    <input type="text" name="qrcode_text" id="text" placeholder="Masukkan Code QR" class="form-control" readonly> <br>
                     <button align="center"><a href="../index.php">Kembali</a></button>
                 </form>
             </div>
@@ -58,7 +125,6 @@
             } else {
                 alert('Tidak ada kamera yang ditemukan');
             }
-
         }).catch(function(e) {
             console.error(e);
         });

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Bulan Mei 2024 pada 14.59
+-- Waktu pembuatan: 08 Jun 2024 pada 14.44
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
@@ -134,7 +134,7 @@ CREATE TABLE `countdown_login` (
 --
 
 INSERT INTO `countdown_login` (`id_countdown`, `target_datetime`, `status`) VALUES
-(1, '2024-02-02 19:00:00', 'Aktif');
+(1, '2024-05-22 19:00:00', 'NonAktif');
 
 -- --------------------------------------------------------
 
@@ -180,19 +180,22 @@ CREATE TABLE `e_learning` (
   `file` varchar(500) NOT NULL,
   `kategori` enum('konten_yt','materi','game') NOT NULL,
   `jenis` varchar(50) NOT NULL,
-  `materi` varchar(50) NOT NULL
+  `materi` varchar(50) NOT NULL,
+  `created_by` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `e_learning`
 --
 
-INSERT INTO `e_learning` (`id_learning`, `judul_konten`, `link_yt`, `file`, `kategori`, `jenis`, `materi`) VALUES
-(7, 'GURINDAM 12 RAJA ALI HAJI │Pasal 1 s.d Pasal 4', 'https://www.youtube.com/embed/g2BjRfdQfTA', '', 'konten_yt', 'muatan_lokal', ''),
-(8, 'INI GURINDAM PASAL KELIMA', 'https://www.youtube.com/embed/V8PNqTgc6-s', '', 'konten_yt', 'muatan_umum', ''),
-(10, 'Pulau Penyegat', 'https://wordwall.net/embed/f458e34f787044eb82795c3b87c08300', '', 'game', 'muatan_umum', ''),
-(13, 'Makanan Khas Melayu', 'https://wordwall.net/embed/ae6dda6f2ba647b3b57dab1c568dca2f', '', 'game', 'muatan_umum', ''),
-(14, 'Kelas VIII Matematika BS Sem 1', 'https://www.instagram.com/p/C6BzeGQpVsy/', 'Kelas VIII Matematika BS Sem 1.pdf', 'materi', 'muatan_umum', 'ipa');
+INSERT INTO `e_learning` (`id_learning`, `judul_konten`, `link_yt`, `file`, `kategori`, `jenis`, `materi`, `created_by`) VALUES
+(7, 'GURINDAM 12 RAJA ALI HAJI │Pasal 1 s.d Pasal 4', 'https://www.youtube.com/embed/g2BjRfdQfTA', '', 'konten_yt', 'muatan_lokal', '', ''),
+(8, 'INI GURINDAM PASAL KELIMA', 'https://www.youtube.com/embed/V8PNqTgc6-s', '', 'konten_yt', 'muatan_umum', '', ''),
+(10, 'Pulau Penyegat', 'https://wordwall.net/embed/f458e34f787044eb82795c3b87c08300', '', 'game', 'muatan_umum', '', ''),
+(13, 'Makanan Khas Melayu', 'https://wordwall.net/embed/ae6dda6f2ba647b3b57dab1c568dca2f', '', 'game', 'muatan_umum', '', ''),
+(17, 'Pulau Penyegat', 'https://www.canva.com/design/DAGFRUsVu6g/dtXcyM0H2rzf8--s8aN3QA/edit', 'Notulensi Diskusi 4.pdf', 'materi', 'muatan_lokal', 'pulau_penyengat', 'Farel Putra Albana'),
+(19, 'IPS', 'https://youtu.be/V8PNqTgc6-s?si=bXOqIAbhp6LR6MNl', 'Kelas VIII Matematika BS Sem 1.pdf', 'materi', 'muatan_umum', 'ips', 'Farel Putra Albana'),
+(20, 'IPA', '-', 'Notulensi Diskusi 2.pdf', 'materi', 'muatan_umum', 'ipa', 'Farel Putra Albana');
 
 -- --------------------------------------------------------
 
@@ -269,9 +272,9 @@ CREATE TABLE `login_siswa` (
 --
 
 INSERT INTO `login_siswa` (`id_login_siswa`, `nik`, `nama_pendek`, `email`, `password`, `status`) VALUES
-(6, '2101020012', 'Rovy', 'rovysaputra10@gmail.com', '$2y$10$9ai5xuHYP8MlhHDguRoDjub6k9T8t6wHI8aNBKtJoFySRO70WQH.O', 1),
+(6, '21010200123', 'Rovy', 'rovysaputra10@gmail.com', '', 1),
 (7, '2172021010020004', 'Vy', 'rovysaputra06@gmail.com', '$2y$10$g8qr7f.6bx0HJoOGmhlAMOUcYUKkcm4hX/TJIflbOknFBlj1GtIly', 1),
-(8, '11202300158', 'UMAR', 'muhdhorcs@gmail.com', '$2y$10$vQbNssv71cG5Z3.qbaimsOGEea93qE3chCIIj2NcCg8gnDXCu/P.a', 1);
+(8, 'Z11.2023.00130', 'UMAR', 'muhdhorcs@gmail.com', '', 1);
 
 -- --------------------------------------------------------
 
@@ -549,7 +552,7 @@ ALTER TABLE `data_guru`
 -- AUTO_INCREMENT untuk tabel `e_learning`
 --
 ALTER TABLE `e_learning`
-  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `e_learning_login`
