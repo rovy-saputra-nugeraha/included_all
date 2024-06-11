@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Jun 2024 pada 14.44
+-- Waktu pembuatan: 11 Jun 2024 pada 09.37
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
@@ -291,13 +291,6 @@ CREATE TABLE `tb_absen` (
   `Keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data untuk tabel `tb_absen`
---
-
-INSERT INTO `tb_absen` (`id`, `masuk`, `keluar`, `date`, `status`, `Keterangan`) VALUES
-('E3A23535', '', '20:37:26', '2024-05-16', 'B', '');
-
 -- --------------------------------------------------------
 
 --
@@ -308,16 +301,11 @@ CREATE TABLE `tb_id` (
   `id` varchar(50) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `chatid` varchar(50) NOT NULL,
-  `notifikasi` int(11) NOT NULL
+  `notifikasi` int(11) NOT NULL,
+  `tahun_masuk` varchar(25) NOT NULL,
+  `nisn` varchar(11) NOT NULL,
+  `status_kartu` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data untuk tabel `tb_id`
---
-
-INSERT INTO `tb_id` (`id`, `nama`, `chatid`, `notifikasi`) VALUES
-('338D3735', 'Rovy Saputra Nugeraha ', '1436647086', 0),
-('E3A23535', 'Rovy Saputra Nugeraha ', '1436647086', 0);
 
 -- --------------------------------------------------------
 
@@ -328,7 +316,7 @@ INSERT INTO `tb_id` (`id`, `nama`, `chatid`, `notifikasi`) VALUES
 CREATE TABLE `tb_pengguna` (
   `no` int(10) NOT NULL,
   `username` varchar(22) NOT NULL,
-  `password` varchar(22) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `level` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -337,7 +325,8 @@ CREATE TABLE `tb_pengguna` (
 --
 
 INSERT INTO `tb_pengguna` (`no`, `username`, `password`, `level`) VALUES
-(6, 'admin', 'admin', 0);
+(8, 'farel', '$2y$10$xXahxW34Ufxdi7SvVXAmWO9qvBXOApJwokUc.o20Lb1C5qg9s8rrG', 0),
+(9, 'Rovy', '$2y$10$va/7.5.m7l89ywjNABWEqeKrEWxRe/RhSaye5mph88S0TXWokOD3m', 0);
 
 -- --------------------------------------------------------
 
@@ -395,7 +384,7 @@ CREATE TABLE `tb_settings` (
 --
 
 INSERT INTO `tb_settings` (`masuk_mulai`, `masuk_akhir`, `keluar_mulai`, `keluar_akhir`, `libur1`, `libur2`, `timezone`, `admin_uid`, `bot_token`) VALUES
-('00:00:00', '08:15:00', '16:00:00', '22:30:00', 'Sabtu', 'Minggu', 'Asia/Jakarta', '338D3735', '6751977753:AAEwU5UFhwBbeIfupfrr7xg4_Utmbrnxefk');
+('00:00:00', '08:15:00', '16:00:00', '20:30:00', 'Rabu', 'Minggu', 'Asia/Jakarta', '338D3735', '6751977753:AAEwU5UFhwBbeIfupfrr7xg4_Utmbrnxefk');
 
 --
 -- Indexes for dumped tables
@@ -582,7 +571,7 @@ ALTER TABLE `login_siswa`
 -- AUTO_INCREMENT untuk tabel `tb_pengguna`
 --
 ALTER TABLE `tb_pengguna`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_profil`
