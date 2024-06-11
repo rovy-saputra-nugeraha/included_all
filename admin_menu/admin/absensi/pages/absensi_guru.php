@@ -22,7 +22,7 @@ if (isset($_POST['tanggal'])) {
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">DATA PRESENSI SISWA</h1>
+                <h1 class="m-0 text-dark">DATA PRESENSI GURU</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -62,7 +62,7 @@ if (isset($_POST['tanggal'])) {
                                     <thead>
                                         <tr>
                                             <th>UID</th>
-                                            <th>Nama Siswa</th>
+                                            <th>Nama Guru</th>
                                             <th>Jam Masuk</th>
                                             <th>Jam Keluar</th>
                                             <th>Tanggal</th>
@@ -96,8 +96,7 @@ if (isset($_POST['tanggal'])) {
                                                 <td><?php echo $data['keluar']; ?></td>
                                                 <td><?php echo $data['date']; ?></td>
                                                 <td><a href="./index.php?page=edit_absen&id=<?php echo $data['id']; ?>&nama=<?php echo $data['nama']; ?>&tanggal=<?php echo $data['date']; ?>&status=<?php echo $data['status']; ?>&flag=<?php echo $flag; ?>"><b>
-                                                            <center><?php echo $data['status']; ?></center>
-                                                        </b></a></td>
+                                                <center><?php echo $data['status']; ?><center></b></a></td>
                                                 <td><?php echo $data['keterangan']; ?></td>
                                             </tr>
 

@@ -71,7 +71,9 @@ $tampung_uid = $uid;
                     </select>
                     <small id="emailHelp" class="form-text text-muted">Pilih status kartu</small>
                 </div>      
-                <button type="submit" class="btn btn-outline-primary mt-3 float-right" value="simpan">Submit</button>
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-outline-primary mt-3" value="simpan">Submit</button>
+                </div>
             </form>
         </div>
     </div>

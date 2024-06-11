@@ -27,7 +27,7 @@ $tampung_uid = $uid;
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="index.php?page=pegawai">Guru</a></li>
+                    <li class="breadcrumb-item"><a href="index.php?page=pengguna-guru">Guru</a></li>
                     <li class="breadcrumb-item active">Edit</li>
                 </ol>
             </div><!-- /.col -->
@@ -71,7 +71,9 @@ $tampung_uid = $uid;
                     </select>
                     <small id="emailHelp" class="form-text text-muted">Pilih status kartu</small>
                 </div>      
-                <button type="submit" class="btn btn-outline-primary mt-3 float-right" value="simpan">Submit</button>
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-outline-primary mt-3" value="simpan">Submit</button>
+                </div>
             </form>
         </div>
     </div>

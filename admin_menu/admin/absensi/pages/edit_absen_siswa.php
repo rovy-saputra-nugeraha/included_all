@@ -24,7 +24,7 @@ if(isset($_SESSION['page'])) {
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="index.php?page=absensi">Data Presensi Siswa</a></li>
+              <li class="breadcrumb-item"><a href="index.php?page=absensi-siswa">Data Presensi Siswa</a></li>
               <li class="breadcrumb-item active">Edit</li>
             </ol>
           </div><!-- /.col -->
@@ -36,7 +36,7 @@ if(isset($_SESSION['page'])) {
 	<div class="content pb-4">
 		<div class="container-fluid">
 			
-				<form action="./konfig/update_absen.php" method="POST">
+				<form action="./konfig/update_siswa.php" method="POST">
 				
 				<input type="hidden" id="custId" name="flag" value="<?php echo $flag;?>">
 				

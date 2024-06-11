@@ -49,6 +49,27 @@ $count_alpa = mysqli_num_rows($sql6);
 
       <!-- card-->
       <div class="row">
+      <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>
+                <?php
+                $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE status_kartu='Siswa'");
+                $row = mysqli_num_rows($sql);
+                echo $row;
+                ?>
+              </h3>
+
+              <p>Data Presensi Siswa</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <a href="index.php?page=absensi-siswa" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
         <div class="col-lg-4 col-6">
           <!-- small box -->
           <div class="small-box bg-info">
@@ -64,32 +85,12 @@ $count_alpa = mysqli_num_rows($sql6);
               <p>Data Presensi Guru</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="fas fa-clipboard-list"></i>
             </div>
             <a href="index.php?page=absensi-guru" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <div class="col-lg-4 col-6">
-          <!-- small box -->
-          <div class="small-box bg-info">
-            <div class="inner">
-              <h3>
-                <?php
-                $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE status_kartu='Siswa'");
-                $row = mysqli_num_rows($sql);
-                echo $row;
-                ?>
-              </h3>
-
-              <p>Data Presensi Siswa</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="index.php?page=absensi-siswa" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
+      
         <div class="col-lg-4 col-6">
           <!-- small box -->
           <div class="small-box bg-success">
@@ -105,7 +106,7 @@ $count_alpa = mysqli_num_rows($sql6);
               <p>Jumlah Siswa</p>
             </div>
             <div class="icon">
-              <i class="fas fa-user-tie"></i>
+              <i class="fas fa-user-graduate"></i>
             </div>
             <a href="index.php?page=pegawai" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -126,9 +127,50 @@ $count_alpa = mysqli_num_rows($sql6);
               <p>Jumlah Guru</p>
             </div>
             <div class="icon">
-              <i class="fas fa-user-tie"></i>
+              <i class="fas fa-chalkboard-teacher"></i>
             </div>
             <a href="index.php?page=pegawai" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>
+                <?php
+                $sql = mysqli_query($dbconnect, "SELECT*FROM tb_id WHERE id");
+                $row = mysqli_num_rows($sql);
+                echo $row;
+                ?>
+              </h3>
+
+              <p>Data Registrasi Kartu</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <a href="index.php?page=pendaftaran" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>
+                <?php
+                $sql = mysqli_query($dbconnect, "SELECT*FROM tb_pengguna WHERE no");
+                $row = mysqli_num_rows($sql);
+                echo $row;
+                ?>
+              </h3>
+              <p>Administrator</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <a href="index.php?page=pengguna" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

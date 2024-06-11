@@ -24,7 +24,7 @@ if(isset($_SESSION['page'])) {
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="index.php?page=absensi">Data Presensi Guru</a></li>
+              <li class="breadcrumb-item"><a href="index.php?page=absensi-guru">Data Presensi Guru</a></li>
               <li class="breadcrumb-item active">Edit</li>
             </ol>
           </div><!-- /.col -->
