@@ -122,13 +122,28 @@ while ($data = $sql->fetch_assoc()) {
 								</a>
 							</li>
 
-							<li class="nav-item">
-								<a href="?page=data-siswa" class="nav-link">
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
 									<i class="nav-icon far fa fa-users"></i>
 									<p>
-										Data Siswa
+										Siswa
+										<i class="right fas fa-angle-left"></i>
 									</p>
 								</a>
+								<ul class="nav nav-treeview" style="font-size: 12px;">
+									<li class="nav-item">
+										<a href="?page=data-siswa" class="nav-link">
+											<i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+											<p>Data Siswa</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-absensi" class="nav-link">
+											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+											<p>Data Absensi</p>
+										</a>
+									</li>
+								</ul>
 							</li>
 
 							<!-- Informasi -->
@@ -248,6 +263,30 @@ while ($data = $sql->fetch_assoc()) {
 								</a>
 							</li>
 
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
+									<i class="nav-icon far fa fa-users"></i>
+									<p>
+										Siswa
+										<i class="right fas fa-angle-left"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview" style="font-size: 12px;">
+									<li class="nav-item">
+										<a href="?page=data-siswa" class="nav-link">
+											<i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+											<p>Data Siswa</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+											<p>Data Absensi</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+
 							<!-- E-Learning -->
 							<li class="nav-item has-treeview">
 								<a href="#" class="nav-link">
@@ -361,6 +400,11 @@ while ($data = $sql->fetch_assoc()) {
 								break;
 							case 'view-ibu':
 								include "admin/siswa/view_ibu.php";
+								break;
+
+								//Absensi
+							case 'data-absensi':
+								include "admin/absensi/data_absensi.php";
 								break;
 
 								//Guru
@@ -569,7 +613,7 @@ while ($data = $sql->fetch_assoc()) {
 					<strong>Sistem Informasi || SDN 013 Tanjungpinang Barat</strong>
 				</a>
 			</div>
-			<b>Project Mamang UI 2023</b>
+			<b>Project PKM-PM RBM</b>
 		</footer>
 
 		<!-- Control Sidebar -->
