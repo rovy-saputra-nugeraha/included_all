@@ -11,7 +11,7 @@ if(isset($_POST['status']) && isset($_POST['id']) ){
 		echo "Xx23er4tXWhz"; //Administrator OK
 	}
 	else if ($status == "Xx23er4tXWhz" && $tag != ""){
-		$sql = mysqli_query($dbconnect,"INSERT INTO tb_id VALUES ('$tag','','','1','','')");
+		$sql = mysqli_query($dbconnect,"INSERT INTO tb_id VALUES ('$tag','','','1','','','')");
 		if($sql){
 			echo 'ID ditambahkan';
 		}else{
