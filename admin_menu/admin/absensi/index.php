@@ -146,7 +146,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <ul class="nav nav-treeview" style="font-size: 12px;">
               <li class="nav-item">
                   <a href="index.php?page=pendaftaran" class="nav-link">
-                    <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+                    <i class="nav-icon fas fa-user-plus" style="font-size: 12px;"></i>
                     <p>Pendaftaran Kartu</p>
                   </a>
                 </li>
