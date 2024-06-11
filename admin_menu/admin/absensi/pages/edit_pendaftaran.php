@@ -23,11 +23,11 @@ $tampung_uid = $uid;
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">EDIT GURU</h1>
+                <h1 class="m-0 text-dark">EDIT PENDAFTARAN KARTU</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="index.php?page=pegawai">Guru</a></li>
+                    <li class="breadcrumb-item"><a href="index.php?page=pendaftaran">Pendaftaran</a></li>
                     <li class="breadcrumb-item active">Edit</li>
                 </ol>
             </div><!-- /.col -->
@@ -38,7 +38,7 @@ $tampung_uid = $uid;
 <section class="content ml-3 mr-3">
     <div class="content">
         <div class="container-fluid">
-            <form action="./konfig/update_guru.php" method="POST">
+            <form action="./konfig/update_pendaftaran.php" method="POST">
                 <div class="form-group">
                     <input type="hidden" name="parameter" value="<?php echo $tampung_uid; ?>">
                     <label for="uid">UID</label>

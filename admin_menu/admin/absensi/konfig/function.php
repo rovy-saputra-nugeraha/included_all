@@ -129,24 +129,40 @@ function postdata($uid, $hari_ini, $time, $cek_absen)
 
 function telegram($uid, $jam_absen, $status, $secret_token)
 {
-	global $dbconnect;
-	$sql = mysqli_query($dbconnect, "SELECT * FROM tb_id WHERE id='$uid'");
-	while ($results = mysqli_fetch_array($sql)) {
-		$nama = $results['nama'];
-		$chat_id = $results['chatid'];
-		$nisn = $results['nisn'];
-		$tahun_masuk = $results['tahun_masuk'];
-	}
-	$message_text = "Halo " . $nama . "\nNISN : " . $nisn . "\nTahun Masuk : " . $tahun_masuk . "\nWaktu Absen : " . $jam_absen . ",\nPresensi anda telah berhasil disimpan. dengan status saat ini : \n" . $status;
-	$url = "https://api.telegram.org/bot" . $secret_token . "/sendMessage?parse_mode=markdown&chat_id=" . $chat_id;
-	$url = $url . "&text=" . urlencode($message_text);
-	$ch = curl_init();
-	$optArray = array(
-		CURLOPT_URL => $url,
-		CURLOPT_RETURNTRANSFER => true
-	);
-	curl_setopt_array($ch, $optArray);
-	curl_exec($ch);
-	curl_close($ch);
+    global $dbconnect;
+    $sql = mysqli_query($dbconnect, "SELECT * FROM tb_id WHERE id='$uid'");
+    while ($results = mysqli_fetch_array($sql)) {
+        $nama = $results['nama'];
+        $chat_id = $results['chatid'];
+        $status_kartu = $results['status_kartu'];
+        $tahun_masuk = $results['tahun_masuk'];
+
+        // Menentukan label dan identifier berdasarkan status kartu
+        if ($status_kartu == 'Guru') {
+            $identifier_label = 'NIP';
+            $identifier_value = $results['nisn'];
+        } else {
+            $identifier_label = 'NISN';
+            $identifier_value = $results['nisn'];
+        }
+    }
+
+    // Membuat teks pesan
+    $message_text = "Halo " . $nama . "\n" . $identifier_label . " : " . $identifier_value . "\nTahun Masuk : " . $tahun_masuk . "\nStatus : " . $status_kartu . "\nWaktu Absen : " . $jam_absen . ",\nPresensi anda telah berhasil disimpan. dengan status saat ini : \n" . $status;
+    
+    // URL untuk mengirim pesan
+    $url = "https://api.telegram.org/bot" . $secret_token . "/sendMessage?parse_mode=markdown&chat_id=" . $chat_id;
+    $url = $url . "&text=" . urlencode($message_text);
+    
+    // Mengirim pesan menggunakan curl
+    $ch = curl_init();
+    $optArray = array(
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true
+    );
+    curl_setopt_array($ch, $optArray);
+    curl_exec($ch);
+    curl_close($ch);
 }
+
 ?>

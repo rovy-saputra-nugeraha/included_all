@@ -144,6 +144,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <i class="right fas fa-angle-left"></i>
               </a>
               <ul class="nav nav-treeview" style="font-size: 12px;">
+              <li class="nav-item">
+                  <a href="index.php?page=pendaftaran" class="nav-link">
+                    <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+                    <p>Pendaftaran Kartu</p>
+                  </a>
+                </li>
                 <li class="nav-item">
                   <a href="index.php?page=pengguna-siswa" class="nav-link">
                     <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
@@ -165,7 +171,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>
                   Daftar Operator
                 </p>
-              </a>
+              </a> 
             </li>
 
             <li class="nav-item">
@@ -204,6 +210,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             include "pages/absensi_guru.php";
             break;
 
+          case 'pendaftaran':
+            include "pages/pendaftaran.php";
+            break;
+
           case 'pengguna-siswa':
             include "pages/pengguna_siswa.php";
             break;
@@ -220,8 +230,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
             include "pages/konfigurasi.php";
             break;
 
-          case 'edit_pegawai':
-            include "pages/edit_pegawai.php";
+          case 'edit_siswa':
+            include "pages/edit_siswa.php";
+            break;
+
+          case 'edit_guru':
+            include "pages/edit_guru.php";
+            break;
+          
+          case 'edit_pendaftaran':
+            include "pages/edit_pendaftaran.php";
             break;
 
           case 'edit_konfigurasi':

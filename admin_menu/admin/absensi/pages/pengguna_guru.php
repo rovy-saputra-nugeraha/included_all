@@ -53,10 +53,11 @@ if (isset($_SESSION['page'])) {
 									<td><?php echo $data['chatid']; ?></td>
 									<td>
 										<center>
-											<a href="./konfig/delete_pegawai.php?id=<?php echo $data['id']; ?>" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apakah anda yakin?')" data-toggle="tooltip" title="Hapus"><i class="fas fa-trash-alt"></i></a>
-											<a href="./index.php?page=edit_guru&id=<?php echo $data['id']; ?>&nisn=<?php echo $data['nisn'];?>&tahun_masuk=<?php echo $data['tahun_masuk'];  ?>&nama=<?php echo $data['nama']; ?>&chatid=<?php echo $data['chatid'];?>" class="btn btn-outline-primary btn-sm ml-3" data-toggle="tooltip" title="Edit"><i class="fas fa-edit"></i></a>
+												<a href="./konfig/delete_guru.php?id=<?php echo $data['id']; ?>" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apakah anda yakin?')" data-toggle="tooltip" title="Hapus"><i class="fas fa-trash-alt"></i></a>
+												<a href="./index.php?page=edit_guru&id=<?php echo $data['id']; ?>&nisn=<?php echo $data['nisn'];?>&tahun_masuk=<?php echo $data['tahun_masuk'];  ?>&nama=<?php echo $data['nama']; ?>&chatid=<?php echo $data['chatid']; ?>&status_kartu=<?php echo $data['status_kartu']; ?>" class="btn btn-outline-primary btn-sm ml-3" data-toggle="tooltip" title="Edit"><i class="fas fa-edit"></i></a>
 										</center>
-									</td>
+								</td>
+
 								</tr>
 
 							<?php

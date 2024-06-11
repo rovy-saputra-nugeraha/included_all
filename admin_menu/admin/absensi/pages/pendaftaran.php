@@ -8,7 +8,7 @@ if (isset($_SESSION['page'])) {
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1 class="m-0 text-dark">DAFTAR PENGGUNA SISWA</h1>
+				<h1 class="m-0 text-dark">REGISTRASI KARTU</h1>
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
@@ -31,17 +31,18 @@ if (isset($_SESSION['page'])) {
 						<thead class="bg-secondary">
 							<tr>
 								<th>UID</th>
-								<th>NISN</th>
-								<th>Nama Siswa</th>
+								<th>NISN/NIP</th>
+								<th>Nama Pengguna</th>
 								<th>Tahun Masuk</th>
 								<th>Chat ID Telegram</th>
+								<th>Status Kartu</th>
 								<th>Aksi</th>
 							</tr>
 						</thead>
 
 						<tbody class="bg-white">
 							<?php
-							$sql = mysqli_query($dbconnect, "SELECT * FROM tb_id WHERE status_kartu='Siswa' ORDER BY nama");
+							$sql = mysqli_query($dbconnect, "SELECT * FROM tb_id ORDER BY nama!=''");
 							while ($data = mysqli_fetch_array($sql)) {
 							?>
 
@@ -51,10 +52,12 @@ if (isset($_SESSION['page'])) {
 									<td><?php echo $data['nama']; ?></td>
 									<td><?php echo $data['tahun_masuk']; ?></td>
 									<td><?php echo $data['chatid']; ?></td>
+									<td><?php echo $data['status_kartu']; ?></td>
+						
 									<td>
 											<center>
-													<a href="./konfig/delete_siswa.php?id=<?php echo $data['id']; ?>" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apakah anda yakin?')" data-toggle="tooltip" title="Hapus"><i class="fas fa-trash-alt"></i></a>
-													<a href="./index.php?page=edit_siswa&id=<?php echo $data['id']; ?>&nisn=<?php echo $data['nisn'];?>&tahun_masuk=<?php echo $data['tahun_masuk'];  ?>&nama=<?php echo $data['nama']; ?>&chatid=<?php echo $data['chatid']; ?>&status_kartu=<?php echo $data['status_kartu']; ?>" class="btn btn-outline-primary btn-sm ml-3" data-toggle="tooltip" title="Edit"><i class="fas fa-edit"></i></a>
+													<a href="./konfig/delete_pendaftaran.php?id=<?php echo $data['id']; ?>" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apakah anda yakin?')" data-toggle="tooltip" title="Hapus"><i class="fas fa-trash-alt"></i></a>
+													<a href="./index.php?page=edit_pendaftaran&id=<?php echo $data['id']; ?>&nisn=<?php echo $data['nisn'];?>&tahun_masuk=<?php echo $data['tahun_masuk'];  ?>&nama=<?php echo $data['nama']; ?>&chatid=<?php echo $data['chatid']; ?>&status_kartu=<?php echo $data['status_kartu']; ?>" class="btn btn-outline-primary btn-sm ml-3" data-toggle="tooltip" title="Edit"><i class="fas fa-edit"></i></a>
 											</center>
 									</td>
 								</tr>

@@ -7,9 +7,9 @@ if(isset($_SESSION['page'])){
 		$uid = $_GET['id'];
 		$sql = mysqli_query($dbconnect,"DELETE FROM tb_id WHERE id='$uid'");
 		$del_absen = mysqli_query($dbconnect,"DELETE FROM tb_absen WHERE id='$uid'");
-		header("location:../index.php?page=pegawai&error=false");
+		header("location:../index.php?page=pendaftaran&error=false");
 	}else{
-		header("location:../index.php?page=pegawai&error=true");
+		header("location:../index.php?page=pendaftaran&error=true");
 	}
 		  
 }else{

@@ -38,7 +38,7 @@ $tampung_uid = $uid;
 <section class="content ml-3 mr-3">
     <div class="content">
         <div class="container-fluid">
-            <form action="./konfig/update_pegawai.php" method="POST">
+            <form action="./konfig/update_siswa.php" method="POST">
                 <div class="form-group">
                     <input type="hidden" name="parameter" value="<?php echo $tampung_uid; ?>">
                     <label for="uid">UID</label>

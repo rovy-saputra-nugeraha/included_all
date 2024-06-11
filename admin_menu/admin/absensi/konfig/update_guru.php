@@ -25,5 +25,5 @@ if (isset($_SESSION['page'])) {
 } else {
     $error = "true";
 } 
-header("location:../index.php?page=pegawai&error=".$error);
+header("location:../index.php?page=pengguna-guru&error=".$error);
 ?>
