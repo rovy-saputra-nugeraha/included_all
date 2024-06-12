@@ -294,7 +294,7 @@ if (isset($_POST['send'])) {
 
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/guru/guru-perempuan.png" class="img-fluid" alt="">
+            <img src="assets/img/guru/Kepala Sekolah.PNG" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
             <h3>Kepala Sekolah SD Negeri 013 Tanjungpinang Barat</h3>
@@ -567,10 +567,6 @@ if (isset($_POST['send'])) {
 
       </div>
     </section><!-- End Portfolio Section -->
-
-    <h1>hbfj ahd </h1>
-    <section>ini adalah codingan </section>
-    <h2><title></title></h2>
 
     <!-- ======= Mitra Section ======= -->
     <section id="mitra" class="services section-bg">

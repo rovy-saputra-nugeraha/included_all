@@ -48,9 +48,6 @@ $_SESSION['page'] = 'index';
         <li class="nav-item d-none d-sm-inline-block">
           <a href="index.php?page=dashboard" class="nav-link">Home</a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Contact</a>
-        </li>
       </ul>
 
       <!-- Right navbar links -->
@@ -98,86 +95,128 @@ $_SESSION['page'] = 'index';
 
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-item">
-              <a href="index.php?page=dashboard" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Dashboard
-                </p>
-              </a>
-            </li>
-
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon far fa-calendar-alt"></i>
-                <p>
-                  Data Presensi
-                </p>
-                <i class="right fas fa-angle-left"></i>
-              </a>
-              <ul class="nav nav-treeview" style="font-size: 12px;">
-                <li class="nav-item">
-                  <a href="index.php?page=absensi-siswa" class="nav-link">
-                    <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
-                    <p>Presensi Siswa</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.php?page=absensi-guru" class="nav-link">
-                    <i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
-                    <p>Presensi Guru</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item has-treeview">
-              <a href="" class="nav-link">
-                <i class="nav-icon fas fa-users"></i>
-                <p>
-                  Daftar Pengguna
-                </p>
-                <i class="right fas fa-angle-left"></i>
-              </a>
-              <ul class="nav nav-treeview" style="font-size: 12px;">
+            <!-- Level  -->
+            <?php
+            if ($_SESSION['level'] == '0') {
+            ?>
               <li class="nav-item">
-                  <a href="index.php?page=pendaftaran" class="nav-link">
-                    <i class="nav-icon fas fa-user-plus" style="font-size: 12px;"></i>
-                    <p>Pendaftaran Kartu</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.php?page=pengguna-siswa" class="nav-link">
-                    <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
-                    <p>Data Siswa</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.php?page=pengguna-guru" class="nav-link">
-                    <i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
-                    <p>Data Guru</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
+                <a href="index.php?page=dashboard" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                  </p>
+                </a>
+              </li>
 
-            <li class="nav-item">
-              <a href="index.php?page=pengguna" class="nav-link">
-                <i class="nav-icon fas fa-user-lock"></i>
-                <p>
-                  Daftar Operator
-                </p>
-              </a> 
-            </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>
+                    Data Presensi
+                  </p>
+                  <i class="right fas fa-angle-left"></i>
+                </a>
+                <ul class="nav nav-treeview" style="font-size: 12px;">
+                  <li class="nav-item">
+                    <a href="index.php?page=absensi-siswa" class="nav-link">
+                      <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+                      <p>Presensi Siswa</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index.php?page=absensi-guru" class="nav-link">
+                      <i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+                      <p>Presensi Guru</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
-            <li class="nav-item">
-              <a href="index.php?page=konfigurasi" class="nav-link">
-                <i class="nav-icon fas fa-cogs"></i>
-                <p>
-                  Konfigurasi
-                </p>
-              </a>
-            </li>
+              <li class="nav-item has-treeview">
+                <a href="" class="nav-link">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>
+                    Daftar Pengguna
+                  </p>
+                  <i class="right fas fa-angle-left"></i>
+                </a>
+                <ul class="nav nav-treeview" style="font-size: 12px;">
+                  <li class="nav-item">
+                    <a href="index.php?page=pendaftaran" class="nav-link">
+                      <i class="nav-icon fas fa-user-plus" style="font-size: 12px;"></i>
+                      <p>Pendaftaran Kartu</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index.php?page=pengguna-siswa" class="nav-link">
+                      <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+                      <p>Data Siswa</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index.php?page=pengguna-guru" class="nav-link">
+                      <i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+                      <p>Data Guru</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="index.php?page=pengguna" class="nav-link">
+                  <i class="nav-icon fas fa-user-lock"></i>
+                  <p>
+                    Daftar Operator
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="index.php?page=konfigurasi" class="nav-link">
+                  <i class="nav-icon fas fa-cogs"></i>
+                  <p>
+                    Konfigurasi
+                  </p>
+                </a>
+              </li>
+            <?php
+            } elseif ($_SESSION['level'] == '1') {
+            ?>
+              <li class="nav-item">
+                <a href="index.php?page=dashboard" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>
+                    Data Presensi
+                  </p>
+                  <i class="right fas fa-angle-left"></i>
+                </a>
+                <ul class="nav nav-treeview" style="font-size: 12px;">
+                  <li class="nav-item">
+                    <a href="index.php?page=absensi-siswa" class="nav-link">
+                      <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+                      <p>Presensi Siswa</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index.php?page=absensi-guru" class="nav-link">
+                      <i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+                      <p>Presensi Guru</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            <?php
+            }
+            ?>
 
           </ul>
         </nav>
@@ -233,7 +272,7 @@ $_SESSION['page'] = 'index';
           case 'edit_guru':
             include "pages/edit_guru.php";
             break;
-          
+
           case 'edit_pendaftaran':
             include "pages/edit_pendaftaran.php";
             break;

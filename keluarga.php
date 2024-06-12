@@ -46,7 +46,6 @@
       background-color: blue;
     }
 
-
     /* Gaya untuk efek overlay dan transformasi gambar saat hover */
     .service-item .img {
       position: relative;
@@ -234,12 +233,12 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="assets/img/Keluarga/guru.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Keluarga/jajaran_guru.jpg" class="img-fluid" alt="">
             </div>
             <div class="details position-relative">
               <h3>Guru SDN 013</h3>
               <p>Jajaran Guru Sekolah Dasar 013 Tanjungpinang Barat</p>
-              <a href="assets/img/sekolah/lapangan2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara">
+              <a href="assets/img/keluarga/jajaran_guru.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara">
                 <i class="bx bx-camera"></i>
               </a>
             </div>
@@ -250,13 +249,13 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="assets/img/Keluarga/guru.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Keluarga/upacara.jpg" class="img-fluid" alt="">
             </div>
             <div class="details position-relative">
-              <a href="assets/img/sekolah/lapangan2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara"><i class="bx bx-camera"></i></a>
-              <h3>Guru SDN 013</h3>
+              <a href="assets/img/Keluarga/upacara.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara"><i class="bx bx-camera"></i></a>
+              <h3>Upacara SDN 013 TPI Barat</h3>
               </a>
-              <p>Jajaran Guru Sekolah Dasar 013 Tanjungpinang Barat</p>
+              <p>Foto Bersama Guru-Guru dan Paskibraka SDN 013 TPI Barat</p>
             </div>
           </div>
         </div><!-- End Service Item -->
@@ -265,13 +264,13 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="assets/img/Keluarga/guru.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Keluarga/kajian.jpg" class="img-fluid" alt="">
             </div>
             <div class="details position-relative">
-              <a href="assets/img/sekolah/lapangan2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara"><i class="bx bx-camera"></i></a>
-              <h3>Guru SDN 013</h3>
+              <a href="assets/img/Keluarga/kajian.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lapangan Upacara"><i class="bx bx-camera"></i></a>
+              <h3>Kajian Bersama</h3>
               </a>
-              <p>Jajaran Guru Sekolah Dasar 013 Tanjungpinang Barat</p>
+              <p>Kajian Bersama Guru-Guru SDN 013 TPI Barat</p>
             </div>
           </div>
         </div><!-- End Service Item -->

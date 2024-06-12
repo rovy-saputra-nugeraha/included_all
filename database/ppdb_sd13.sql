@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Jun 2024 pada 09.37
+-- Waktu pembuatan: 12 Jun 2024 pada 10.37
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
@@ -249,8 +249,9 @@ CREATE TABLE `login_admin` (
 --
 
 INSERT INTO `login_admin` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `level`) VALUES
+(1, 'Rovy Saputra Nugeraha', 'rovy', '$2y$10$tedhzOqR7Q97F1fOFoXWyeoIESPXbAZw.OvFrV82uQfJjuLV6hK.C', 'Administrator'),
 (16, 'Farel Putra Albana', 'farel', '$2y$10$TB/lZ5NuEppH/7ULy2p6i.wtN07gSYdV3w7fwHNXVHNJETJPjXlZ2', 'Administrator'),
-(17, 'Rovy Saputra Nugeraha', 'rovy', '$2y$10$p584Td8GOTlfa7QYGwWiiupeiQvLR4uaj2i1HkAdxf5C2XXMCZ08q', 'Guru');
+(17, 'Rovy Saputra Nugeraha', 'Rovy', '$2y$10$WBJnizdhS9wE28xeUi/TjuFSCgSy6QTG6nuvpmRSY6v8bjbp6CadG', 'Guru');
 
 -- --------------------------------------------------------
 
@@ -273,8 +274,7 @@ CREATE TABLE `login_siswa` (
 
 INSERT INTO `login_siswa` (`id_login_siswa`, `nik`, `nama_pendek`, `email`, `password`, `status`) VALUES
 (6, '21010200123', 'Rovy', 'rovysaputra10@gmail.com', '', 1),
-(7, '2172021010020004', 'Vy', 'rovysaputra06@gmail.com', '$2y$10$g8qr7f.6bx0HJoOGmhlAMOUcYUKkcm4hX/TJIflbOknFBlj1GtIly', 1),
-(8, 'Z11.2023.00130', 'UMAR', 'muhdhorcs@gmail.com', '', 1);
+(7, '2172021010020004', 'Vy', 'rovysaputra06@gmail.com', '$2y$10$g8qr7f.6bx0HJoOGmhlAMOUcYUKkcm4hX/TJIflbOknFBlj1GtIly', 1);
 
 -- --------------------------------------------------------
 
@@ -326,7 +326,8 @@ CREATE TABLE `tb_pengguna` (
 
 INSERT INTO `tb_pengguna` (`no`, `username`, `password`, `level`) VALUES
 (8, 'farel', '$2y$10$xXahxW34Ufxdi7SvVXAmWO9qvBXOApJwokUc.o20Lb1C5qg9s8rrG', 0),
-(9, 'Rovy', '$2y$10$va/7.5.m7l89ywjNABWEqeKrEWxRe/RhSaye5mph88S0TXWokOD3m', 0);
+(9, 'Rovy', '$2y$10$WYYAMPAGFc/0hrbMu7.WCOgogo1sZyJv7mAdJRcJUgCvSpQwV6wxy', 1),
+(11, 'Hardi', '$2y$10$HmjrsrYdVc6r9Sqv7wZkse3Gi9M6ZFFbfY87Q1NTByub.3e03J.Yi', 1);
 
 -- --------------------------------------------------------
 
@@ -384,7 +385,7 @@ CREATE TABLE `tb_settings` (
 --
 
 INSERT INTO `tb_settings` (`masuk_mulai`, `masuk_akhir`, `keluar_mulai`, `keluar_akhir`, `libur1`, `libur2`, `timezone`, `admin_uid`, `bot_token`) VALUES
-('00:00:00', '08:15:00', '16:00:00', '20:30:00', 'Rabu', 'Minggu', 'Asia/Jakarta', '338D3735', '6751977753:AAEwU5UFhwBbeIfupfrr7xg4_Utmbrnxefk');
+('00:00:00', '08:15:00', '16:00:00', '20:30:00', 'Rabu', 'Minggu', 'Asia/Jakarta', '43CFE60C', '6751977753:AAEwU5UFhwBbeIfupfrr7xg4_Utmbrnxefk');
 
 --
 -- Indexes for dumped tables
@@ -571,7 +572,7 @@ ALTER TABLE `login_siswa`
 -- AUTO_INCREMENT untuk tabel `tb_pengguna`
 --
 ALTER TABLE `tb_pengguna`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_profil`

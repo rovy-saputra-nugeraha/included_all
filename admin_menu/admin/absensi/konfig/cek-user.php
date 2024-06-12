@@ -2,26 +2,22 @@
 session_start();
 include 'connection.php';
 
-if(isset($_POST['username']) && isset($_POST['password'])) {
+if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = mysqli_real_escape_string($dbconnect, $_POST['username']);
     $password = mysqli_real_escape_string($dbconnect, $_POST['password']);
 
     $sql = mysqli_query($dbconnect, "SELECT * FROM tb_pengguna WHERE username='$username'");
     $user = mysqli_fetch_assoc($sql);
 
-    if($user && password_verify($password, $user['password'])) {
+    if ($user && password_verify($password, $user['password'])) {
         $_SESSION['page'] = 'dashboard';
         $_SESSION['username'] = $username;
+        $_SESSION['level'] = $user['level']; // Tambahkan ini untuk menyimpan level pengguna
         header("location: ../index.php?page=dashboard");
-        exit();
     } else {
-        $error_message = "Username atau Password salah.";
+        header("location: ../login.php?error=true");
     }
 } else {
-    $error_message = "Username dan Password harus diisi.";
+    header("location: ../login.php?error=true");
 }
-
-// Redirect back to login page with error message
-header("location: ../login.php?error=true&message=".urlencode($error_message));
-exit();
 ?>
