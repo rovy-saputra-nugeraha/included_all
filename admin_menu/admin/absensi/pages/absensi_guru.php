@@ -9,12 +9,12 @@ if (isset($_POST['tanggal'])) {
     $flag = '0';
     $date = $_POST['tanggal'];
     $absent = $date;
-    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Siswa'");
+    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Guru'");
 } else {
     $flag = '0';
     $date = date('Y-m-d');
     $absent = $date;
-    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Siswa'");
+    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Guru'");
 }
 ?>
 

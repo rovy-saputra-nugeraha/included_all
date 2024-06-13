@@ -59,12 +59,12 @@ if(isset($_SESSION['page'])) {
 					<label for="exampleFormControlSelect1">Status Kehadiran</label>
 					<select class="form-control" name="status">
 						<option value="" selected disabled>Presensi saat ini : <?php echo $status;?></option>
-						<option>H</option>
-						<option>I</option>
-						<option>S</option>
-						<option>B</option>
-						<option>T</option>
-						<option>A</option>
+						<option>HADIR</option>
+						<option>IZIN</option>
+						<option>SAKIT</option>
+						<option>BOLOS</option>
+						<option>TERLAMBAT</option>
+						<option>ALPA</option>
 					</select>
 					<small id="emailHelp" class="form-text text-muted">H=Hadir - I=Izin - S=Sakit - B=Bolos - T=Terlambat - A=Alpa </small>
 				</div>
