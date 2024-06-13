@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Jun 2024 pada 10.37
+-- Waktu pembuatan: 13 Jun 2024 pada 09.27
 -- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.1.25
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -291,6 +291,14 @@ CREATE TABLE `tb_absen` (
   `Keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data untuk tabel `tb_absen`
+--
+
+INSERT INTO `tb_absen` (`id`, `masuk`, `keluar`, `date`, `status`, `Keterangan`) VALUES
+('43CFE60C', '-', '-', '2024-06-13', 'IZIN', 'Izin'),
+('033DBC0C', '-', '-', '2024-06-13', 'HADIR', 'Hadir ');
+
 -- --------------------------------------------------------
 
 --
@@ -306,6 +314,15 @@ CREATE TABLE `tb_id` (
   `nisn` varchar(11) NOT NULL,
   `status_kartu` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `tb_id`
+--
+
+INSERT INTO `tb_id` (`id`, `nama`, `chatid`, `notifikasi`, `tahun_masuk`, `nisn`, `status_kartu`) VALUES
+('033DBC0C', 'Rovy Saputra Nugeraha ', '1436647086', 0, '2021', '2101020012', 'Siswa'),
+('43CFE60C', 'Cindi Aulia Ladiesta', '1436647086', 0, '2021', '21010200124', 'Guru'),
+('E3A23542', 'Farel Putra', '1436647086', 0, '2021', '2101020012', 'Siswa');
 
 -- --------------------------------------------------------
 
@@ -326,8 +343,7 @@ CREATE TABLE `tb_pengguna` (
 
 INSERT INTO `tb_pengguna` (`no`, `username`, `password`, `level`) VALUES
 (8, 'farel', '$2y$10$xXahxW34Ufxdi7SvVXAmWO9qvBXOApJwokUc.o20Lb1C5qg9s8rrG', 0),
-(9, 'Rovy', '$2y$10$WYYAMPAGFc/0hrbMu7.WCOgogo1sZyJv7mAdJRcJUgCvSpQwV6wxy', 1),
-(11, 'Hardi', '$2y$10$HmjrsrYdVc6r9Sqv7wZkse3Gi9M6ZFFbfY87Q1NTByub.3e03J.Yi', 1);
+(9, 'Rovy', '$2y$10$va/7.5.m7l89ywjNABWEqeKrEWxRe/RhSaye5mph88S0TXWokOD3m', 0);
 
 -- --------------------------------------------------------
 
@@ -385,7 +401,7 @@ CREATE TABLE `tb_settings` (
 --
 
 INSERT INTO `tb_settings` (`masuk_mulai`, `masuk_akhir`, `keluar_mulai`, `keluar_akhir`, `libur1`, `libur2`, `timezone`, `admin_uid`, `bot_token`) VALUES
-('00:00:00', '08:15:00', '16:00:00', '20:30:00', 'Rabu', 'Minggu', 'Asia/Jakarta', '43CFE60C', '6751977753:AAEwU5UFhwBbeIfupfrr7xg4_Utmbrnxefk');
+('00:00:00', '08:15:00', '12:00:00', '20:30:00', 'Rabu', 'Minggu', 'Asia/Jakarta', '43CFE60C', '6751977753:AAEwU5UFhwBbeIfupfrr7xg4_Utmbrnxefk');
 
 --
 -- Indexes for dumped tables
@@ -572,7 +588,7 @@ ALTER TABLE `login_siswa`
 -- AUTO_INCREMENT untuk tabel `tb_pengguna`
 --
 ALTER TABLE `tb_pengguna`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_profil`
