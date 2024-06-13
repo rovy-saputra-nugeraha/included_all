@@ -95,7 +95,7 @@ if (isset($_POST['tanggal'])) {
                                                 <td><?php echo $data['masuk']; ?></td>
                                                 <td><?php echo $data['keluar']; ?></td>
                                                 <td><?php echo $data['date']; ?></td>
-                                                <td><a href="./index.php?page=edit_absen&id=<?php echo $data['id']; ?>&nama=<?php echo $data['nama']; ?>&tanggal=<?php echo $data['date']; ?>&status=<?php echo $data['status']; ?>&flag=<?php echo $flag; ?>"><b>
+                                                <td><a href="./index.php?page=edit_absen_guru&id=<?php echo $data['id']; ?>&nama=<?php echo $data['nama']; ?>&tanggal=<?php echo $data['date']; ?>&status=<?php echo $data['status']; ?>&flag=<?php echo $flag; ?>"><b>
                                                 <center><?php echo $data['status']; ?><center></b></a></td>
                                                 <td><?php echo $data['keterangan']; ?></td>
                                             </tr>
