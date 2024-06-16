@@ -15,14 +15,13 @@ if (isset($_POST['tanggal'])) {
     $flag = '0';
     $date = $_POST['tanggal'];
     $absent = $date;
-    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE date='$date'");
+    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Siswa'");
 } else {
     $flag = '0';
     $date = date('Y-m-d');
     $absent = $date;
-    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE date='$date'");
+    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Siswa'");
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +29,7 @@ if (isset($_POST['tanggal'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Siswa</title>
+    <title>Data Absensi Keluar Siswa</title>
     <style>
         thead .tabel {
             display: flex;
@@ -52,7 +51,7 @@ if (isset($_POST['tanggal'])) {
     <div class="card card-info">
         <div class="card-header">
             <h3 class="card-title">
-                <i class="fa fa-table"></i> Data Absensi
+                <i class="fa fa-table"></i> Data Absensi Keluar Siswa
             </h3>
         </div>
         <!-- /.card-header -->
@@ -87,7 +86,6 @@ if (isset($_POST['tanggal'])) {
                                     <tr>
                                         <th>UID</th>
                                         <th>Nama Pengguna</th>
-                                        <th>Jam Masuk</th>
                                         <th>Jam Keluar</th>
                                         <th>Tanggal</th>
                                         <th>Status</th>
@@ -98,17 +96,17 @@ if (isset($_POST['tanggal'])) {
                                 <tbody>
                                     <?php
                                     while ($data = mysqli_fetch_array($sql)) {
-                                        if ($data['status'] == 'H') {
+                                        if ($data['status'] == 'HADIR') {
                                             $color = "table-success";
-                                        } else if ($data['status'] == 'T') {
+                                        } else if ($data['status'] == 'TERLAMBAT') {
                                             $color = "table-secondary";
-                                        } else if ($data['status'] == 'A') {
+                                        } else if ($data['status'] == 'ABSEN') {
                                             $color = "table-danger";
-                                        } else if ($data['status'] == 'I') {
+                                        } else if ($data['status'] == 'IZIN') {
                                             $color = "table-primary";
-                                        } else if ($data['status'] == 'S') {
+                                        } else if ($data['status'] == 'SAKIT') {
                                             $color = "table-info";
-                                        } else if ($data['status'] == 'B') {
+                                        } else if ($data['status'] == 'BOLOS') {
                                             $color = "table-warning";
                                         }
                                     ?>
@@ -116,12 +114,9 @@ if (isset($_POST['tanggal'])) {
                                         <tr class="<?php echo $color; ?>">
                                             <td><?php echo $data['id']; ?></td>
                                             <td><?php echo $data['nama']; ?></td>
-                                            <td><?php echo $data['masuk']; ?></td>
                                             <td><?php echo $data['keluar']; ?></td>
                                             <td><?php echo $data['date']; ?></td>
-                                            <td><a href="./index.php?page=edit_absen&id=<?php echo $data['id']; ?>&nama=<?php echo $data['nama']; ?>&tanggal=<?php echo $data['date']; ?>&status=<?php echo $data['status']; ?>&flag=<?php echo $flag; ?>"><b>
-                                                        <center><?php echo $data['status']; ?></center>
-                                                    </b></a></td>
+                                            <td><center><?php echo $data['status']; ?></center></td>
                                             <td><?php echo $data['keterangan']; ?></td>
                                         </tr>
 
@@ -131,7 +126,7 @@ if (isset($_POST['tanggal'])) {
 
                                     <?php
                                     $flag = '1';
-                                    $sql1 = mysqli_query($dbconnect, "select * from tb_id where id not in(select id from tb_absen where date='$absent')");
+                                    $sql1 = mysqli_query($dbconnect, "select * from tb_id where id not in(select id from tb_absen where date='$absent') AND status_kartu='Siswa'");
                                     while ($data1 = mysqli_fetch_array($sql1)) {
                                     ?>
 
@@ -139,10 +134,9 @@ if (isset($_POST['tanggal'])) {
                                             <td><?php echo $data1['id']; ?></td>
                                             <td><?php echo $data1['nama']; ?></td>
                                             <td>-</td>
-                                            <td>-</td>
                                             <td><?php echo $absent; ?></td>
-                                            <td><a href="./index.php?page=edit_absen&id=<?php echo $data1['id']; ?>&nama=<?php echo $data1['nama']; ?>&tanggal=<?php echo $absent; ?>&status=A&flag=<?php echo $flag; ?>">
-                                                    <center><b>A</b></center>
+                                            <td><a <?php echo $data1['id']; ?>&nama=<?php echo $data1['nama']; ?>&tanggal=<?php echo $absent; ?>&status=A&flag=<?php echo $flag; ?>">
+                                                    <center><b>ALFA</b></center>
                                                 </a></td>
                                             <td></td>
                                         </tr>

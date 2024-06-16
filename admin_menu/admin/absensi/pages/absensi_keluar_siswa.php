@@ -22,12 +22,12 @@ if (isset($_POST['tanggal'])) {
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">DATA PRESENSI SISWA</h1>
+                <h1 class="m-0 text-dark">DATA PRESENSI KELUAR SISWA</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="index.php?page=dashboard">Home</a></li>
-                    <li class="breadcrumb-item active">Data Presensi</li>
+                    <li class="breadcrumb-item active">Data Presensi Siswa</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -63,7 +63,6 @@ if (isset($_POST['tanggal'])) {
                                         <tr>
                                             <th>UID</th>
                                             <th>Nama Siswa</th>
-                                            <th>Jam Masuk</th>
                                             <th>Jam Keluar</th>
                                             <th>Tanggal</th>
                                             <th>Status</th>
@@ -92,7 +91,6 @@ if (isset($_POST['tanggal'])) {
                                             <tr class="<?php echo $color; ?>">
                                                 <td><?php echo $data['id']; ?></td>
                                                 <td><?php echo $data['nama']; ?></td>
-                                                <td><?php echo $data['masuk']; ?></td>
                                                 <td><?php echo $data['keluar']; ?></td>
                                                 <td><?php echo $data['date']; ?></td>
                                                 <td><a href="./index.php?page=edit_absen_siswa&id=<?php echo $data['id']; ?>&nama=<?php echo $data['nama']; ?>&tanggal=<?php echo $data['date']; ?>&status=<?php echo $data['status']; ?>&flag=<?php echo $flag; ?>"><b>
@@ -115,10 +113,9 @@ if (isset($_POST['tanggal'])) {
                                                 <td><?php echo $data1['id']; ?></td>
                                                 <td><?php echo $data1['nama']; ?></td>
                                                 <td>-</td>
-                                                <td>-</td>
                                                 <td><?php echo $absent; ?></td>
                                                 <td><a href="./index.php?page=edit_absen_siswa&id=<?php echo $data1['id']; ?>&nama=<?php echo $data1['nama']; ?>&tanggal=<?php echo $absent; ?>&status=A&flag=<?php echo $flag; ?>">
-                                                        <center><b>A</b></center>
+                                                        <center><b>ALFA</b></center>
                                                     </a></td>
                                                 <td></td>
                                             </tr>

@@ -112,21 +112,45 @@ $_SESSION['page'] = 'index';
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>
-                    Data Presensi
+                    Data Presensi Siswa
                   </p>
                   <i class="right fas fa-angle-left"></i>
                 </a>
                 <ul class="nav nav-treeview" style="font-size: 12px;">
                   <li class="nav-item">
-                    <a href="index.php?page=absensi-siswa" class="nav-link">
+                    <a href="index.php?page=absensi-masuk-siswa" class="nav-link">
                       <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
-                      <p>Presensi Siswa</p>
+                      <p>Presensi Masuk Siswa</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="index.php?page=absensi-guru" class="nav-link">
+                    <a href="index.php?page=absensi-keluar-siswa" class="nav-link">
                       <i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
-                      <p>Presensi Guru</p>
+                      <p>Presensi Keluar Siswa</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>
+                    Data Presensi Guru
+                  </p>
+                  <i class="right fas fa-angle-left"></i>
+                </a>
+                <ul class="nav nav-treeview" style="font-size: 12px;">
+                  <li class="nav-item">
+                    <a href="index.php?page=absensi-masuk-guru" class="nav-link">
+                      <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+                      <p>Presensi Masuk Guru</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index.php?page=absensi-keluar-guru" class="nav-link">
+                      <i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
+                      <p>Presensi Keluar Guru</p>
                     </a>
                   </li>
                 </ul>
@@ -195,21 +219,21 @@ $_SESSION['page'] = 'index';
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>
-                    Data Presensi
+                    Data Presensi Siswa
                   </p>
                   <i class="right fas fa-angle-left"></i>
                 </a>
                 <ul class="nav nav-treeview" style="font-size: 12px;">
                   <li class="nav-item">
-                    <a href="index.php?page=absensi-siswa" class="nav-link">
+                    <a href="index.php?page=absensi-masuk-siswa" class="nav-link">
                       <i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
-                      <p>Presensi Siswa</p>
+                      <p>Presensi Masuk Siswa</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="index.php?page=absensi-guru" class="nav-link">
+                    <a href="index.php?page=absensi-keluar-siswa" class="nav-link">
                       <i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
-                      <p>Presensi Guru</p>
+                      <p>Presensi Keluar Siswa</p>
                     </a>
                   </li>
                 </ul>
@@ -237,12 +261,20 @@ $_SESSION['page'] = 'index';
             include "pages/dashboard.php";
             break;
 
-          case 'absensi-siswa':
-            include "pages/absensi_siswa.php";
+          case 'absensi-masuk-siswa':
+            include "pages/absensi_masuk_siswa.php";
             break;
 
-          case 'absensi-guru':
-            include "pages/absensi_guru.php";
+          case 'absensi-keluar-siswa':
+            include "pages/absensi_keluar_siswa.php";
+            break;
+
+          case 'absensi-masuk-guru':
+            include "pages/absensi_masuk_guru.php";
+            break;
+
+          case 'absensi-keluar-guru':
+            include "pages/absensi_keluar_guru.php";
             break;
 
           case 'pendaftaran':

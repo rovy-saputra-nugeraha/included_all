@@ -133,14 +133,51 @@ while ($data = $sql->fetch_assoc()) {
 								<ul class="nav nav-treeview" style="font-size: 12px;">
 									<li class="nav-item">
 										<a href="?page=data-siswa" class="nav-link">
-											<i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+											<i class="nav-icon far fa fa-user" style="font-size: 12px;"></i>
 											<p>Data Siswa</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=data-absensi" class="nav-link">
-											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
-											<p>Data Absensi</p>
+										<a href="?page=data-absensi-masuk-siswa" class="nav-link">
+											<i class="nav-icon fas fa-clipboard-list" style="font-size: 12px;"></i>
+											<p>Data Absensi Masuk</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-absensi-keluar-siswa" class="nav-link">
+											<i class="nav-icon fas fa-clipboard-list" style="font-size: 12px;"></i>
+											<p>Data Absensi Keluar</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+							<!-- Informasi -->
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
+									<i class="nav-icon far fa fa-users"></i>
+									<p>
+										Guru
+										<i class="right fas fa-angle-left"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview" style="font-size: 12px;">
+									<li class="nav-item">
+										<a href="?page=data-guru" class="nav-link">
+											<i class="nav-icon far fa fa-user" style="font-size: 12px;"></i>
+											<p>Data Guru</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-absensi-masuk-guru" class="nav-link">
+											<i class="nav-icon fas fa-clipboard-list" style="font-size: 12px;"></i>
+											<p>Data Absensi Masuk</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-absensi-keluar-guru" class="nav-link">
+											<i class="nav-icon fas fa-clipboard-list" style="font-size: 12px;"></i>
+											<p>Data Absensi Keluar</p>
 										</a>
 									</li>
 								</ul>
@@ -156,12 +193,6 @@ while ($data = $sql->fetch_assoc()) {
 									</p>
 								</a>
 								<ul class="nav nav-treeview" style="font-size: 12px;">
-									<li class="nav-item">
-										<a href="?page=data-guru" class="nav-link">
-											<i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
-											<p>Data Guru</p>
-										</a>
-									</li>
 									<li class="nav-item">
 										<a href="?page=data-berita" class="nav-link">
 											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
@@ -403,8 +434,17 @@ while ($data = $sql->fetch_assoc()) {
 								break;
 
 								//Absensi
-							case 'data-absensi':
-								include "admin/absensi/data_absensi.php";
+							case 'data-absensi-masuk-siswa':
+								include "admin/absensi/data_absensi_masuk_siswa.php";
+								break;
+							case 'data-absensi-masuk-guru':
+								include "admin/absensi/data_absensi_masuk_guru.php";
+								break;
+							case 'data-absensi-keluar-siswa':
+								include "admin/absensi/data_absensi_keluar_siswa.php";
+								break;
+							case 'data-absensi-keluar-guru':
+								include "admin/absensi/data_absensi_keluar_guru.php";
 								break;
 
 								//Guru

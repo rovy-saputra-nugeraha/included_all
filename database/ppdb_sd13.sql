@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Jun 2024 pada 09.27
+-- Waktu pembuatan: 16 Jun 2024 pada 09.51
 -- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
+-- Versi PHP: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -288,16 +288,18 @@ CREATE TABLE `tb_absen` (
   `keluar` varchar(15) NOT NULL,
   `date` date NOT NULL,
   `status` varchar(10) NOT NULL,
-  `Keterangan` text NOT NULL
+  `keterangan` varchar(100) NOT NULL,
+  `berkas` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `tb_absen`
 --
 
-INSERT INTO `tb_absen` (`id`, `masuk`, `keluar`, `date`, `status`, `Keterangan`) VALUES
-('43CFE60C', '-', '-', '2024-06-13', 'IZIN', 'Izin'),
-('033DBC0C', '-', '-', '2024-06-13', 'HADIR', 'Hadir ');
+INSERT INTO `tb_absen` (`id`, `masuk`, `keluar`, `date`, `status`, `keterangan`, `berkas`) VALUES
+('43CFE60C', '-', '-', '2024-06-13', 'IZIN', 'Izin', ''),
+('033DBC0C', '-', '-', '2024-06-13', 'HADIR', 'Hadir ', ''),
+('033DBC0C', '-', '-', '2024-06-16', 'SAKIT', 'Demam', 'Notulensi Diskusi 4 (1).pdf');
 
 -- --------------------------------------------------------
 
