@@ -80,52 +80,46 @@ function cektime($time, $m_mulai, $m_akhir, $k_mulai, $k_akhir)
 function postdata($uid, $hari_ini, $time, $cek_absen)
 {
     global $dbconnect;
-    $sql = mysqli_query($dbconnect, "select * from tb_absen where id='$uid' and date='$hari_ini'");
-    $auth = mysqli_num_rows($sql);
-    if ($auth > 0) {
-        if ($cek_absen == "in") {
-            mysqli_query($dbconnect, "UPDATE tb_absen SET masuk='$time', status = 'BOLOS' WHERE id='$uid' AND date='$hari_ini'");
-            return ("PRESENSI TEPAT WAKTU!");
-        } else if ($cek_absen == "terlambat") {
-            mysqli_query($dbconnect, "UPDATE tb_absen SET masuk='$time', status = 'TERLAMBAT' WHERE id='$uid' AND date='$hari_ini'");
-            return ("PRESENSI TERLAMBAT!");
-        } else if ($cek_absen == "out") {
-            $cek_masuk = mysqli_query($dbconnect, "select * from tb_absen WHERE id='$uid' AND date='$hari_ini'");
-            while ($data = mysqli_fetch_array($cek_masuk)) {
-                $masuk = $data['masuk'];
-                $status = $data['status'];
-                if ($masuk != "" && $status != "T") {
-                    mysqli_query($dbconnect, "UPDATE tb_absen SET keluar='$time', status = 'HADIR' WHERE id='$uid' AND date='$hari_ini'");
-                    return ("PRESENSI TEPAT WAKTU!");
-                } else if ($masuk != "" && $status == "TERLAMBAT") {
-                    mysqli_query($dbconnect, "UPDATE tb_absen SET keluar='$time', status = 'TERLAMBAT' WHERE id='$uid' AND date='$hari_ini'");
-                    return ("PRESENSI TERLAMBAT!");
-                } else if ($masuk == "" && $status == "BOLOS") {
-                    mysqli_query($dbconnect, "UPDATE tb_absen SET keluar='$time', status = 'BOLOS' WHERE id='$uid' AND date='$hari_ini'");
-                    return ("PRESENSI BOLOS!");
-                }
-            }
-        } else if ($cek_absen == "bolos") {
-            mysqli_query($dbconnect, "UPDATE tb_absen SET keluar='$time', status = 'BOLOS' WHERE id='$uid' AND date='$hari_ini'");
-            return ("PRESENSI SELESAI!");
+
+    // Handle check-in actions
+    if ($cek_absen == "in" || $cek_absen == "terlambat") {
+        $status = $cek_absen == "in" ? "BOLOS" : "TERLAMBAT";
+        $query = mysqli_query($dbconnect, "SELECT * FROM data_absen_masuk WHERE id='$uid' AND date='$hari_ini'");
+        $auth = mysqli_num_rows($query);
+
+        if ($auth > 0) {
+            mysqli_query($dbconnect, "UPDATE data_absen_masuk SET masuk='$time', status='$status' WHERE id='$uid' AND date='$hari_ini'");
+        } else {
+            mysqli_query($dbconnect, "INSERT INTO data_absen_masuk (id, masuk, date, status, keterangan, berkas) VALUES ('$uid', '$time', '$hari_ini', '$status', '', '')");
         }
-    } else {
-        if ($cek_absen == "in") {
-            mysqli_query($dbconnect, "INSERT INTO tb_absen VALUES ('$uid','$time','','$hari_ini','BOLOS','')");
-            return ("PRESENSI TEPAT WAKTU!");
-        } else if ($cek_absen == "terlambat") {
-            mysqli_query($dbconnect, "INSERT INTO tb_absen VALUES ('$uid','$time','','$hari_ini','TERLAMBAT','')");
-            return ("PRESENSI TERLAMBAT!");
-        } else if ($cek_absen == "out") {
-            mysqli_query($dbconnect, "INSERT INTO tb_absen VALUES ('$uid','','$time','$hari_ini','BOLOS','')");
-            return ("PRESENSI KELUAR!");
-        } else if ($cek_absen == "bolos") {
-            mysqli_query($dbconnect, "INSERT INTO tb_absen VALUES ('$uid','','$time','$hari_ini','BOLOS','')");
-            return ("PRESENSI BOLOS!");
-        }
+        return $cek_absen == "in" ? "PRESENSI TEPAT WAKTU!" : "PRESENSI TERLAMBAT!";
     }
+
+    // Handle check-out actions
+    if ($cek_absen == "out" || $cek_absen == "bolos") {
+        $query_masuk = mysqli_query($dbconnect, "SELECT * FROM data_absen_masuk WHERE id='$uid' AND date='$hari_ini'");
+        $data_masuk = mysqli_fetch_array($query_masuk);
+        $masuk = isset($data_masuk['masuk']) ? $data_masuk['masuk'] : "";
+
+        $status = "BOLOS";
+        if ($cek_absen == "out" && $masuk != "") {
+            $status = $data_masuk['status'] == "TERLAMBAT" ? "TERLAMBAT" : "HADIR";
+        }
+
+        $query_keluar = mysqli_query($dbconnect, "SELECT * FROM data_absen_keluar WHERE id='$uid' AND date='$hari_ini'");
+        $auth_keluar = mysqli_num_rows($query_keluar);
+
+        if ($auth_keluar > 0) {
+            mysqli_query($dbconnect, "UPDATE data_absen_keluar SET keluar='$time', status='$status' WHERE id='$uid' AND date='$hari_ini'");
+        } else {
+            mysqli_query($dbconnect, "INSERT INTO data_absen_keluar (id, keluar, date, status, keterangan, berkas) VALUES ('$uid', '$time', '$hari_ini', '$status', '', '')");
+        }
+        return $cek_absen == "out" ? "PRESENSI KELUAR!" : "PRESENSI BOLOS!";
+    }
+
     mysqli_close($dbconnect);
 }
+
 
 function telegram($uid, $jam_absen, $status, $secret_token)
 {

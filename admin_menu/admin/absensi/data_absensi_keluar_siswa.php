@@ -15,12 +15,12 @@ if (isset($_POST['tanggal'])) {
     $flag = '0';
     $date = $_POST['tanggal'];
     $absent = $date;
-    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Siswa'");
+    $sql = mysqli_query($dbconnect, "SELECT tb_absen_keluar.id, tb_id.nama, tb_id.status_kartu, tb_absen_keluar.keluar, tb_absen_keluar.date, tb_absen_keluar.status, tb_absen_keluar.keterangan FROM tb_absen_keluar INNER JOIN tb_id ON tb_absen_keluar.id=tb_id.id WHERE tb_absen_keluar.date='$date' AND tb_id.status_kartu='Siswa'");
 } else {
     $flag = '0';
     $date = date('Y-m-d');
     $absent = $date;
-    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Siswa'");
+    $sql = mysqli_query($dbconnect, "SELECT tb_absen_keluar.id, tb_id.nama, tb_id.status_kartu, tb_absen_keluar.keluar, tb_absen_keluar.date, tb_absen_keluar.status, tb_absen_keluar.keterangan FROM tb_absen_keluar INNER JOIN tb_id ON tb_absen_keluar.id=tb_id.id WHERE tb_absen_keluar.date='$date' AND tb_id.status_kartu='Siswa'");
 }
 ?>
 <!DOCTYPE html>
@@ -116,7 +116,9 @@ if (isset($_POST['tanggal'])) {
                                             <td><?php echo $data['nama']; ?></td>
                                             <td><?php echo $data['keluar']; ?></td>
                                             <td><?php echo $data['date']; ?></td>
-                                            <td><center><?php echo $data['status']; ?></center></td>
+                                            <td>
+                                                <center><?php echo $data['status']; ?></center>
+                                            </td>
                                             <td><?php echo $data['keterangan']; ?></td>
                                         </tr>
 
@@ -126,7 +128,7 @@ if (isset($_POST['tanggal'])) {
 
                                     <?php
                                     $flag = '1';
-                                    $sql1 = mysqli_query($dbconnect, "select * from tb_id where id not in(select id from tb_absen where date='$absent') AND status_kartu='Siswa'");
+                                    $sql1 = mysqli_query($dbconnect, "select * from tb_id where id not in(select id from tb_absen_keluar where date='$absent') AND status_kartu='Siswa'");
                                     while ($data1 = mysqli_fetch_array($sql1)) {
                                     ?>
 

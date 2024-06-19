@@ -9,12 +9,12 @@ if (isset($_POST['tanggal'])) {
     $flag = '0';
     $date = $_POST['tanggal'];
     $absent = $date;
-    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan, tb_absen.berkas FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Guru'");
+    $sql = mysqli_query($dbconnect, "SELECT tb_absen_masuk.id, tb_id.nama, tb_id.status_kartu, tb_absen_masuk.masuk, tb_absen_masuk.date, tb_absen_masuk.status, tb_absen_masuk.keterangan, tb_absen_masuk.berkas FROM tb_absen_masuk INNER JOIN tb_id ON tb_absen_masuk.id=tb_id.id WHERE tb_absen_masuk.date='$date' AND tb_id.status_kartu='Guru'");
 } else {
     $flag = '0';
     $date = date('Y-m-d');
     $absent = $date;
-    $sql = mysqli_query($dbconnect, "SELECT tb_absen.id, tb_id.nama, tb_id.status_kartu, tb_absen.masuk, tb_absen.keluar, tb_absen.date, tb_absen.status, tb_absen.keterangan, tb_absen.berkas FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE tb_absen.date='$date' AND tb_id.status_kartu='Guru'");
+    $sql = mysqli_query($dbconnect, "SELECT tb_absen_masuk.id, tb_id.nama, tb_id.status_kartu, tb_absen_masuk.masuk, tb_absen_masuk.date, tb_absen_masuk.status, tb_absen_masuk.keterangan, tb_absen_masuk.berkas FROM tb_absen_masuk INNER JOIN tb_id ON tb_absen_masuk.id=tb_id.id WHERE tb_absen_masuk.date='$date' AND tb_id.status_kartu='Guru'");
 }
 ?>
 
@@ -111,10 +111,10 @@ if (isset($_POST['tanggal'])) {
                                                     </td>
                                                     <td>
                                                         <?php if (!empty($data['berkas'])) : ?>
-                                                            <a href="./konfig/berkasGuru/<?php echo $data['berkas']; ?>" target="_blank">
+                                                            <a href="../konfig/berkasGuru/<?php echo $data['berkas']; ?>" target="_blank">
                                                                 <i class="fas fa-eye"></i> Lihat Berkas
                                                             </a>
-                                                            <a href="./index.php?page=edit_absen_guru&id=<?php echo $data['id']; ?>&nama=<?php echo $data['nama']; ?>&tanggal=<?php echo $absent; ?>&status=A&flag=<?php echo $flag; ?>">
+                                                            <a href="./index.php?page=edit_absen_masuk_guru&id=<?php echo $data['id']; ?>&nama=<?php echo $data['nama']; ?>&tanggal=<?php echo $absent; ?>&status=A&flag=<?php echo $flag; ?>">
                                                                 <i class="fa fa-edit"></i> Edit
                                                             </a>
                                                         <?php else : ?>
@@ -130,7 +130,7 @@ if (isset($_POST['tanggal'])) {
                                             <?php
                                             $flag = '1';
                                             // Menampilkan guru yang tidak ada absen
-                                            $sql1 = mysqli_query($dbconnect, "SELECT * FROM tb_id WHERE id NOT IN (SELECT id FROM tb_absen WHERE date='$absent') AND status_kartu='Guru'");
+                                            $sql1 = mysqli_query($dbconnect, "SELECT * FROM tb_id WHERE id NOT IN (SELECT id FROM tb_absen_masuk WHERE date='$absent') AND status_kartu='Guru'");
                                             while ($data1 = mysqli_fetch_array($sql1)) {
                                             ?>
 
@@ -140,7 +140,7 @@ if (isset($_POST['tanggal'])) {
                                                     <td>-</td>
                                                     <td><?php echo $absent; ?></td>
                                                     <td>
-                                                        <a href="./index.php?page=edit_absen_guru&id=<?php echo $data1['id']; ?>&nama=<?php echo $data1['nama']; ?>&tanggal=<?php echo $absent; ?>&status=A&flag=<?php echo $flag; ?>">
+                                                        <a href="./index.php?page=edit_absen_masuk_guru&id=<?php echo $data1['id']; ?>&nama=<?php echo $data1['nama']; ?>&tanggal=<?php echo $absent; ?>&status=A&flag=<?php echo $flag; ?>">
                                                             <b>ALFA</b>
                                                         </a>
                                                     </td>

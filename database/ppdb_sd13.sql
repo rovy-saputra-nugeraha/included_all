@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jun 2024 pada 09.51
+-- Waktu pembuatan: 19 Jun 2024 pada 16.32
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
@@ -279,10 +279,10 @@ INSERT INTO `login_siswa` (`id_login_siswa`, `nik`, `nama_pendek`, `email`, `pas
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_absen`
+-- Struktur dari tabel `tb_absen_keluar`
 --
 
-CREATE TABLE `tb_absen` (
+CREATE TABLE `tb_absen_keluar` (
   `id` varchar(50) NOT NULL,
   `masuk` varchar(15) NOT NULL,
   `keluar` varchar(15) NOT NULL,
@@ -293,13 +293,43 @@ CREATE TABLE `tb_absen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data untuk tabel `tb_absen`
+-- Dumping data untuk tabel `tb_absen_keluar`
 --
 
-INSERT INTO `tb_absen` (`id`, `masuk`, `keluar`, `date`, `status`, `keterangan`, `berkas`) VALUES
-('43CFE60C', '-', '-', '2024-06-13', 'IZIN', 'Izin', ''),
-('033DBC0C', '-', '-', '2024-06-13', 'HADIR', 'Hadir ', ''),
-('033DBC0C', '-', '-', '2024-06-16', 'SAKIT', 'Demam', 'Notulensi Diskusi 4 (1).pdf');
+INSERT INTO `tb_absen_keluar` (`id`, `masuk`, `keluar`, `date`, `status`, `keterangan`, `berkas`) VALUES
+('43CFE60C', '', '-', '2024-06-13', 'IZIN', 'Izin', ''),
+('033DBC0C', '', '-', '2024-06-13', 'HADIR', 'Hadir ', ''),
+('033DBC0C', '', '-', '2024-06-16', 'SAKIT', 'Demam', 'Notulensi Diskusi 4 (1).pdf'),
+('033DBC0C', '-', '-', '2024-06-19', 'IZIN', 'Acara Keluarga', 'Tugas Kelompok_Resume Analisis Dampak Perubahan (1).pdf'),
+('E3A23542', '', '-', '2024-06-19', 'SAKIT', 'Demam', 'Presensi SDN 013 Tanjungpinang Barat.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_absen_masuk`
+--
+
+CREATE TABLE `tb_absen_masuk` (
+  `id` varchar(50) NOT NULL,
+  `masuk` varchar(15) NOT NULL,
+  `keluar` varchar(15) NOT NULL,
+  `date` date NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `keterangan` varchar(100) NOT NULL,
+  `berkas` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `tb_absen_masuk`
+--
+
+INSERT INTO `tb_absen_masuk` (`id`, `masuk`, `keluar`, `date`, `status`, `keterangan`, `berkas`) VALUES
+('43CFE60C', '-', '', '2024-06-13', 'IZIN', 'Izin', ''),
+('033DBC0C', '-', '', '2024-06-13', 'HADIR', 'Hadir ', ''),
+('033DBC0C', '-', '', '2024-06-16', 'SAKIT', 'Demam', 'Notulensi Diskusi 4 (1).pdf'),
+('033DBC0C', '-', '', '2024-06-19', 'IZIN', 'Acara Keluarga', 'Lanyard SDN 013 TPI BARAT (1).pdf'),
+('E3A23542', '-', '', '2024-06-19', 'HADIR', '-', ''),
+('43CFE60C', '-', '', '2024-06-19', 'SAKIT', 'Demam', 'Presensi SDN 013 Tanjungpinang Barat (1).pdf');
 
 -- --------------------------------------------------------
 

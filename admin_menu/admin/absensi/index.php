@@ -313,12 +313,20 @@ $_SESSION['page'] = 'index';
             include "pages/edit_konfigurasi.php";
             break;
 
-          case 'edit_absen_guru':
-            include "pages/edit_absen_guru.php";
+          case 'edit_absen_masuk_guru':
+            include "pages/edit_absen_masuk_guru.php";
             break;
 
-          case 'edit_absen_siswa':
-            include "pages/edit_absen_siswa.php";
+          case 'edit_absen_keluar_guru':
+            include "pages/edit_absen_keluar_guru.php";
+            break;
+
+          case 'edit_absen_masuk_siswa':
+            include "pages/edit_absen_masuk_siswa.php";
+            break;
+
+          case 'edit_absen_keluar_siswa':
+            include "pages/edit_absen_keluar_siswa.php";
             break;
 
           case 'edit_pengguna':

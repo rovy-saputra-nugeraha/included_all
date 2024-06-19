@@ -5,22 +5,22 @@ if (isset($_SESSION['page'])) {
 }
 
 $today = date('Y-m-d');
-$sql1 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen WHERE date='$today' AND status='TERLAMBAT'");
+$sql1 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen_masuk WHERE date='$today' AND status='TERLAMBAT'");
 $count_terlambat = mysqli_num_rows($sql1);
 
-$sql2 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen WHERE date='$today' AND status='HADIR'");
+$sql2 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen_masuk WHERE date='$today' AND status='HADIR'");
 $count_hadir = mysqli_num_rows($sql2);
 
-$sql3 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen WHERE date='$today' AND status='IZIN'");
+$sql3 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen_masuk WHERE date='$today' AND status='IZIN'");
 $count_izin = mysqli_num_rows($sql3);
 
-$sql4 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen WHERE date='$today' AND status='SAKIT'");
+$sql4 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen_masuk WHERE date='$today' AND status='SAKIT'");
 $count_sakit = mysqli_num_rows($sql4);
 
-$sql5 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen WHERE date='$today' AND status='BOLOS'");
+$sql5 = mysqli_query($dbconnect, "SELECT COUNT(status) FROM tb_absen_masuk WHERE date='$today' AND status='BOLOS'");
 $count_bolos = mysqli_num_rows($sql5);
 
-$sql6 = mysqli_query($dbconnect, "select * from tb_id where id not in(select id from tb_absen where date='$today')");
+$sql6 = mysqli_query($dbconnect, "select * from tb_id where id not in(select id from tb_absen_masuk where date='$today')");
 $count_alpa = mysqli_num_rows($sql6);
 ?>
 
@@ -58,7 +58,7 @@ $count_alpa = mysqli_num_rows($sql6);
               <div class="inner">
                 <h3>
                   <?php
-                  $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE status_kartu='Siswa'");
+                  $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen_masuk INNER JOIN tb_id ON tb_absen_masuk.id=tb_id.id WHERE status_kartu='Siswa'");
                   $row = mysqli_num_rows($sql);
                   echo $row;
                   ?>
@@ -80,7 +80,7 @@ $count_alpa = mysqli_num_rows($sql6);
               <div class="inner">
                 <h3>
                   <?php
-                  $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE status_kartu='Guru'");
+                  $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen_masuk INNER JOIN tb_id ON tb_absen_masuk.id=tb_id.id WHERE status_kartu='Guru'");
                   $row = mysqli_num_rows($sql);
                   echo $row;
                   ?>
@@ -187,7 +187,7 @@ $count_alpa = mysqli_num_rows($sql6);
               <div class="inner">
                 <h3>
                   <?php
-                  $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE status_kartu='Siswa'");
+                  $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen_masuk INNER JOIN tb_id ON tb_absen_masuk.id=tb_id.id WHERE status_kartu='Siswa'");
                   $row = mysqli_num_rows($sql);
                   echo $row;
                   ?>
@@ -208,7 +208,7 @@ $count_alpa = mysqli_num_rows($sql6);
               <div class="inner">
                 <h3>
                   <?php
-                  $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen INNER JOIN tb_id ON tb_absen.id=tb_id.id WHERE status_kartu='Guru'");
+                  $sql = mysqli_query($dbconnect, "SELECT*FROM tb_absen_masuk INNER JOIN tb_id ON tb_absen_masuk.id=tb_id.id WHERE status_kartu='Guru'");
                   $row = mysqli_num_rows($sql);
                   echo $row;
                   ?>

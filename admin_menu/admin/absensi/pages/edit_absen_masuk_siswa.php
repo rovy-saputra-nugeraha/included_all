@@ -22,7 +22,7 @@ $flag = $_GET['flag'];
 include './konfig/connection.php'; // Sesuaikan dengan file koneksi Anda
 
 // Query untuk mengambil status dan keterangan dari tb_absen
-$query = mysqli_query($dbconnect, "SELECT id, date, status, keterangan FROM tb_absen WHERE id='$uid' AND date='$tanggal'");
+$query = mysqli_query($dbconnect, "SELECT id, date, status, keterangan FROM tb_absen_masuk WHERE id='$uid' AND date='$tanggal'");
 if ($query) {
 	$data = mysqli_fetch_assoc($query);
 	if ($data) {
@@ -31,7 +31,7 @@ if ($query) {
 		$status_terpilih = $data['status'];
 		$keterangan_terpilih = $data['keterangan'];
 	} else {
-		// Jika tidak ada data ditemukan, munculkan form untuk absen guru baru
+		// Jika tidak ada data ditemukan, munculkan form untuk absen siswa baru
 	?>
 
 	<!DOCTYPE html>
@@ -39,7 +39,7 @@ if ($query) {
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Edit Presensi Guru</title>
+		<title>Edit Presensi Siswa</title>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	</head>
@@ -49,10 +49,10 @@ if ($query) {
 				<div class="col-md-8 offset-md-2">
 					<div class="card">
 						<div class="card-header bg-info text-white">
-							<h1 class="m-0">EDIT PRESENSI GURU</h1>
+							<h1 class="m-0">EDIT PRESENSI SISWA</h1>
 						</div>
 						<div class="card-body">
-							<form action="./konfig/update_keterangan_guru.php" method="POST" enctype="multipart/form-data">
+							<form action="./konfig/update_keterangan_masuk_siswa.php" method="POST" enctype="multipart/form-data">
 								<input type="hidden" name="flag" value="<?php echo $flag; ?>">
 								<input type="hidden" name="id" value="<?php echo $uid; ?>">
 								<input type="hidden" name="tanggal" value="<?php echo $tanggal; ?>">
@@ -63,7 +63,7 @@ if ($query) {
 								</div>
 
 								<div class="form-group">
-									<label for="nama">Nama Guru</label>
+									<label for="nama">Nama Siswa</label>
 									<input required class="form-control" type="text" id="nama" placeholder="Masukan Nama" value="<?php echo $nama; ?>" readonly>
 								</div>
 
@@ -97,7 +97,7 @@ if ($query) {
 
 								<div class="form-group pt-3">
 									<button type="submit" class="btn btn-outline-success ml-2">Simpan</button>
-									<a href="index.php?page=absensi-masuk-guru" class="btn btn-outline-danger ml-2">Batal</a>
+									<a href="index.php?page=absensi-masuk-siswa" class="btn btn-outline-danger ml-2">Batal</a>
 								</div>
 							</form>
 						</div>
@@ -123,7 +123,7 @@ if ($query) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Edit Presensi Guru</title>
+	<title>Edit Presensi Siswa</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
@@ -134,10 +134,10 @@ if ($query) {
 			<div class="col-md-8 offset-md-2">
 				<div class="card">
 					<div class="card-header bg-info text-white">
-						<h1 class="m-0">EDIT PRESENSI GURU</h1>
+						<h1 class="m-0">EDIT PRESENSI SISWA</h1>
 					</div>
 					<div class="card-body">
-						<form action="./konfig/update_keterangan_guru.php" method="POST" enctype="multipart/form-data">
+						<form action="./konfig/update_keterangan_masuk_siswa.php" method="POST" enctype="multipart/form-data">
 
 							<input type="hidden" id="custId" name="flag" value="<?php echo $flag; ?>">
 
@@ -147,7 +147,7 @@ if ($query) {
 							</div>
 
 							<div class="form-group">
-								<label for="exampleInputEmail1">Nama Guru</label>
+								<label for="exampleInputEmail1">Nama Siswa</label>
 								<input required class="form-control" type="text" placeholder="Masukan Nama" value="<?php echo $nama ?>" readonly>
 							</div>
 
@@ -197,7 +197,7 @@ if ($query) {
 							// Mengambil informasi file dari database jika sudah ada
 							include './konfig/connection.php'; // Sesuaikan dengan file koneksi Anda
 
-							$query = mysqli_query($dbconnect, "SELECT berkas FROM tb_absen WHERE id='$uid' AND date='$tanggal'");
+							$query = mysqli_query($dbconnect, "SELECT berkas FROM tb_absen_masuk WHERE id='$uid' AND date='$tanggal'");
 							if ($query) {
 								$fileRow = mysqli_fetch_assoc($query);
 								if ($fileRow) {
@@ -205,7 +205,7 @@ if ($query) {
 
 									// Menampilkan tautan unduh jika file sudah ada
 									if (!empty($fileBerkas)) {
-										$downloadLink = './konfig/berkasGuru/' . $fileBerkas; // Pastikan $fileBerkas berisi nama file dengan ekstensi yang benar (misalnya 'file.pdf')
+										$downloadLink = '../konfig/berkasSiswa/' . $fileBerkas; // Pastikan $fileBerkas berisi nama file dengan ekstensi yang benar (misalnya 'file.pdf')
 										echo '<div class="form-group pt-2">';
 										echo '<label>File yang sudah diunggah:</label><br>';
 										echo '<a href="' . $downloadLink . '" class="btn btn-primary" download="' . basename($fileBerkas) . '">Unduh File</a>'; // basename($fileBerkas) akan mengambil nama file dengan ekstensinya
@@ -232,7 +232,7 @@ if ($query) {
 
 							<div class="form-group pt-3">
 								<button type="submit" class="btn btn-outline-success ml-2">Simpan</button>
-								<a href="index.php?page=absensi-masuk-guru" class="btn btn-outline-danger ml-2">Batal</a>
+								<a href="index.php?page=absensi-masuk-siswa" class="btn btn-outline-danger ml-2">Batal</a>
 							</div>
 
 						</form>
