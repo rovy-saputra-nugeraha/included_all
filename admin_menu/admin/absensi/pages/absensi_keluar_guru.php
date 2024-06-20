@@ -111,7 +111,7 @@ if (isset($_POST['tanggal'])) {
                                                     </td>
                                                     <td>
                                                         <?php if (!empty($data['berkas'])) : ?>
-                                                            <a href="../konfig/berkasGuru/<?php echo $data['berkas']; ?>" target="_blank">
+                                                            <a href="./konfig/berkasGuru/<?php echo $data['berkas']; ?>" target="_blank">
                                                                 <i class="fas fa-eye"></i> Lihat Berkas
                                                             </a>
                                                             <a href="./index.php?page=edit_absen_keluar_guru&id=<?php echo $data['id']; ?>&nama=<?php echo $data['nama']; ?>&tanggal=<?php echo $absent; ?>&status=A&flag=<?php echo $flag; ?>">
