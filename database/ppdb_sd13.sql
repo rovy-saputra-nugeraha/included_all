@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Jun 2024 pada 16.32
+-- Waktu pembuatan: 30 Jun 2024 pada 18.16
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
@@ -56,8 +56,7 @@ CREATE TABLE `berkas` (
   `id_siswa` int(11) NOT NULL,
   `kartu_keluarga` varchar(500) NOT NULL,
   `akta_lahir` varchar(500) NOT NULL,
-  `pas_foto` varchar(500) NOT NULL,
-  `ktp` varchar(500) NOT NULL
+  `bukti_registrasi` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -71,6 +70,7 @@ CREATE TABLE `biodata_ayah` (
   `id_siswa` int(11) NOT NULL,
   `nama_ayah` varchar(50) NOT NULL,
   `pekerjaan_ayah` varchar(50) NOT NULL,
+  `penghasilan_ayah` varchar(150) NOT NULL,
   `alamat_ayah` varchar(75) NOT NULL,
   `no_hp_ayah` varchar(15) NOT NULL,
   `tgl_lahir_ayah` date NOT NULL,
@@ -89,6 +89,7 @@ CREATE TABLE `biodata_ibu` (
   `id_siswa` int(11) NOT NULL,
   `nama_ibu` varchar(50) NOT NULL,
   `pekerjaan_ibu` varchar(50) NOT NULL,
+  `penghasilan_ibu` varchar(150) NOT NULL,
   `alamat_ibu` varchar(75) NOT NULL,
   `no_hp_ibu` varchar(15) NOT NULL,
   `tgl_lahir_ibu` date NOT NULL,
@@ -111,6 +112,9 @@ CREATE TABLE `biodata_siswa` (
   `alamat_siswa` varchar(75) NOT NULL,
   `nik_siswa` int(20) NOT NULL,
   `jk_siswa` enum('Laki-Laki','Perempuan') NOT NULL,
+  `tb_siswa` int(10) NOT NULL,
+  `bb_siswa` int(10) NOT NULL,
+  `size_pakaian` varchar(10) NOT NULL,
   `agama_siswa` varchar(20) NOT NULL,
   `anak_ke` int(10) NOT NULL,
   `jumlah_saudara` int(10) NOT NULL,
@@ -134,7 +138,7 @@ CREATE TABLE `countdown_login` (
 --
 
 INSERT INTO `countdown_login` (`id_countdown`, `target_datetime`, `status`) VALUES
-(1, '2024-05-22 19:00:00', 'NonAktif');
+(1, '2024-06-28 19:00:00', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -170,6 +174,28 @@ INSERT INTO `data_guru` (`id_guru`, `nip_guru`, `nama_guru`, `alamat_guru`, `no_
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `data_kepala_sekolah`
+--
+
+CREATE TABLE `data_kepala_sekolah` (
+  `id_kepsek` int(11) NOT NULL,
+  `nip_kepsek` varchar(20) NOT NULL,
+  `nama_kepsek` varchar(30) NOT NULL,
+  `alamat_kepsek` varchar(50) NOT NULL,
+  `kata_pengantar` varchar(500) NOT NULL,
+  `foto_kepsek` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `data_kepala_sekolah`
+--
+
+INSERT INTO `data_kepala_sekolah` (`id_kepsek`, `nip_kepsek`, `nama_kepsek`, `alamat_kepsek`, `kata_pengantar`, `foto_kepsek`) VALUES
+(2, '196511201986092003', 'Marunah', 'Tarempa', 'pppppppppp', 'Kepala Sekolah.png');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `e_learning`
 --
 
@@ -195,7 +221,9 @@ INSERT INTO `e_learning` (`id_learning`, `judul_konten`, `link_yt`, `file`, `kat
 (13, 'Makanan Khas Melayu', 'https://wordwall.net/embed/ae6dda6f2ba647b3b57dab1c568dca2f', '', 'game', 'muatan_umum', '', ''),
 (17, 'Pulau Penyegat', 'https://www.canva.com/design/DAGFRUsVu6g/dtXcyM0H2rzf8--s8aN3QA/edit', 'Notulensi Diskusi 4.pdf', 'materi', 'muatan_lokal', 'pulau_penyengat', 'Farel Putra Albana'),
 (19, 'IPS', 'https://youtu.be/V8PNqTgc6-s?si=bXOqIAbhp6LR6MNl', 'Kelas VIII Matematika BS Sem 1.pdf', 'materi', 'muatan_umum', 'ips', 'Farel Putra Albana'),
-(20, 'IPA', '-', 'Notulensi Diskusi 2.pdf', 'materi', 'muatan_umum', 'ipa', 'Farel Putra Albana');
+(20, 'IPA', '-', 'Notulensi Diskusi 2.pdf', 'materi', 'muatan_umum', 'ipa', 'Farel Putra Albana'),
+(21, 'Pulau Kapuk', 'https://wordwall.net/embed/f458e34f787044eb82795c3b87c08300', '', 'game', '', '', ''),
+(22, 'Pulau Kapuk', 'https://wordwall.net/embed/f458e34f787044eb82795c3b87c08300', '', 'game', 'muatan_umum', '', '');
 
 -- --------------------------------------------------------
 
@@ -297,7 +325,6 @@ CREATE TABLE `tb_absen_keluar` (
 --
 
 INSERT INTO `tb_absen_keluar` (`id`, `masuk`, `keluar`, `date`, `status`, `keterangan`, `berkas`) VALUES
-('43CFE60C', '', '-', '2024-06-13', 'IZIN', 'Izin', ''),
 ('033DBC0C', '', '-', '2024-06-13', 'HADIR', 'Hadir ', ''),
 ('033DBC0C', '', '-', '2024-06-16', 'SAKIT', 'Demam', 'Notulensi Diskusi 4 (1).pdf'),
 ('033DBC0C', '-', '-', '2024-06-19', 'IZIN', 'Acara Keluarga', 'Tugas Kelompok_Resume Analisis Dampak Perubahan (1).pdf'),
@@ -324,12 +351,10 @@ CREATE TABLE `tb_absen_masuk` (
 --
 
 INSERT INTO `tb_absen_masuk` (`id`, `masuk`, `keluar`, `date`, `status`, `keterangan`, `berkas`) VALUES
-('43CFE60C', '-', '', '2024-06-13', 'IZIN', 'Izin', ''),
 ('033DBC0C', '-', '', '2024-06-13', 'HADIR', 'Hadir ', ''),
 ('033DBC0C', '-', '', '2024-06-16', 'SAKIT', 'Demam', 'Notulensi Diskusi 4 (1).pdf'),
 ('033DBC0C', '-', '', '2024-06-19', 'IZIN', 'Acara Keluarga', 'Lanyard SDN 013 TPI BARAT (1).pdf'),
-('E3A23542', '-', '', '2024-06-19', 'HADIR', '-', ''),
-('43CFE60C', '-', '', '2024-06-19', 'SAKIT', 'Demam', 'Presensi SDN 013 Tanjungpinang Barat (1).pdf');
+('E3A23542', '-', '', '2024-06-19', 'HADIR', '-', '');
 
 -- --------------------------------------------------------
 
@@ -352,8 +377,6 @@ CREATE TABLE `tb_id` (
 --
 
 INSERT INTO `tb_id` (`id`, `nama`, `chatid`, `notifikasi`, `tahun_masuk`, `nisn`, `status_kartu`) VALUES
-('033DBC0C', 'Rovy Saputra Nugeraha ', '1436647086', 0, '2021', '2101020012', 'Siswa'),
-('43CFE60C', 'Cindi Aulia Ladiesta', '1436647086', 0, '2021', '21010200124', 'Guru'),
 ('E3A23542', 'Farel Putra', '1436647086', 0, '2021', '2101020012', 'Siswa');
 
 -- --------------------------------------------------------
@@ -486,6 +509,12 @@ ALTER TABLE `data_guru`
   ADD PRIMARY KEY (`id_guru`);
 
 --
+-- Indeks untuk tabel `data_kepala_sekolah`
+--
+ALTER TABLE `data_kepala_sekolah`
+  ADD PRIMARY KEY (`id_kepsek`);
+
+--
 -- Indeks untuk tabel `e_learning`
 --
 ALTER TABLE `e_learning`
@@ -587,10 +616,16 @@ ALTER TABLE `data_guru`
   MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT untuk tabel `data_kepala_sekolah`
+--
+ALTER TABLE `data_kepala_sekolah`
+  MODIFY `id_kepsek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT untuk tabel `e_learning`
 --
 ALTER TABLE `e_learning`
-  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_learning` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `e_learning_login`
