@@ -118,6 +118,8 @@ if (isset($_POST["login"])) {
                 <small>Belum punya akun? <a href="registrasi.php">Daftar akun</a></small>
               </div>
               </form>
+              <br>
+              <a href="../index.php" class="btn btn-danger btn-block btn-flat" title="Kembali Ke Halaman Utama">Halaman Utama</a>
               <script>
                 // JavaScript to toggle password visibility
                 const passwordInput = document.getElementById('password');

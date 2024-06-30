@@ -50,7 +50,7 @@ if (isset($_POST['Simpan'])) {
     $judul_konten = $_POST['judul_konten'];
     $link_yt = $_POST['link_yt'];
     $kategori = $_POST['kategori'];
-    $jenis = $_POST['muatan_lokal'];
+    $jenis = $_POST['muatan_umum'];
 
     $sql_simpan = "INSERT INTO e_learning (judul_konten, link_yt, kategori, jenis) VALUES (
         '$judul_konten',

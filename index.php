@@ -204,15 +204,15 @@ if (isset($_POST['send'])) {
             <ul>
               <li><i class="ri-check-double-line"></i> Membiasakan siswa jujur dalam bertindak, serta bertanggung jawab terhadap diri, sekolah dan lingkungan.</li>
               <li><i class="ri-check-double-line"></i> Membiasakan siswa beribadah menurut agama dan kepercayaan masing-masing.</li>
-              <li><i class="ri-check-double-line"></i> Membiasakan siswa melakukan 55: Seyum, Sapa, Salam, Sopan Santun dalam perilaku.</li>
-              <li><i class="ri-check-double-line"></i> Membiasakan siswa menjaga Kesehatan diri, baik jasmani maupun rohani. </li>
+              <li><i class="ri-check-double-line"></i> Membiasakan siswa melakukan 5S: Senyum, Sapa, Salam, Sopan, Santun dalam perilaku.</li>
+              <li><i class="ri-check-double-line"></i> Membiasakan siswa menjaga kesehatan diri, baik jasmani maupun rohani. </li>
               <li><i class="ri-check-double-line"></i> Membiasakan siswa meningkatkan kemampuan akademik maupun non akademik.</li>
               <li><i class="ri-check-double-line"></i> Membiasakan sikap peduli terhadap lingkungan dan pembinaan sikap santun pada orang tua, guru dan teman.</li>
               <li><i class="ri-check-double-line"></i> Membiasakan siswa untuk melestarikan lingkungan dengan melakukan tugas rutin sekolah.</li>
               <li><i class="ri-check-double-line"></i> Mengintegrasikan materi lingkungan hidup (LH) dalam mata pelajaran.</li>
               <li><i class="ri-check-double-line"></i> Membiasakan diri ikut kegiatan aksi lingkungan bersih.</li>
               <li><i class="ri-check-double-line"></i> Menjaga kelestarian lingkungan dengan mencegah pencemaran dan kerusakan lingkungan dengan program 7-K (Keamanan, Kebersihan, Keimanan, Keindahan, Ketertiban dan Kekeluargaan).</li>
-              <li><i class="ri-check-double-line"></i> Mebangun lingkungan sekolah yang bertoleransi dalam kebhinekaan golbal, mencintai budaya local dan menjungung nilai gotong royonh.</li>
+              <li><i class="ri-check-double-line"></i> Membangun lingkungan sekolah yang bertoleransi dalam kebhinekaan global, mencintai budaya lokal dan menjunjung nilai gotong royong.</li>
             </ul>
           </div>
         </div>
@@ -293,18 +293,46 @@ if (isset($_POST['send'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/guru/Kepala Sekolah.PNG" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3>Kepala Sekolah SD Negeri 013 Tanjungpinang Barat</h3>
-            <p class="fst-italic" align="justify">
-              Salam hangat untuk anak-anak yang hebat di SDN 013 Tanjungpinang Barat! Saya, sebagai Kepala Sekolah, merasa bangga dan bahagia melihat semangat belajar kalian yang luar biasa. Tahun ajaran baru ini merupakan kesempatan baru untuk tumbuh, belajar, dan mencapai potensi penuh kalian. Mari bersama-sama membangun lingkungan sekolah yang positif, menjaga semangat kebersamaan, dan bersinergi dalam mencapai prestasi. Saya yakin, dengan kerja keras dan tekad yang kuat, kalian akan meraih keberhasilan yang gemilang. Selamat belajar, teman-teman! Saya percaya, kita akan menciptakan tahun ajaran yang penuh prestasi dan kebahagiaan bersama-sama. Terima kasih.
-            </p>
-            <h5 align="center">
-              - Marunah Kepala Sekolah SD Negeri 013 TPI Barat -
-            </h5>
-          </div>
+          <?php
+          // Koneksi ke database
+          $koneksi = mysqli_connect("localhost", "root", "", "ppdb_sd13");
+
+          // Periksa koneksi
+          if (mysqli_connect_errno()) {
+            echo "Koneksi database gagal: " . mysqli_connect_error();
+            exit();
+          }
+
+          // Query untuk mengambil data guru dari database
+          $sql_kepsek = "SELECT * FROM data_kepala_sekolah";
+          $result_kepsek = mysqli_query($koneksi, $sql_kepsek);
+
+          // Periksa apakah ada data guru yang ditemukan
+          if (mysqli_num_rows($result_kepsek) > 0) {
+            // Loop melalui setiap baris data guru
+            while ($row = mysqli_fetch_assoc($result_kepsek)) {
+              // Tampilkan informasi guru dari database
+              echo '<div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">';
+              echo '<img src="/admin_menu/foto/kepala_sekolah/' . $row['foto_kepsek'] . '" class="img-fluid" alt="">';
+              echo '</div>';
+              echo '<div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">';
+              echo '<h3 class="text-center">Kepala Sekolah <br> SD Negeri 013 Tanjungpinang Barat</h3>';
+              echo '<h5 class="fst-italic" align="justify">';
+              echo '' . $row['kata_pengantar'] . '';
+              echo '</h5>';
+              echo '<h5 align="center">';
+              echo '- ' . $row['nama_kepsek'] . ' Kepala Sekolah SD Negeri 013 TPI Barat -';
+              echo '</h5>';
+              echo '</div>';
+            }
+          } else {
+            // Jika tidak ada data guru yang ditemukan
+            echo '<p>Tidak ada data kepala sekolah yang tersedia.</p>';
+          }
+
+          // Tutup koneksi database
+          mysqli_close($koneksi);
+          ?>
         </div>
 
       </div>
@@ -315,7 +343,7 @@ if (isset($_POST['send'])) {
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Tenaga Pendidik</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Berikut adalah daftar tenaga pendidik yang ada di SDN 013 Tanjungpinang Barat untuk menunjang proses belajar dan mengajar:</p>
         </div>
 
         <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
@@ -723,7 +751,7 @@ if (isset($_POST['send'])) {
 
         <div class="section-title">
           <h2>Pelayanan Sistem</h2>
-          <p>Jika anda butuh informasi lebih lanjut mengenai Sistem Informasi Digital Akademik SD Negeri 013 Tanjungpinang Barat, Dapat mengirimkan pesan email dengan menggunakan formulir dibawah ini. Atas perhatiannya kami ucapkan Terimaksih.</p>
+          <p>Jika anda butuh informasi lebih lanjut mengenai Sistem Informasi Digital Akademik SD Negeri 013 Tanjungpinang Barat, Dapat mengirimkan pesan email dengan menggunakan formulir dibawah ini. Atas perhatiannya kami ucapkan Terimakasih.</p>
         </div>
 
         <div class="row">
@@ -835,10 +863,10 @@ if (isset($_POST['send'])) {
             <p>Mari berinteraksi bersama kami melalui media sosial SD Negeri 013 Tanjungpinang Barat
             <p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.tiktok.com/@pkmpm_rbm?_t=8nZsQaI4wHA&_r=1" class="tiktok"><i class="bx bxl-tiktok"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100068154853700&mibextid=LQQJ4d" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://youtube.com/@pkmpm_rbm?si=VjebsYm3FQCc6ix-" class="youtube"><i class="bx bxl-youtube"></i></a>
+              <a href="https://www.instagram.com/pkmpm_rbm?igsh=MzgzZm9qbjQ3anB5&utm_source=qr" class="instagram"><i class="bx bxl-instagram"></i></a>
             </div>
           </div>
 
@@ -851,7 +879,7 @@ if (isset($_POST['send'])) {
         &copy; Copyright <strong><span>SDN 013 Tanjungpinang Barat</span></strong>.
       </div>
       <div class="credits">
-        Designed by <a href="#">TIM PKM-PM RBM</a>
+        Designed by <a href="https://sdn013tpibarat.sch.id/">TIM PKM-PM RBM</a>
       </div>
     </div>
   </footer><!-- End Footer -->

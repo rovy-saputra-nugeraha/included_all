@@ -83,7 +83,7 @@ if (isset($_GET['kode'])) {
 									</div>
 									<div class="card-body p-0">
 										<div class="mt-2">
-											<a href="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['pas_foto']; ?>" target="_blank">
+											<a href="/<?php echo $data_cek['pas_foto']; ?>" target="_blank">
 												<img id="zoom-image-pas-foto" src="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['pas_foto']; ?>" class="zoomed-image" width="280px">
 											</a>
 										</div>

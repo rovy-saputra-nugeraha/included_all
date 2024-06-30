@@ -157,11 +157,17 @@ while ($data = $sql->fetch_assoc()) {
 								<a href="#" class="nav-link">
 									<i class="nav-icon far fa fa-users"></i>
 									<p>
-										Guru
+										Tenaga Pendidik
 										<i class="right fas fa-angle-left"></i>
 									</p>
 								</a>
 								<ul class="nav nav-treeview" style="font-size: 12px;">
+									<li class="nav-item">
+										<a href="?page=data-kepala-sekolah" class="nav-link">
+											<i class="nav-icon far fa fa-user" style="font-size: 12px;"></i>
+											<p>Data Kepala Sekolah</p>
+										</a>
+									</li>
 									<li class="nav-item">
 										<a href="?page=data-guru" class="nav-link">
 											<i class="nav-icon far fa fa-user" style="font-size: 12px;"></i>
@@ -462,6 +468,23 @@ while ($data = $sql->fetch_assoc()) {
 								break;
 							case 'view-guru':
 								include "admin/guru/view_guru.php";
+								break;
+
+								//Kepala Sekolah
+							case 'data-kepala-sekolah':
+								include "admin/guru/data_kepala_sekolah.php";
+								break;
+							case 'add-kepala-sekolah':
+								include "admin/guru/add_kepala_sekolah.php";
+								break;
+							case 'edit-kepala-sekolah':
+								include "admin/guru/edit_kepala_sekolah.php";
+								break;
+							case 'del-kepala-sekolah':
+								include "admin/guru/del_kepala_sekolah.php";
+								break;
+							case 'view-kepala-sekolah':
+								include "admin/guru/view_kepala_sekolah.php";
 								break;
 
 								//Berita

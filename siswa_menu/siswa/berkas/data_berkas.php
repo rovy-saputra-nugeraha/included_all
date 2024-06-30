@@ -26,7 +26,7 @@
 	<div class="card card-info">
 		<div class="card-header">
 			<h3 class="card-title">
-				<i class="fa fa-table"></i> Upload Berkas - KTP, Kartu Keluarga, Akta Lahir dan Pas Foto
+				<i class="fa fa-table"></i> Upload Berkas - Kartu Keluarga, Akta Lahir dan Bukti Pendaftaran
 			</h3>
 		</div>
 		<div align="center" class="row mt-3 mr-2 ml-2">

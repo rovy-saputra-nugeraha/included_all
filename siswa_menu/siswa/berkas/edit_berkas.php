@@ -30,22 +30,19 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
         $target_directory = 'foto/';
 
         // Inisialisasi variabel-variabel berkas lama
-        $ktp_lama = $data_cek['ktp'];
         $kk_lama = $data_cek['kartu_keluarga'];
         $akta_lahir_lama = $data_cek['akta_lahir'];
-        $pas_foto_lama = $data_cek['pas_foto'];
+        $bukti_registrasi_lama = $data_cek['bukti_registrasi'];
 
         // Tentukan nama berkas baru
-        $ktp_baru = @$_FILES['ktp']['name'];
         $kk_baru = @$_FILES['kk']['name'];
         $akta_lahir_baru = @$_FILES['akta_lahir']['name'];
-        $pas_foto_baru = @$_FILES['pas_foto']['name'];
+        $bukti_registrasi_baru = @$_FILES['bukti_registrasi']['name'];
 
         // Inisialisasi variabel-variabel untuk cek apakah berkas baru diunggah
-        $pindah_ktp = false;
         $pindah_kk = false;
         $pindah_akta_lahir = false;
-        $pindah_pas_foto = false;
+        $pindah_bukti_registrasi = false;
 
         // Cek dan hapus berkas lama jika berkas baru diunggah
         if (!empty($ktp_baru)) {
@@ -63,24 +60,18 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
             $pindah_akta_lahir = move_uploaded_file($_FILES['akta_lahir']['tmp_name'], $target_directory . $akta_lahir_baru);
         }
 
-        if (!empty($pas_foto_baru)) {
-            unlink($target_directory . $pas_foto_lama);
-            $pindah_pas_foto = move_uploaded_file($_FILES['pas_foto']['tmp_name'], $target_directory . $pas_foto_baru);
+        if (!empty($bukti_registrasi_baru)) {
+            unlink($target_directory . $bukti_registrasi_lama);
+            $pindah_bukti_registrasi = move_uploaded_file($_FILES['bukti_registrasi']['tmp_name'], $target_directory . $bukti_registrasi_baru);
         }
 
         // Pastikan minimal satu berkas telah diunggah dengan sukses
-        if ($pindah_ktp || $pindah_kk || $pindah_akta_lahir || $pindah_pas_foto) {
+        if ($pindah_kk || $pindah_akta_lahir || $pindah_bukti_registrasi) {
             // Ubah kode SQL untuk mengupdate data berkas di tabel berkas
             $sql_ubah_berkas = "UPDATE berkas SET";
             $update_fields = [];
             $param_types = "";
             $param_values = [];
-
-            if ($pindah_ktp) {
-                $update_fields[] = "ktp=?";
-                $param_types .= "s";
-                $param_values[] = $ktp_baru;
-            }
 
             if ($pindah_kk) {
                 $update_fields[] = "kartu_keluarga=?";
@@ -94,10 +85,10 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
                 $param_values[] = $akta_lahir_baru;
             }
 
-            if ($pindah_pas_foto) {
-                $update_fields[] = "pas_foto=?";
+            if ($pindah_bukti_registrasi) {
+                $update_fields[] = "bukti_registrasi=?";
                 $param_types .= "s";
-                $param_values[] = $pas_foto_baru;
+                $param_values[] = $bukti_registrasi_baru;
             }
 
             $sql_ubah_berkas .= " " . implode(', ', $update_fields);
@@ -161,24 +152,6 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                     <!-- ... (bagian formulir dan tampilan berkas) -->
-                    <!-- Menampilkan foto KTP -->
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Berkas KTP</label>
-                        <div class="col-sm-6">
-                            <img src="foto/<?php echo $data_cek['ktp']; ?>" width="160px" />
-                        </div>
-                    </div>
-
-                    <!-- Mengunggah ulang foto KTP -->
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Ubah Berkas KTP</label>
-                        <div class="col-sm-6">
-                            <input type="file" id="ktp" name="ktp">
-                            <p class="help-block">
-                                <font color="red">"Format file Jpg/Png"</font>
-                            </p>
-                        </div>
-                    </div>
 
                     <!-- Menampilkan foto Kartu Keluarga -->
                     <div class="form-group row">
@@ -220,17 +193,17 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 
                     <!-- Menampilkan foto Pas Foto -->
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Berkas Pas Foto</label>
+                        <label class="col-sm-2 col-form-label">Berkas Bukti Registrasi</label>
                         <div class="col-sm-6">
-                            <img src="foto/<?php echo $data_cek['pas_foto']; ?>" width="160px" />
+                            <img src="foto/<?php echo $data_cek['bukti_registrasi']; ?>" width="160px" />
                         </div>
                     </div>
 
                     <!-- Mengunggah ulang foto Pas Foto -->
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Ubah Berkas Pas Foto</label>
+                        <label class="col-sm-2 col-form-label">Ubah Berkas Bukti Registrasi</label>
                         <div class="col-sm-6">
-                            <input type="file" id="pas_foto" name="pas_foto">
+                            <input type="file" id="bukti_registrasi" name="bukti_registrasi">
                             <p class="help-block">
                                 <font color="red">"Format file Jpg/Png"</font>
                             </p>

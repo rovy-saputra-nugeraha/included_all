@@ -37,7 +37,6 @@
                     <thead class="tabel">
                         <tr class="text-center">
                             <th>No</th>
-                            <th>Foto</th>
                             <th>NIK</th>
                             <th>Nama</th>
                             <th>Tempat Lahir</th>
@@ -51,7 +50,7 @@
 
                         <?php
                         $no = 1;
-                        $sql = $koneksi->query("SELECT login_siswa.nik, biodata_siswa.*, berkas.pas_foto 
+                        $sql = $koneksi->query("SELECT login_siswa.nik, biodata_siswa.*
                             FROM login_siswa
                             LEFT JOIN biodata_siswa ON login_siswa.id_login_siswa = biodata_siswa.id_login_siswa
                             LEFT JOIN berkas ON biodata_siswa.id_siswa = berkas.id_siswa
@@ -62,9 +61,6 @@
                             <tr>
                                 <td>
                                     <?php echo $no++; ?>
-                                </td>
-                                <td align="center">
-                                    <img src="/ppdb-sd/src/siswa_menu/foto/<?php echo $data['pas_foto']; ?>" width="70px" />
                                 </td>
                                 <td>
                                     <?php echo $data['nik']; ?>

@@ -69,8 +69,7 @@
 									<tr class="text-center">
 										<th>Berkas Kartu Keluarga</th>
 										<th>Berkas Akta Lahir</th>
-										<th>Berkas KTP</th>
-										<th>Berkas Pas Foto</th>
+										<th>Berkas Bukti Registrasi</th>
 									</tr>
 								</thead>
 								<tbody class="text-center">
@@ -85,10 +84,7 @@
 												<img src="foto/<?php echo $data['akta_lahir']; ?>" width="250px" height="150px" />
 											</td>
 											<td align="center">
-												<img src="foto/<?php echo $data['ktp']; ?>" width="250px" height="150px" />
-											</td>
-											<td align="center">
-												<img src="foto/<?php echo $data['pas_foto']; ?>" width="100px" height="150px" />
+												<img src="foto/<?php echo $data['bukti_registrasi']; ?>" width="100px" height="150px" />
 											</td>
 										</tr>
 									<?php

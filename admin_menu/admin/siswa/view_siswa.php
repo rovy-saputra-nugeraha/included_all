@@ -116,14 +116,14 @@ if (isset($_GET['kode'])) {
                     <div class="card-header">
                         <center>
                             <h3 class="card-title">
-                                Foto Siswa
+                                Bukti Registrasi
                             </h3>
                         </center>
                         <div class="card-tools">
                         </div>
                     </div>
                     <div class="card-body">
-                        <?php if ($data_cek['pas_foto']) : ?>
+                        <?php if ($data_cek['bukti_registrasi']) : ?>
                             <div class="text-center">
                                 <img src="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['pas_foto']; ?>" width="280px" />
                             </div>

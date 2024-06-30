@@ -91,7 +91,8 @@ function postdata($uid, $hari_ini, $time, $cek_absen)
 
         $status = "BOLOS";
         if ($cek_absen == "out" && $masuk != "") {
-            $status = $data_masuk['status'] == "TERLAMBAT" ? "TERLAMBAT" : "HADIR";
+            // Status for check-out does not follow "TERLAMBAT" from check-in
+            $status = "HADIR";
         }
 
         $query_keluar = mysqli_query($dbconnect, "SELECT * FROM tb_absen_keluar WHERE id='$uid' AND date='$hari_ini'");
@@ -140,5 +141,3 @@ function telegram($uid, $jam_absen, $status, $secret_token)
         curl_close($ch);
     }
 }
-
-?>

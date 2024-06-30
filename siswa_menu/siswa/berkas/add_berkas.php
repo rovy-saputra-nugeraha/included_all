@@ -26,16 +26,6 @@
 				</div>
 
 				<div class="form-group row">
-					<label class="col-sm-2 col-form-label">Berkas KTP</label>
-					<div class="col-sm-6">
-						<input type="file" id="ktp" name="ktp">
-						<p class="help-block">
-							<font color="red">"Format file Jpg/Png"</font>
-						</p>
-					</div>
-				</div>
-
-				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Berkas Akta Lahir</label>
 					<div class="col-sm-6">
 						<input type="file" id="akta_lahir" name="akta_lahir">
@@ -46,9 +36,9 @@
 				</div>
 
 				<div class="form-group row">
-					<label class="col-sm-2 col-form-label">Berkas Pas Foto</label>
+					<label class="col-sm-2 col-form-label">Berkas Bukti Pendaftaran</label>
 					<div class="col-sm-6">
-						<input type="file" id="pas_foto" name="pas_foto">
+						<input type="file" id="bukti_registrasi" name="bukti_registrasi">
 						<p class="help-block">
 							<font color="red">"Format file Jpg/Png"</font>
 						</p>
@@ -95,26 +85,22 @@
 			$target = 'foto/';
 			$nama_file = @$_FILES['kk']['name'];
 
-			$ktp_sumber = @$_FILES['ktp']['tmp_name'];
 			$akta_lahir_sumber = @$_FILES['akta_lahir']['tmp_name'];
-			$pas_foto_sumber = @$_FILES['pas_foto']['tmp_name'];
+			$bukti_registrasi_sumber = @$_FILES['bukti_registrasi']['tmp_name'];
 
-			$ktp_target = 'foto/'; // Ganti folder sesuai kebutuhan
 			$akta_lahir_target = 'foto/'; // Ganti folder sesuai kebutuhan
-			$pas_foto_target = 'foto/'; // Ganti folder sesuai kebutuhan
+			$bukti_registrasi_target = 'foto/'; // Ganti folder sesuai kebutuhan
 
-			$ktp_nama_file = @$_FILES['ktp']['name'];
 			$akta_lahir_nama_file = @$_FILES['akta_lahir']['name'];
-			$pas_foto_nama_file = @$_FILES['pas_foto']['name'];
+			$bukti_registrasi_nama_file = @$_FILES['bukti_registrasi']['name'];
 
 			$pindah = move_uploaded_file($sumber, $target . $nama_file);
-			$pindah_ktp = move_uploaded_file($ktp_sumber, $ktp_target . $ktp_nama_file);
 			$pindah_akta_lahir = move_uploaded_file($akta_lahir_sumber, $akta_lahir_target . $akta_lahir_nama_file);
-			$pindah_pas_foto = move_uploaded_file($pas_foto_sumber, $pas_foto_target . $pas_foto_nama_file);
+			$pindah_bukti_registrasi = move_uploaded_file($bukti_registrasi_sumber, $bukti_registrasi_target . $pas_foto_nama_file);
 
 			if (!empty($sumber)) {
-				$sql_simpan = "INSERT INTO berkas (kartu_keluarga, ktp, akta_lahir, pas_foto, id_siswa) VALUES (
-                 '" . $nama_file . "', '" . $ktp_nama_file . "', '" . $akta_lahir_nama_file . "', '" . $pas_foto_nama_file . "', " . $id_siswa . ")";
+				$sql_simpan = "INSERT INTO berkas (kartu_keluarga, akta_lahir, bukti_registrasi, id_siswa) VALUES (
+                 '" . $nama_file . "', '" . $akta_lahir_nama_file . "', '" . $bukti_registrasi_nama_file . "', " . $id_siswa . ")";
 				$query_simpan = mysqli_query($koneksi, $sql_simpan);
 				mysqli_close($koneksi);
 
@@ -137,7 +123,7 @@
 				}
 			} else {
 				echo "<script>
-                Swal.fire({title: 'Gagal, Foto Wajib Diisi', text: '', icon: 'error', confirmButtonText: 'OK'
+                Swal.fire({title: 'Gagal, Bukti Registrasi Wajib Diisi', text: '', icon: 'error', confirmButtonText: 'OK'
                 }).then((result) => {
                     if (result.value) {
                         window location = 'data.php?page=add-berkas';
