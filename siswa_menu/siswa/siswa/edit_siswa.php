@@ -92,6 +92,46 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 			</div>
 
 			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Tinggi Badan</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="tb_siswa" name="tb_siswa" value="<?php echo $data_cek['tb_siswa']; ?>" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Berat Badan</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="bb_siswa" name="bb_siswa" value="<?php echo $data_cek['bb_siswa']; ?>" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Size Pakaian</label>
+				<div class="col-sm-4">
+					<select name="size_pakaian" id="size_pakaian" class="form-control">
+						<option value="">-- Pilih --</option>
+						<?php
+						//cek data yg dipilih sebelumnya
+						if ($data_cek['size_pakaian'] == "S") echo "<option value='S' selected>S</option>";
+						else echo "<option value='S'>S</option>";
+
+						if ($data_cek['size_pakaian'] == "M") echo "<option value='M' selected>M</option>";
+						else echo "<option value='M'>M</option>";
+
+						if ($data_cek['size_pakaian'] == "L") echo "<option value='L' selected>L</option>";
+						else echo "<option value='L'>L</option>";
+
+						if ($data_cek['size_pakaian'] == "XL") echo "<option value='XL' selected>XL</option>";
+						else echo "<option value='XL'>XL</option>";
+
+						if ($data_cek['size_pakaian'] == "XXL") echo "<option value='XXL' selected>XXL</option>";
+						else echo "<option value='XXL'>XXL</option>";
+						?>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Anak Ke-</label>
 				<div class="col-sm-1">
 					<input type="number" class="form-control" id="anak_ke" name="anak_ke" value="<?php echo $data_cek['anak_ke']; ?>" />
@@ -137,26 +177,29 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 <?php
 // Periksa apakah pengguna sudah login
 if (isset($_SESSION['ses_id_login_siswa'])) {
-    $id_login_siswa = $_SESSION['ses_id_login_siswa'];
-    $koneksi = mysqli_connect("localhost", "root", "", "ppdb_sd13");
+	$id_login_siswa = $_SESSION['ses_id_login_siswa'];
+	$koneksi = mysqli_connect("localhost", "root", "", "ppdb_sd13");
 
-    if (!$koneksi) {
-        die("Koneksi ke database gagal: " . mysqli_connect_error());
-    }
+	if (!$koneksi) {
+		die("Koneksi ke database gagal: " . mysqli_connect_error());
+	}
 
-    if (isset($_POST['Ubah'])) {
-        // Perbarui data siswa berdasarkan id_login_siswa
-        $nama_siswa = mysqli_real_escape_string($koneksi, $_POST['nama_siswa']);
-        $alamat_siswa = mysqli_real_escape_string($koneksi, $_POST['alamat_siswa']);
-        $tgl_lahir_siswa = $_POST['tgl_lahir_siswa'];
-        $status_keluarga = $_POST['status_keluarga'];
-        $tempat_lahir_siswa = mysqli_real_escape_string($koneksi, $_POST['tempat_lahir_siswa']);
-        $jk_siswa = $_POST['jk_siswa'];
-        $agama_siswa = $_POST['agama_siswa'];
-        $anak_ke = $_POST['anak_ke'];
-        $jumlah_saudara = $_POST['jumlah_saudara'];
+	if (isset($_POST['Ubah'])) {
+		// Perbarui data siswa berdasarkan id_login_siswa
+		$nama_siswa = mysqli_real_escape_string($koneksi, $_POST['nama_siswa']);
+		$alamat_siswa = mysqli_real_escape_string($koneksi, $_POST['alamat_siswa']);
+		$tgl_lahir_siswa = $_POST['tgl_lahir_siswa'];
+		$status_keluarga = $_POST['status_keluarga'];
+		$tempat_lahir_siswa = mysqli_real_escape_string($koneksi, $_POST['tempat_lahir_siswa']);
+		$jk_siswa = $_POST['jk_siswa'];
+		$agama_siswa = $_POST['agama_siswa'];
+		$tb_siswa = mysqli_real_escape_string($koneksi, $_POST['tb_siswa']);
+		$bb_siswa = mysqli_real_escape_string($koneksi, $_POST['bb_siswa']);
+		$size_pakaian = mysqli_real_escape_string($koneksi, $_POST['size_pakaian']);
+		$anak_ke = $_POST['anak_ke'];
+		$jumlah_saudara = $_POST['jumlah_saudara'];
 
-        $sql_ubah = "UPDATE biodata_siswa SET
+		$sql_ubah = "UPDATE biodata_siswa SET
                         nama_siswa='$nama_siswa',
                         alamat_siswa='$alamat_siswa',
                         tgl_lahir_siswa='$tgl_lahir_siswa',
@@ -164,14 +207,17 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
                         tempat_lahir_siswa='$tempat_lahir_siswa',
                         jk_siswa='$jk_siswa',
                         agama_siswa='$agama_siswa',
+						tb_siswa='$tb_siswa',
+						bb_siswa='$bb_siswa',
+						size_pakaian='$size_pakaian',
                         anak_ke='$anak_ke',
                         jumlah_saudara='$jumlah_saudara'
                     WHERE id_login_siswa='$id_login_siswa'";
 
-        $query_ubah = mysqli_query($koneksi, $sql_ubah);
+		$query_ubah = mysqli_query($koneksi, $sql_ubah);
 
-        if ($query_ubah) {
-            echo "<script>
+		if ($query_ubah) {
+			echo "<script>
                 Swal.fire({
                     title: 'Ubah Data Berhasil',
                     text: '',
@@ -183,8 +229,8 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
                     }
                 });
             </script>";
-        } else {
-            echo "<script>
+		} else {
+			echo "<script>
                 Swal.fire({
                     title: 'Ubah Data Gagal',
                     text: '',
@@ -196,16 +242,16 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
                     }
                 });
             </script>";
-        }
-    }
+		}
+	}
 
-    // Ambil data siswa dari database untuk ditampilkan dalam formulir
-    $sql = $koneksi->query("SELECT * FROM biodata_siswa WHERE id_login_siswa = $id_login_siswa");
+	// Ambil data siswa dari database untuk ditampilkan dalam formulir
+	$sql = $koneksi->query("SELECT * FROM biodata_siswa WHERE id_login_siswa = $id_login_siswa");
 
-    if ($sql) {
-        $data_cek = $sql->fetch_assoc();
-    } else {
-        die("Error dalam pengambilan data: " . mysqli_error($koneksi));
-    }
+	if ($sql) {
+		$data_cek = $sql->fetch_assoc();
+	} else {
+		die("Error dalam pengambilan data: " . mysqli_error($koneksi));
+	}
 }
 ?>

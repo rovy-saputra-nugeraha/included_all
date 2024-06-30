@@ -78,6 +78,46 @@ if (isset($_GET['kode'])) {
 			</div>
 
 			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Tinggi Badan</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="tb_siswa" name="tb_siswa" value="<?php echo $data_cek['tb_siswa']; ?>" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Berat Badan</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="bb_siswa" name="bb_siswa" value="<?php echo $data_cek['bb_siswa']; ?>" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Size Pakaian</label>
+				<div class="col-sm-4">
+					<select name="size_pakaian" id="size_pakaian" class="form-control">
+						<option value="">-- Pilih --</option>
+						<?php
+						//cek data yg dipilih sebelumnya
+						if ($data_cek['size_pakaian'] == "S") echo "<option value='S' selected>S</option>";
+						else echo "<option value='S'>S</option>";
+
+						if ($data_cek['size_pakaian'] == "M") echo "<option value='M' selected>M</option>";
+						else echo "<option value='M'>M</option>";
+
+						if ($data_cek['size_pakaian'] == "L") echo "<option value='L' selected>L</option>";
+						else echo "<option value='L'>L</option>";
+
+						if ($data_cek['size_pakaian'] == "XL") echo "<option value='XL' selected>XL</option>";
+						else echo "<option value='XL'>XL</option>";
+
+						if ($data_cek['size_pakaian'] == "XXL") echo "<option value='XXL' selected>XXL</option>";
+						else echo "<option value='XXL'>XXL</option>";
+						?>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Anak Ke-</label>
 				<div class="col-sm-1">
 					<input type="number" class="form-control" id="anak_ke" name="anak_ke" value="<?php echo $data_cek['anak_ke']; ?>" />
@@ -128,7 +168,10 @@ if (isset($_POST['Ubah'])) {
     $status_keluarga = $_POST['status_keluarga'];
     $tempat_lahir_siswa = mysqli_real_escape_string($koneksi, $_POST['tempat_lahir_siswa']);
     $jk_siswa = $_POST['jk_siswa'];
-    $agama_siswa = mysqli_real_escape_string($koneksi, $_POST['agama_siswa']);
+    $tb_siswa = mysqli_real_escape_string($koneksi, $_POST['tb_siswa']);
+	$bb_siswa = mysqli_real_escape_string($koneksi, $_POST['bb_siswa']);
+	$size_pakaian = mysqli_real_escape_string($koneksi, $_POST['size_pakaian']);
+	$agama_siswa = mysqli_real_escape_string($koneksi, $_POST['agama_siswa']);
     $anak_ke = $_POST['anak_ke'];
     $jumlah_saudara = $_POST['jumlah_saudara'];
 
@@ -141,6 +184,9 @@ if (isset($_POST['Ubah'])) {
         tempat_lahir_siswa='$tempat_lahir_siswa',
         jk_siswa='$jk_siswa',
         agama_siswa='$agama_siswa',
+		tb_siswa='$tb_siswa',
+		bb_siswa='$bb_siswa',
+		size_pakaian='$size_pakaian',
         anak_ke='$anak_ke',
         jumlah_saudara='$jumlah_saudara'
         WHERE id_siswa='$id_siswa'";
@@ -156,7 +202,7 @@ if (isset($_POST['Ubah'])) {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.value) {
-                    window.location = 'data.php?page=data-siswa'; // Memperbaiki typo 'location'
+                    window.location = 'data.php?page=data-siswa';
                 }
             });
         </script>";
@@ -169,7 +215,7 @@ if (isset($_POST['Ubah'])) {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.value) {
-                    window.location = 'data.php?page=edit-siswa&kode=" . $_GET['kode'] . "'; // Memperbaiki typo 'location'
+                    window.location = 'data.php?page=edit-siswa&kode=" . $_GET['kode'] . "';
                 }
             });
         </script>";

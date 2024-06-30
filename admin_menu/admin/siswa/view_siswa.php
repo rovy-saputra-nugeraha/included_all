@@ -81,6 +81,30 @@ if (isset($_GET['kode'])) {
                                 </tr>
                                 <tr>
                                     <td style="width: 180px">
+                                        <b>Tinggi Badan</b>
+                                    </td>
+                                    <td>:
+                                        <?php echo $data_cek['tb_siswa']; ?> CM
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 180px">
+                                        <b>Berat Badan</b>
+                                    </td>
+                                    <td>:
+                                        <?php echo $data_cek['bb_siswa']; ?> KG
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 180px">
+                                        <b>Size Pakaian</b>
+                                    </td>
+                                    <td>:
+                                        <?php echo $data_cek['size_pakaian']; ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 180px">
                                         <b>Anak Ke-</b>
                                     </td>
                                     <td>:
@@ -121,21 +145,6 @@ if (isset($_GET['kode'])) {
                         </center>
                         <div class="card-tools">
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <?php if ($data_cek['bukti_registrasi']) : ?>
-                            <div class="text-center">
-                                <img src="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['pas_foto']; ?>" width="280px" />
-                            </div>
-                            <h3 class="profile-username text-center">
-                                <b class="text-danger">NAMA SISWA</b> <br>
-                                <?php echo $data_cek['nama_siswa']; ?>
-                            </h3>
-                        <?php else : ?>
-                            <div class="text-center text-danger">
-                                Pas Foto Siswa Belum di Upload
-                            </div>
-                        <?php endif; ?>
                     </div>
                 </div>
             </div>

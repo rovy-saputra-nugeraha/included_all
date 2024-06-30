@@ -104,6 +104,30 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 							</tr>
 							<tr>
 								<td style="width: 180px">
+									<b>Tinggi Badan</b>
+								</td>
+								<td>:
+									<?php echo $data_cek['tb_siswa']; ?> CM
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 180px">
+									<b>Berat Badan</b>
+								</td>
+								<td>:
+									<?php echo $data_cek['bb_siswa']; ?> KG
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 180px">
+									<b>Size Pakaian</b>
+								</td>
+								<td>:
+									<?php echo $data_cek['size_pakaian']; ?>
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 180px">
 									<b>Anak Ke-</b>
 								</td>
 								<td>:
@@ -133,53 +157,6 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 
 						<a href="./report/cetak-pegawai.php?nip=<?php echo $data_cek['nik']; ?>" target=" _blank" title="Cetak Data Siswa" class="btn btn-primary">Print</a>
 					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-4">
-			<div class="card card-success">
-				<div class="card-header">
-					<center>
-						<h3 class="card-title">
-							Foto Siswa
-						</h3>
-					</center>
-
-					<div class="card-tools">
-					</div>
-				</div>
-				<div class="card-body">
-					<div class="text-center">
-						<?php
-						if ($data_cek) {
-							// Sekarang, kita akan mengambil pas_foto dari tabel berkas berdasarkan id_siswa
-							$id_siswa = $data_cek['id_siswa'];
-							$sql_berkas = $koneksi->query("SELECT pas_foto FROM berkas WHERE id_siswa = $id_siswa");
-
-							if ($sql_berkas) {
-								$data_berkas = $sql_berkas->fetch_assoc();
-
-								// Periksa apakah pas_foto sudah diisi
-								if (!empty($data_berkas['pas_foto'])) {
-									// Jika pas_foto sudah diisi, tampilkan gambar
-									echo '<img src="foto/' . $data_berkas['pas_foto'] . '" width="280px" />';
-								} else {
-									// Jika pas_foto belum diisi, tampilkan pesan atau tombol upload di sini
-									echo '<p>Pas Foto belum diisi.</p>';
-									echo '<a href="?page=data-berkas" class="btn btn-primary">Upload Pas Foto</a>';
-								}
-							} else {
-								die("Error dalam pengambilan data berkas: " . mysqli_error($koneksi));
-							}
-						}
-						?>
-					</div>
-
-					<h3 class="profile-username text-center">
-						<b class="text-danger">NAMA SISWA</b> <br>
-						<?php echo $data_cek['nama_siswa']; ?>
-					</h3>
 				</div>
 			</div>
 		</div>

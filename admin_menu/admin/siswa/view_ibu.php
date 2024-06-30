@@ -69,6 +69,14 @@ if (isset($_GET['kode'])) {
 						</tr>
 						<tr>
 							<td style="width: 180px">
+								<b>Penghasilan Ibu</b>
+							</td>
+							<td>:
+								<?php echo $data_cek['penghasilan_ibu']; ?>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 180px">
 								<b>Pendidikan Terakhir</b>
 							</td>
 							<td>:

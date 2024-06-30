@@ -64,6 +64,34 @@
 				</div>
 
 				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Tinggi Badan</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" id="tb_siswa" name="tb_siswa" placeholder="Masukkan Tinggi Badan (CM)" required>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Berat Badan</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" id="bb_siswa" name="bb_siswa" placeholder="Masukkan Berat Badan (KG)" required>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Size Pakaian</label>
+					<div class="col-sm-5">
+						<select name="size_pakaian" id="size_pakaian" class="form-control">
+							<option>- Pilih -</option>
+							<option>S</option>
+							<option>M</option>
+							<option>L</option>
+							<option>XL</option>
+							<option>XXL</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Anak Ke-</label>
 					<div class="col-sm-5">
 						<input type="number" class="form-control" id="anak_ke" name="anak_ke" placeholder="Masukkan Anak Ke-" required>
@@ -123,12 +151,15 @@
 			$alamat_siswa = mysqli_real_escape_string($koneksi, $_POST['alamat_siswa']);
 			$jk_siswa = mysqli_real_escape_string($koneksi, $_POST['jk_siswa']);
 			$agama_siswa = mysqli_real_escape_string($koneksi, $_POST['agama_siswa']);
+			$tb_siswa = mysqli_real_escape_string($koneksi, $_POST['tb_siswa']);
+			$bb_siswa = mysqli_real_escape_string($koneksi, $_POST['bb_siswa']);
+			$size_pakaian = mysqli_real_escape_string($koneksi, $_POST['size_pakaian']);
 			$anak_ke = mysqli_real_escape_string($koneksi, $_POST['anak_ke']);
 			$jumlah_saudara = mysqli_real_escape_string($koneksi, $_POST['jumlah_saudara']);
 			$status_keluarga = mysqli_real_escape_string($koneksi, $_POST['status_keluarga']);
 
 			// Query untuk memasukkan data ke tabel biodata_siswa
-			$sql_simpan = "INSERT INTO biodata_siswa (id_login_siswa, nama_siswa, tempat_lahir_siswa, tgl_lahir_siswa, alamat_siswa, jk_siswa, agama_siswa, anak_ke, jumlah_saudara, status_keluarga) VALUES ('$id_login_siswa', '$nama_siswa', '$tempat_lahir_siswa', '$tgl_lahir_siswa', '$alamat_siswa', '$jk_siswa', '$agama_siswa', '$anak_ke', '$jumlah_saudara', '$status_keluarga')";
+			$sql_simpan = "INSERT INTO biodata_siswa (id_login_siswa, nama_siswa, tempat_lahir_siswa, tgl_lahir_siswa, alamat_siswa, jk_siswa, agama_siswa, tb_siswa, bb_siswa, size_pakaian, anak_ke, jumlah_saudara, status_keluarga) VALUES ('$id_login_siswa', '$nama_siswa', '$tempat_lahir_siswa', '$tgl_lahir_siswa', '$alamat_siswa', '$jk_siswa', '$agama_siswa', '$tb_siswa', '$bb_siswa', '$size_pakaian', '$anak_ke', '$jumlah_saudara', '$status_keluarga')";
 			$query_simpan = mysqli_query($koneksi, $sql_simpan);
 
 			if ($query_simpan) {

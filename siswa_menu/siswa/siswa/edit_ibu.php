@@ -14,6 +14,7 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 		$tempat_lahir_ibu = mysqli_real_escape_string($koneksi, $_POST['tempat_lahir_ibu']);
 		$no_hp_ibu = $_POST['no_hp_ibu'];
 		$pekerjaan_ibu = mysqli_real_escape_string($koneksi, $_POST['pekerjaan_ibu']);
+		$penghasilan_ibu = mysqli_real_escape_string($koneksi, $_POST['penghasilan_ibu']);
 		$pend_terakhir_ibu = mysqli_real_escape_string($koneksi, $_POST['pend_terakhir_ibu']);
 
 		// Memperbaiki query untuk mengambil id_ibu dari tabel biodata_siswa
@@ -36,6 +37,7 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
                             tempat_lahir_ibu='$tempat_lahir_ibu',
                             no_hp_ibu='$no_hp_ibu',
                             pekerjaan_ibu='$pekerjaan_ibu',
+							penghasilan_ibu='$penghasilan_ibu',
                             pend_terakhir_ibu='$pend_terakhir_ibu'
                         WHERE id_ibu='$id_ibu'";
 
@@ -134,6 +136,38 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 				<label class="col-sm-2 col-form-label">Pekerjaan ibu</label>
 				<div class="col-sm-5">
 					<input type="text" class="form-control" id="pekerjaan_ibu" name="pekerjaan_ibu" value="<?php echo $data_cek['pekerjaan_ibu']; ?>" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Penghasilan Ibu</label>
+				<div class="col-sm-4">
+					<select name="penghasilan_ibu" id="penghasilan_ibu" class="form-control">
+						<option value="">-- Pilih --</option>
+						<?php
+						//cek data yg dipilih sebelumnya
+						if ($data_cek['penghasilan_ibu'] == "< Rp. 500.000") echo "<option value='< Rp. 500.000' selected>< Rp. 500.000</option>";
+						else echo "<option value='< Rp. 500.000'>< Rp. 500.000</option>";
+
+						if ($data_cek['penghasilan_ibu'] == "Rp. 500.000-Rp. 999.000") echo "<option value='Rp. 500.000-Rp. 999.000' selected>Rp. 500.000-Rp. 999.000</option>";
+						else echo "<option value='Rp. 500.000-Rp. 999.000'>Rp. 500.000-Rp. 999.000</option>";
+
+						if ($data_cek['penghasilan_ibu'] == "Rp. 1.000.000-Rp. 1.999.999") echo "<option value='Rp. 1.000.000-Rp. 1.999.999' selected>Rp. 1.000.000-Rp. 1.999.999</option>";
+						else echo "<option value='Rp. 1.000.000-Rp. 1.999.999'>Rp. 1.000.000-Rp. 1.999.999</option>";
+
+						if ($data_cek['penghasilan_ibu'] == "Rp. 2.000.000-Rp. 4.999.999") echo "<option value='Rp. 2.000.000-Rp. 4.999.999' selected>Rp. 2.000.000-Rp. 4.999.999</option>";
+						else echo "<option value='Rp. 2.000.000-Rp. 4.999.999'>Rp. 2.000.000-Rp. 4.999.999</option>";
+
+						if ($data_cek['penghasilan_ibu'] == "Rp. 5.000.000-Rp. 20.000.000") echo "<option value='Rp. 5.000.000-Rp. 20.000.000' selected>Rp. 5.000.000-Rp. 20.000.000</option>";
+						else echo "<option value='Rp. 5.000.000-Rp. 20.000.000'>Rp. 5.000.000-Rp. 20.000.000</option>";
+
+                        if ($data_cek['penghasilan_ibu'] == "> Rp. 20.000.000") echo "<option value='> Rp. 20.000.000' selected>> Rp. 20.000.000</option>";
+						else echo "<option value='> Rp. 20.000.000'>> Rp. 20.000.000</option>";
+
+                        if ($data_cek['penghasilan_ibu'] == "Tidak Berpenghasilan") echo "<option value='Tidak Berpenghasilan' selected>Tidak Berpenghasilan</option>";
+						else echo "<option value='Tidak Berpenghasilan'>Tidak Berpenghasilan</option>";
+						?>
+					</select>
 				</div>
 			</div>
 

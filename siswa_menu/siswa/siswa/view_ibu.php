@@ -87,6 +87,14 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 						</tr>
 						<tr>
 							<td style="width: 180px">
+								<b>Penghasilan Ibu</b>
+							</td>
+							<td>:
+								<?php echo $data_cek['penghasilan_ibu']; ?>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 180px">
 								<b>Pendidikan Terakhir</b>
 							</td>
 							<td>:
@@ -97,8 +105,6 @@ if (isset($_SESSION['ses_id_login_siswa'])) {
 				</table>
 				<div class="card-footer">
 					<a href="?page=data-ibu" class="btn btn-warning">Kembali</a>
-
-					<a href="./report/cetak-pegawai.php?nip=<?php echo $data_cek['id_ibu']; ?>" target=" _blank" title="Cetak Data Siswa" class="btn btn-primary">Print</a>
 				</div>
 			</div>
 		</div>

@@ -59,6 +59,22 @@
 				</div>
 
 				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Penghasilan Ayah</label>
+					<div class="col-sm-5">
+						<select name="penghasilan_ayah" id="penghasilan_ayah" class="form-control">
+							<option>- Pilih -</option>
+							<option>< Rp. 500.000</option>
+							<option>Rp. 500.000-Rp. 999.000</option>
+							<option>Rp. 1.000.000-Rp. 1.999.999</option>
+							<option>Rp. 2.000.000-Rp. 4.999.999</option>
+							<option>Rp. 5.000.000-Rp. 20.000.000</option>
+							<option>> Rp. 20.000.000</option>
+							<option>Tidak Berpenghasilan</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Pendidikan Terakhir Ayah</label>
 					<div class="col-sm-5">
 						<input type="text" class="form-control" id="pend_terakhir_ayah" name="pend_terakhir_ayah" placeholder="Masukkan Pendidikan Terakhir Ayah" required>
@@ -105,10 +121,11 @@
 				$alamat_ayah = mysqli_real_escape_string($koneksi, $_POST['alamat_ayah']);
 				$no_hp_ayah = mysqli_real_escape_string($koneksi, $_POST['no_hp_ayah']);
 				$pekerjaan_ayah = mysqli_real_escape_string($koneksi, $_POST['pekerjaan_ayah']);
+				$penghasilan_ayah = mysqli_real_escape_string($koneksi, $_POST['penghasilan_ayah']);
 				$pend_terakhir_ayah = mysqli_real_escape_string($koneksi, $_POST['pend_terakhir_ayah']);
 
 				// Query untuk memasukkan data ke tabel biodata_ayah
-				$sql_simpan = "INSERT INTO biodata_ayah (id_siswa, nama_ayah, tempat_lahir_ayah, tgl_lahir_ayah, alamat_ayah, no_hp_ayah, pekerjaan_ayah, pend_terakhir_ayah) VALUES ('$id_siswa', '$nama_ayah', '$tempat_lahir_ayah', '$tgl_lahir_ayah', '$alamat_ayah', '$no_hp_ayah', '$pekerjaan_ayah', '$pend_terakhir_ayah')";
+				$sql_simpan = "INSERT INTO biodata_ayah (id_siswa, nama_ayah, tempat_lahir_ayah, tgl_lahir_ayah, alamat_ayah, no_hp_ayah, pekerjaan_ayah, penghasilan_ayah, pend_terakhir_ayah) VALUES ('$id_siswa', '$nama_ayah', '$tempat_lahir_ayah', '$tgl_lahir_ayah', '$alamat_ayah', '$no_hp_ayah', '$pekerjaan_ayah', '$penghasilan_ayah', '$pend_terakhir_ayah')";
 
 				$query_simpan = mysqli_query($koneksi, $sql_simpan);
 

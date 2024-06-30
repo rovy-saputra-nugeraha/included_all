@@ -60,6 +60,38 @@ if (isset($_GET['kode'])) {
 					</div>
 
 					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Penghasilan Ayah</label>
+						<div class="col-sm-4">
+							<select name="penghasilan_ayah" id="penghasilan_ayah" class="form-control">
+								<option value="">-- Pilih --</option>
+								<?php
+								//cek data yg dipilih sebelumnya
+								if ($data_cek['penghasilan_ayah'] == "< Rp. 500.000") echo "<option value='< Rp. 500.000' selected>< Rp. 500.000</option>";
+								else echo "<option value='< Rp. 500.000'>< Rp. 500.000</option>";
+
+								if ($data_cek['penghasilan_ayah'] == "Rp. 500.000-Rp. 999.000") echo "<option value='Rp. 500.000-Rp. 999.000' selected>Rp. 500.000-Rp. 999.000</option>";
+								else echo "<option value='Rp. 500.000-Rp. 999.000'>Rp. 500.000-Rp. 999.000</option>";
+
+								if ($data_cek['penghasilan_ayah'] == "Rp. 1.000.000-Rp. 1.999.999") echo "<option value='Rp. 1.000.000-Rp. 1.999.999' selected>Rp. 1.000.000-Rp. 1.999.999</option>";
+								else echo "<option value='Rp. 1.000.000-Rp. 1.999.999'>Rp. 1.000.000-Rp. 1.999.999</option>";
+
+								if ($data_cek['penghasilan_ayah'] == "Rp. 2.000.000-Rp. 4.999.999") echo "<option value='Rp. 2.000.000-Rp. 4.999.999' selected>Rp. 2.000.000-Rp. 4.999.999</option>";
+								else echo "<option value='Rp. 2.000.000-Rp. 4.999.999'>Rp. 2.000.000-Rp. 4.999.999</option>";
+
+								if ($data_cek['penghasilan_ayah'] == "Rp. 5.000.000-Rp. 20.000.000") echo "<option value='Rp. 5.000.000-Rp. 20.000.000' selected>Rp. 5.000.000-Rp. 20.000.000</option>";
+								else echo "<option value='Rp. 5.000.000-Rp. 20.000.000'>Rp. 5.000.000-Rp. 20.000.000</option>";
+
+								if ($data_cek['penghasilan_ayah'] == "> Rp. 20.000.000") echo "<option value='> Rp. 20.000.000' selected>> Rp. 20.000.000</option>";
+								else echo "<option value='> Rp. 20.000.000'>> Rp. 20.000.000</option>";
+
+								if ($data_cek['penghasilan_ayah'] == "Tidak Berpenghasilan") echo "<option value='Tidak Berpenghasilan' selected>Tidak Berpenghasilan</option>";
+								else echo "<option value='Tidak Berpenghasilan'>Tidak Berpenghasilan</option>";
+								?>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Pendidikan Terakhir</label>
 						<div class="col-sm-5">
 							<input type="text" class="form-control" id="pend_terakhir_ayah" name="pend_terakhir_ayah" value="<?php echo $data_cek['pend_terakhir_ayah']; ?>" />
@@ -82,6 +114,7 @@ if (isset($_GET['kode'])) {
 			$tempat_lahir_ayah = mysqli_real_escape_string($koneksi, $_POST['tempat_lahir_ayah']);
 			$no_hp_ayah = $_POST['no_hp_ayah'];
 			$pekerjaan_ayah = $_POST['pekerjaan_ayah'];
+			$penghasilan_ayah = mysqli_real_escape_string($koneksi, $_POST['penghasilan_ayah']);
 			$pend_terakhir_ayah = $_POST['pend_terakhir_ayah'];
 
 			$sql_ubah = "UPDATE biodata_ayah SET
@@ -91,6 +124,7 @@ if (isset($_GET['kode'])) {
 										tempat_lahir_ayah='$tempat_lahir_ayah',
 										no_hp_ayah='$no_hp_ayah',
 										pekerjaan_ayah='$pekerjaan_ayah',
+										penghasilan_ayah='$penghasilan_ayah',
 										pend_terakhir_ayah='$pend_terakhir_ayah'
 								WHERE id_siswa='$id_siswa'";
 
@@ -101,7 +135,7 @@ if (isset($_GET['kode'])) {
                 Swal.fire({title: 'Ubah Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
                 }).then((result) => {
                     if (result.value) {
-                        window.location = 'data.php?page=data-siswa';
+                        window.location = 'data.php?page=data-ayah';
                     }
                 })</script>";
 			} else {
@@ -109,7 +143,7 @@ if (isset($_GET['kode'])) {
                 Swal.fire({title: 'Ubah Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
                 }).then((result) => {
                     if (result.value) {
-                        window.location = 'data.php?page=data-siswa';
+                        window.location = 'data.php?page=data-ayah';
                     }
                 })</script>";
 			}

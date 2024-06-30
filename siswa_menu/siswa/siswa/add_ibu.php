@@ -59,6 +59,22 @@
 				</div>
 
 				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Penghasilan Ibu</label>
+					<div class="col-sm-5">
+						<select name="penghasilan_ibu" id="penghasilan_ibu" class="form-control">
+							<option>- Pilih -</option>
+							<option>< Rp. 500.000</option>
+							<option>Rp. 500.000-Rp. 999.000</option>
+							<option>Rp. 1.000.000-Rp. 1.999.999</option>
+							<option>Rp. 2.000.000-Rp. 4.999.999</option>
+							<option>Rp. 5.000.000-Rp. 20.000.000</option>
+							<option>> Rp. 20.000.000</option>
+							<option>Tidak Berpenghasilan</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Pendidikan Terakhir Ibu</label>
 					<div class="col-sm-5">
 						<input type="text" class="form-control" id="pend_terakhir_ibu" name="pend_terakhir_ibu" placeholder="Masukkan Pendidikan Terakhir Ibu" required>
@@ -105,10 +121,11 @@
 				$alamat_ibu = mysqli_real_escape_string($koneksi, $_POST['alamat_ibu']);
 				$no_hp_ibu = mysqli_real_escape_string($koneksi, $_POST['no_hp_ibu']);
 				$pekerjaan_ibu = mysqli_real_escape_string($koneksi, $_POST['pekerjaan_ibu']);
+				$penghasilan_ibu = mysqli_real_escape_string($koneksi, $_POST['penghasilan_ibu']);
 				$pend_terakhir_ibu = mysqli_real_escape_string($koneksi, $_POST['pend_terakhir_ibu']);
 
 				// Query untuk memasukkan data ke tabel biodata_ibu
-				$sql_simpan = "INSERT INTO biodata_ibu (id_siswa, nama_ibu, tempat_lahir_ibu, tgl_lahir_ibu, alamat_ibu, no_hp_ibu, pekerjaan_ibu, pend_terakhir_ibu) VALUES ('$id_siswa', '$nama_ibu', '$tempat_lahir_ibu', '$tgl_lahir_ibu', '$alamat_ibu', '$no_hp_ibu', '$pekerjaan_ibu', '$pend_terakhir_ibu')";
+				$sql_simpan = "INSERT INTO biodata_ibu (id_siswa, nama_ibu, tempat_lahir_ibu, tgl_lahir_ibu, alamat_ibu, no_hp_ibu, pekerjaan_ibu, penghasilan_ibu, pend_terakhir_ibu) VALUES ('$id_siswa', '$nama_ibu', '$tempat_lahir_ibu', '$tgl_lahir_ibu', '$alamat_ibu', '$no_hp_ibu', '$pekerjaan_ibu', '$penghasilan_ibu', '$pend_terakhir_ibu')";
 
 				$query_simpan = mysqli_query($koneksi, $sql_simpan);
 
