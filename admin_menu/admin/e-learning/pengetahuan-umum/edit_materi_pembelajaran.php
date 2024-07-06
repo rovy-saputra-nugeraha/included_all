@@ -127,8 +127,7 @@ if (isset($_POST['Ubah'])) {
                     <select class="form-control" name="materi">
                         <option value="agama" <?php if ($materi == 'agama') echo 'selected'; ?>>Agama</option>
                         <option value="bahasa_indonesia" <?php if ($materi == 'bahasa_indonesia') echo 'selected'; ?>>Bahasa Indonesia</option>
-                        <option value="ipa" <?php if ($materi == 'ipa') echo 'selected'; ?>>IPA</option>
-                        <option value="ips" <?php if ($materi == 'ips') echo 'selected'; ?>>IPS</option>
+                        <option value="ipa" <?php if ($materi == 'ipas') echo 'selected'; ?>>IPAS</option>
                         <option value="pkn" <?php if ($materi == 'pkn') echo 'selected'; ?>>PKN</option>
                         <option value="pjok" <?php if ($materi == 'pjok') echo 'selected'; ?>>PJOK</option>
                         <option value="seni_budaya" <?php if ($materi == 'seni_budaya') echo 'selected'; ?>>Seni Budaya</option>

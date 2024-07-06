@@ -129,8 +129,8 @@
                                 <!-- Aksi Biodata Siswa -->
                                 <td>
                                     <?php
-                                    // Query untuk mendapatkan data login_siswa.nik, biodata_siswa.*, berkas.pas_foto
-                                    $queryBiodata = $koneksi->query("SELECT login_siswa.nik, biodata_siswa.*, berkas.pas_foto 
+                                    // Query untuk mendapatkan data login_siswa.nik, biodata_siswa.*
+                                    $queryBiodata = $koneksi->query("SELECT login_siswa.nik, biodata_siswa.*
                                                 FROM login_siswa
                                                 LEFT JOIN biodata_siswa ON login_siswa.id_login_siswa = biodata_siswa.id_login_siswa
                                                 LEFT JOIN berkas ON biodata_siswa.id_siswa = berkas.id_siswa 

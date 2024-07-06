@@ -55,8 +55,7 @@
                         // Array asosiatif untuk memetakan nilai di database ke label jenis materi
                         $jenis_materi_labels = array(
                             'mtk' => 'Matematika',
-                            'ipa' => 'IPA',
-                            'ips' => 'IPS',
+                            'ipas' => 'IPAS',
                             'pkn' => 'pkn',
                             'bahasa_indonesia' => 'Bahasa Indonesia',
                             'pjok' => 'PJOK',

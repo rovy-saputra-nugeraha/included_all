@@ -75,20 +75,6 @@ if (isset($_GET['kode'])) {
 					<div class="card-body p-0">
 						<div class="card small-container card-success">
 							<div class="mt-2">
-								<div class="card card-info">
-									<div class="card-header">
-										<h3 align="center" class="card-title">
-											Berkas Pas Foto
-										</h3>
-									</div>
-									<div class="card-body p-0">
-										<div class="mt-2">
-											<a href="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['pas_foto']; ?>" target="_blank">
-												<img id="zoom-image-pas-foto" src="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['pas_foto']; ?>" class="zoomed-image" width="280px">
-											</a>
-										</div>
-									</div>
-								</div>
 
 								<div class="card card-info text-center">
 									<div class="card-header text-center">
@@ -99,8 +85,22 @@ if (isset($_GET['kode'])) {
 									<div class="card-body p-0">
 										<div class="card card-success">
 											<div class="mt-2">
-												<a href="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['kartu_keluarga']; ?>" target="_blank">
-													<img id="zoom-image-pas-kk" src="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['kartu_keluarga']; ?>" class="zoomed-image" width="300px">
+												<a href="/siswa_menu/foto/<?php echo $data_cek['kartu_keluarga']; ?>" target="_blank">
+													<img id="zoom-image-pas-kk" src="/siswa_menu/foto/<?php echo $data_cek['kartu_keluarga']; ?>" class="zoomed-image" width="300px">
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="card-header text-center">
+										<h3 align="center" class="card-title text-center">
+											Download Berkas KK
+										</h3>
+									</div>
+									<div class="card-body p-0">
+										<div class="card card-success">
+											<div class="mt-2">
+												<a href="/siswa_menu/foto/<?php echo $data_cek['kartu_keluarga']; ?>" title="Download File" class="btn btn-success btn-sm" download>
+													<i class="fa fa-download"></i>
 												</a>
 											</div>
 										</div>
@@ -116,8 +116,22 @@ if (isset($_GET['kode'])) {
 									<div class="card-body p-0">
 										<div class="card card-success">
 											<div class="mt-2">
-												<a href="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['akta_lahir']; ?>" target="_blank">
-													<img id="zoom-image-akta-lahir" src="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['akta_lahir']; ?>" class="zoomed-image">
+												<a href="/siswa_menu/foto/<?php echo $data_cek['akta_lahir']; ?>" target="_blank">
+													<img id="zoom-image-akta-lahir" src="/siswa_menu/foto/<?php echo $data_cek['akta_lahir']; ?>" class="zoomed-image">
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="card-header text-center">
+										<h3 align="center" class="card-title text-center">
+											Download Berkas Akta Lahir
+										</h3>
+									</div>
+									<div class="card-body p-0">
+										<div class="card card-success">
+											<div class="mt-2">
+												<a href="/siswa_menu/foto/<?php echo $data_cek['akta_lahir']; ?>" title="Download File" class="btn btn-success btn-sm" download>
+													<i class="fa fa-download"></i>
 												</a>
 											</div>
 										</div>
@@ -127,14 +141,28 @@ if (isset($_GET['kode'])) {
 								<div class="card card-info">
 									<div class="card-header">
 										<h3 align="center" class="card-title">
-											Berkas KTP
+											Berkas Bukti Registrasi
 										</h3>
 									</div>
 									<div class="card-body p-0">
 										<div class="card card-success">
 											<div class="mt-2">
-												<a href="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['ktp']; ?>" target="_blank">
-													<img id="zoom-image-ktp" src="/ppdb-sd/src/siswa_menu/foto/<?php echo $data_cek['ktp']; ?>" class="zoomed-image">
+												<a href="/siswa_menu/foto/<?php echo $data_cek['bukti_registrasi']; ?>" target="_blank">
+													<img id="zoom-image-ktp" src="/siswa_menu/foto/<?php echo $data_cek['bukti_registrasi']; ?>" class="zoomed-image">
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="card-header text-center">
+										<h3 align="center" class="card-title text-center">
+											Download Berkas Bukti Registrasi
+										</h3>
+									</div>
+									<div class="card-body p-0">
+										<div class="card card-success">
+											<div class="mt-2">
+												<a href="/siswa_menu/foto/<?php echo $data_cek['bukti_registrasi']; ?>" title="Download File" class="btn btn-success btn-sm" download>
+													<i class="fa fa-download"></i>
 												</a>
 											</div>
 										</div>

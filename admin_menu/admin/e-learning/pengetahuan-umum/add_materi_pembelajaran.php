@@ -41,8 +41,7 @@ include_once 'data.php'; // Pastikan file ini sudah mengandung session_start() d
                         <option value="" disabled selected>Pilih Materi</option>
                         <option value="agama">Agama</option>
                         <option value="bahasa_indonesia">Bahasa Indonesia</option>
-                        <option value="ipa">IPA</option>
-                        <option value="ips">IPS</option>
+                        <option value="ipas">IPAS</option>
                         <option value="pkn">PKN</option>
                         <option value="pjok">PJOK</option>
                         <option value="seni_budaya">Seni Budaya</option>

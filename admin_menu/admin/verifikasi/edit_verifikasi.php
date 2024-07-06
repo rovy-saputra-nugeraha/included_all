@@ -47,7 +47,7 @@ if (isset($_GET['kode'])) {
 								<option value="" disabled>Pilih Status Verifikasi</option>
 								<?php
 								$selectedStatus = $data_cek['status_penerimaan'];
-								$statusOptions = ["Belum di Setujui", "Sudah di Setujui", "Tidak di Setujui"];
+								$statusOptions = ["Sudah di Setujui", "Tidak di Setujui"];
 								foreach ($statusOptions as $status) {
 									$selected = ($selectedStatus === $status) ? 'selected' : '';
 									echo "<option value='$status' $selected>$status</option>";

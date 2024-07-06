@@ -311,14 +311,20 @@ while ($data = $sql->fetch_assoc()) {
 								<ul class="nav nav-treeview" style="font-size: 12px;">
 									<li class="nav-item">
 										<a href="?page=data-siswa" class="nav-link">
-											<i class="nav-icon far fa fa-users" style="font-size: 12px;"></i>
+											<i class="nav-icon far fa fa-user" style="font-size: 12px;"></i>
 											<p>Data Siswa</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="nav-icon fas fa fa-newspaper" style="font-size: 12px;"></i>
-											<p>Data Absensi</p>
+										<a href="?page=data-absensi-masuk-siswa" class="nav-link">
+											<i class="nav-icon fas fa-clipboard-list" style="font-size: 12px;"></i>
+											<p>Data Absensi Masuk</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=data-absensi-keluar-siswa" class="nav-link">
+											<i class="nav-icon fas fa-clipboard-list" style="font-size: 12px;"></i>
+											<p>Data Absensi Keluar</p>
 										</a>
 									</li>
 								</ul>

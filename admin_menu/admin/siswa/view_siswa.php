@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_GET['kode'])) {
-    $sql_cek = "SELECT login_siswa.nik, biodata_siswa.*, berkas.pas_foto 
+    $sql_cek = "SELECT login_siswa.nik, biodata_siswa.*, berkas.bukti_registrasi
     FROM login_siswa
     LEFT JOIN biodata_siswa ON login_siswa.id_login_siswa = biodata_siswa.id_login_siswa
     LEFT JOIN berkas ON biodata_siswa.id_siswa = berkas.id_siswa WHERE biodata_siswa.id_siswa='" . $_GET['kode'] . "'";
@@ -146,8 +146,25 @@ if (isset($_GET['kode'])) {
                         <div class="card-tools">
                         </div>
                     </div>
+                    <div class="card-body">
+                        <?php if ($data_cek['bukti_registrasi']) : ?>
+                            <div class="text-center">
+                                <img src="/included_all/siswa_menu/foto/<?php echo $data_cek['bukti_registrasi']; ?>" width="280px" />
+                                
+                            </div>
+                            <h3 class="profile-username text-center">
+                                <b class="text-danger">NAMA SISWA</b> <br>
+                                <?php echo $data_cek['nama_siswa']; ?>
+                            </h3>
+                        <?php else : ?>
+                            <div class="text-center text-danger">
+                                Pas Foto Siswa Belum di Upload
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
+
         </div>
 <?php
     } else {

@@ -96,7 +96,7 @@
 
 			$pindah = move_uploaded_file($sumber, $target . $nama_file);
 			$pindah_akta_lahir = move_uploaded_file($akta_lahir_sumber, $akta_lahir_target . $akta_lahir_nama_file);
-			$pindah_bukti_registrasi = move_uploaded_file($bukti_registrasi_sumber, $bukti_registrasi_target . $pas_foto_nama_file);
+			$pindah_bukti_registrasi = move_uploaded_file($bukti_registrasi_sumber, $bukti_registrasi_target . $bukti_registrasi_nama_file);
 
 			if (!empty($sumber)) {
 				$sql_simpan = "INSERT INTO berkas (kartu_keluarga, akta_lahir, bukti_registrasi, id_siswa) VALUES (
